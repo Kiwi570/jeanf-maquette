@@ -1,0 +1,352 @@
+{
+  "commun": {
+    "navigation": "Navigation principale",
+    "menu": "Menu",
+    "fermer": "Fermer",
+    "langueAutre": "English version",
+    "actionEntete": "Écrire à JeanF",
+    "actionCourte": "Écrire",
+    "appeler": "Appeler",
+    "calmeReduire": "Réduire les animations",
+    "calmeRetablir": "Rétablir les animations",
+    "calmeSysteme": "Animations réduites par le réglage de votre appareil",
+    "sommaire": "Sommaire",
+    "confort": "Confort de lecture",
+    "retourHaut": "Retour en haut",
+    "maquette": "Maquette : les informations marquées « à compléter » seront fournies par l’artiste.",
+    "evitement": "Aller au contenu",
+    "mentionIa": "Illustration générée",
+    "pause": "Pause",
+    "lecture": "Lecture",
+    "introLigne": "Nomade Polymedia",
+    "introLieu": "Bruxelles",
+    "nomComplet": "JeanF Jans",
+    "signature": "Nomade Polymedia",
+    "contact": "Contact",
+    "email": "E-mail",
+    "telephone": "Téléphone",
+    "facebook": "Facebook",
+    "atelier": "Atelier : adresse à compléter",
+    "passe": "passé",
+    "aCompleter": "à compléter",
+    "codes": "Code des étiquettes",
+    "minutage": "Minutage du mur",
+    "curseurVoir": "Voir",
+    "atelierLibelle": "Atelier"
+  },
+  "pages": {
+    "accueil": {
+      "titre": "JeanF Jans, Nomade Polymedia : peinture, sculpture, films",
+      "description": "Artiste polymedia installé à Bruxelles : triptyques, sculptures de jardin, vitraux de déchets plastiques, courts-métrages et résidences Laundry.",
+      "nav": "Accueil",
+      "partageAlt": "JeanF, Nomade Polymedia, et le triptyque Cantico delle creature ouvert",
+      "accroche": "Le mur fait œuvre."
+    },
+    "oeuvres": {
+      "titre": "Œuvres : le mur de JeanF Jans",
+      "description": "Cinq séries sur un seul mur : Retables et triptyques, Pépinière, Road Map, Russian Diary Moods, Dérive-Dérêve. Légendes complètes, prix sur demande.",
+      "nav": "Œuvres",
+      "partageAlt": "Œuvres de JeanF Jans : le triptyque Songes de ma voisine de quartier",
+      "accroche": "Cinq pans d’un seul mur"
+    },
+    "films": {
+      "titre": "Films : les courts-métrages de JeanF Jans",
+      "description": "Douze courts-métrages de 2000 à 2015, dont Still Lives, Remi Platinum au WorldFest-Houston 2014.",
+      "nav": "Films",
+      "partageAlt": "Photogramme du film Still Lives de JeanF Jans",
+      "accroche": "Douze films, une seule table de montage"
+    },
+    "a-propos": {
+      "titre": "À propos et contact : JeanF Jans",
+      "description": "Parcours, formation, agenda 2012-2024, bibliographie et contact de l’artiste JeanF Jans.",
+      "nav": "À propos",
+      "partageAlt": "Atelier de JeanF Jans : une sculpture de la série Pépinière en cours",
+      "accroche": "Parcours, agenda, contact"
+    },
+    "mentions-legales": {
+      "titre": "Mentions légales : JeanF Jans",
+      "description": "Éditeur, hébergeur, crédits et confidentialité du site de JeanF Jans.",
+      "nav": "Mentions légales",
+      "partageAlt": "Mentions légales du site de JeanF Jans",
+      "accroche": "Mentions légales"
+    },
+    "404": {
+      "titre": "Pan de mur manquant : JeanF Jans",
+      "description": "Cette page n’existe pas ou plus.",
+      "nav": "Page introuvable",
+      "partageAlt": "Page introuvable",
+      "accroche": "Pan de mur manquant"
+    }
+  },
+  "accueil": {
+    "hero": {
+      "titre": "JeanF, Nomade Polymedia",
+      "etiquette": "JeanF Jans · Nomade Polymedia · Bruxelles",
+      "texte": "Peintures, sculptures, vitraux, films et résidences, accrochés pan après pan pour former un seul mur.",
+      "action": "Parcourir le mur",
+      "action2": "Voir les films",
+      "info": "Dernière résidence : Laundry VI, Igualada, 2023-2024",
+      "fermeAlt": "Cantico delle creature, triptyque fermé : fusain sur toile brute",
+      "ouvertAlt": "Cantico delle creature, triptyque ouvert : huile sur toile",
+      "legende": "Cantico delle creature, 2016-2017 · fermé, puis ouvert"
+    },
+    "manifeste": {
+      "titre": "Mauerstücke",
+      "sous": "Pans de mur",
+      "p1": "MAUERSTÜCKE peut s’entendre comme le diorama d’une bataille intérieure dans la guerre des mondes, des concepts, de l’implosion des sens et des perceptions qui font de chacun de nous une sorte de Wunderkammer ambulant d’idées qui s’entrechoquent… C’est l’assise d’une manière de construire et d’habiter un lieu, une esthétique dans le(a)quel(le) s’étireraient le temps, l’espace et les profondeurs. Une affaire de territoires, en somme.",
+      "p2": "MAUERSTÜCKE sont une sélection d’« antiquités » mêlées à des travaux plus contemporains, agencés selon des affinités de sens ou d’affects que le regard recueille dans son parcours à travers des publications variées. Chaque pièce hypercontextualisée au départ est mise à l’épreuve d’un décloisonnement inédit pour elle par le voisinage immédiat, tantôt d’un relief de palette (Müllstück), tantôt d’un court-métrage (Kurzstück), d’une pièce montée (Skulptück) ou d’une image peinte, photographiée, imprimée (Bildstück)… le tout formant un pan de mur qui aura son caractère propre dans le défilement de pans qui lui précèdent ou lui succèdent, le tout formant un seul mur. Un peu comme le processus de montage « fait » le film. En somme, le (pan de) mur fait œuvre.",
+      "p3": "MAUERSTÜCKE imagine le geste du collectionneur, avec ce côté poétique dans la construction de sa collection (premières esquisses, commencement d’une série de style défini, première expédition…) ; une scénographie émerge au fur et à mesure d’une sélection de travaux tantôt « figuratifs », tantôt « abstraits », pris dans la nasse de façon aléatoire ; la mise en perspective sera immanquablement enrichie par le regard extérieur invité à reconstituer ou alimenter sa propre guerre civile. Une suggestion d’échos, en somme.",
+      "note": "Mauerstücke : de l’allemand, pans de mur ; ici, plutôt des pièces accrochées au mur.",
+      "credit": "Texte de JeanF Jans. Traduction anglaise : John Barret.",
+      "mull": "relief de palette, déchets",
+      "kurz": "court-métrage",
+      "skulp": "pièce montée",
+      "bild": "image peinte, photographiée, imprimée",
+      "codesTexte": "Quand l’artiste en a défini une, l’étiquette de la pièce porte l’abréviation de la démarche à laquelle elle appartient.",
+      "alt": "Deux pans de plâtre qui se rejoignent le long d’un joint"
+    },
+    "mur": {
+      "titre": "Le mur",
+      "texte": "Huit pièces tirées des cinq séries. Les triptyques ouvrent leurs volets en passant au centre.",
+      "action": "Parcourir tout le mur",
+      "region": "Le mur, défilement horizontal",
+      "glisser": "Faites glisser le mur"
+    },
+    "laundry": {
+      "titre": "Laundry",
+      "citation": "« Un lessivage de perceptions mutuelles entre un (ou plusieurs) artiste(s), un curateur et moi-même sur le génie des lieux. »",
+      "texte": "Des résidences de trois à cinq semaines, qui donnent un court-métrage, un livre, une installation ou une performance.",
+      "carteTitre": "Six résidences, de Houston à Igualada",
+      "carteAlt": "Carte des six résidences Laundry : Houston, Le Caire, Naples, Tourinnes-la-Grosse, Minsk, Igualada",
+      "avortee": "avortée",
+      "encours": "film en construction",
+      "sansPhoto": "Pas encore de photo",
+      "carteCoupe": "double trait rouge : coupure d’échelle, l’Atlantique est raccourci"
+    },
+    "films": {
+      "titre": "Kurzstücke",
+      "texte": "Douze courts-métrages, de 2000 à 2015 : performances, voyages, mémoires de lieux.",
+      "prix": "Remi Platinum, WorldFest-Houston 2014",
+      "action": "Tous les films",
+      "voir": "Voir la fiche"
+    },
+    "gare": {
+      "titre": "Gare aux Rumeurs",
+      "texte": "Projet collectif de création d’un espace d’art, de recherche et d’expérimentation pour lanceurs d’alerte polymedia.",
+      "detail": "Dans la gare de Grupont, sur la ligne 161 entre Bruxelles et Luxembourg, un « Mus_e de l’insaisissable » consacré à la rumeur : expositions, ateliers, films, conférences performées.",
+      "statut": "Livret, deuxième édition, novembre 2025",
+      "action": "Lire le livret (PDF)",
+      "alt": "Couverture du livret Gare aux Rumeurs : la gare de Grupont"
+    },
+    "reperes": {
+      "titre": "Derniers repères",
+      "texte": "Les dates les plus récentes de l’agenda.",
+      "action": "Tout l’agenda"
+    },
+    "contact": {
+      "titre": "Écrire à JeanF",
+      "texte": "Une œuvre, une projection, une résidence ou une question : un message suffit.",
+      "action": "Écrire un message",
+      "alt": "Atelier vide, lumière de fenêtre, toiles retournées contre le mur"
+    }
+  },
+  "oeuvres": {
+    "tete": {
+      "titre": "Le mur",
+      "sous": "Œuvres",
+      "texte": "Cinq séries accrochées pan après pan : retables qui s’ouvrent, sculptures d’inox et de corten, un rouleau venu du Mur, un journal russe, des vitraux de plastique.",
+      "action": "Parcourir le mur",
+      "info": "{series} séries · {pieces} pièces · prix sur demande",
+      "alt": "Long mur de galerie vide sous une lumière rasante"
+    },
+    "filtres": {
+      "libelle": "Afficher une série",
+      "tous": "Tout le mur"
+    },
+    "mur": {
+      "region": "Le mur des œuvres, défilement horizontal",
+      "glisser": "Faites glisser le mur",
+      "pan": "Pan",
+      "synopsis": "Lire le texte de la série (PDF)",
+      "titre": "Cinq pans, un seul mur",
+      "sauter": "Passer à la liste",
+      "presentation": "Présentation de la série"
+    },
+    "carte": {
+      "ouvrir": "Ouvrir les volets",
+      "fermer": "Fermer les volets",
+      "ouvert": "ouvert",
+      "ferme": "fermé",
+      "agrandir": "Agrandir",
+      "voirMur": "Voir au mur",
+      "photos": "{n} photos",
+      "film": "Voir le film",
+      "detail": "détail",
+      "anneeInconnue": "année à compléter",
+      "dimsInconnues": "dimensions à compléter",
+      "infosInconnues": "année et dimensions à compléter"
+    },
+    "liste": {
+      "titre": "Toutes les pièces",
+      "texte": "La liste complète, série par série.",
+      "titreCol": "Titre",
+      "serieCol": "Série",
+      "techniqueCol": "Technique",
+      "dimensionsCol": "Dimensions",
+      "anneeCol": "Année",
+      "dispoCol": "Prix",
+      "dispo": "Sur demande",
+      "inconnu": "à compléter",
+      "demander": "Demander le prix",
+      "imageCol": "Image"
+    },
+    "voirMur": {
+      "titre": "Voir au mur",
+      "texte": "Échelle approximative : le banc mesure environ 120 cm.",
+      "sansDimensions": "Dimensions à compléter : échelle non disponible.",
+      "alt": "Mur blanc vide au-dessus d’un banc de chêne"
+    },
+    "visionneuse": {
+      "titre": "Visionneuse",
+      "precedent": "Image précédente",
+      "suivant": "Image suivante",
+      "loupe": "Survolez l’image pour la loupe",
+      "loupeTactile": "Touchez l’image pour zoomer",
+      "compte": "{i} sur {n}"
+    },
+    "fin": {
+      "titre": "Une pièce vous intéresse ?",
+      "texte": "Dimensions, état, disponibilité et prix : demandez le dossier de la pièce.",
+      "action": "Demander un dossier"
+    }
+  },
+  "films": {
+    "tete": {
+      "titre": "Films",
+      "sous": "Kurzstücke, 2000-2015",
+      "texte": "Douze courts-métrages : performances, voyages, mémoires de lieux, du Texas à la Biélorussie.",
+      "action": "Voir Still Lives",
+      "info": "Remi Platinum, WorldFest-Houston 2014",
+      "alt": "Table de montage vide dans une pièce sombre"
+    },
+    "vedette": {
+      "prix": "Remi Platinum, WorldFest-Houston 2014",
+      "laundry": "Résidence Laundry I, Houston"
+    },
+    "table": {
+      "titre": "La table de montage",
+      "texte": "La longueur de chaque bande suit la durée du film. Touchez une bande pour ouvrir la fiche.",
+      "texteSouris": "La longueur de chaque bande suit la durée du film. Cliquez sur une bande pour ouvrir la fiche.",
+      "echelle": "1 minute",
+      "region": "Table de montage des films"
+    },
+    "fiche": {
+      "production": "Production",
+      "format": "Format",
+      "duree": "Durée",
+      "lieu": "Lieu",
+      "montre": "Montré",
+      "jouer": "Lire le film",
+      "chargement": "Le lecteur se charge au clic, depuis {service}.",
+      "prive": "Vidéo non intégrable en ligne",
+      "demander": "Demander le lien",
+      "ouvrirService": "Voir sur {service}",
+      "versions": "Autres versions",
+      "fermer": "Fermer la fiche",
+      "dureeAVerifier": "durée à vérifier"
+    },
+    "fin": {
+      "titre": "Programmer un film",
+      "texte": "Festivals, lieux, écoles : demandez une projection ou un lien de visionnage.",
+      "action": "Demander une projection",
+      "alt": "Faisceau de projecteur sur un mur de plâtre vide"
+    }
+  },
+  "apropos": {
+    "tete": {
+      "titre": "À propos",
+      "sous": "JeanF Jans",
+      "texte": "Parcours, agenda, bibliographie et contact.",
+      "info": "Portrait de l’artiste : à compléter",
+      "alt": "Atelier : la sculpture Nepenthes sanguinea en cours de montage"
+    },
+    "bio": {
+      "titre": "Vieil artiste émergent",
+      "texte": "Juriste de formation, archéologue et historien de l’art, JeanF Jans restaure pendant dix ans des œuvres anciennes et contemporaines et des bâtiments, en Allemagne, en Italie, en France et en Belgique. En 2000, il décide de se consacrer entièrement à son travail d’artiste : « vieil artiste émergent, ou nomade polymedia ».",
+      "alt": "Table de restaurateur : pinceaux, spatules, pigments"
+    },
+    "parcours": {
+      "titre": "Formation et parcours"
+    },
+    "agenda": {
+      "titre": "Agenda",
+      "texte": "2012-2024. Toutes les dates sont passées.",
+      "filtre": "Afficher",
+      "tous": "Tout",
+      "vide": "Aucune date pour ce filtre.",
+      "alt": "Traces de cadres et d’affiches retirés sur un mur de plâtre",
+      "avortee": "avortée",
+      "annule": "annulé",
+      "reporte": "reporté"
+    },
+    "bibliographie": {
+      "titre": "Bibliographie et catalogues",
+      "alt": "Pile de catalogues fermés sans titre"
+    },
+    "avec": {
+      "titre": "Avec",
+      "texte": "Artistes, commissaires, collectifs et collaborateurs croisés dans les résidences Laundry et les projets collectifs."
+    },
+    "contact": {
+      "titre": "Contact",
+      "texte": "Une œuvre, une projection, une résidence ou une question : écrivez directement.",
+      "nom": "Nom",
+      "email": "E-mail",
+      "tel": "Téléphone (facultatif)",
+      "sujet": "Objet",
+      "sujetOeuvre": "Une œuvre",
+      "sujetProjection": "Une projection",
+      "sujetResidence": "Une résidence",
+      "sujetAutre": "Autre",
+      "oeuvre": "Pièce concernée (facultatif)",
+      "message": "Message",
+      "donnees": "Vos coordonnées servent seulement à vous répondre. <a href=\"/mentions-legales#confidentialite\">Politique de confidentialité</a> (à compléter).",
+      "envoyer": "Envoyer",
+      "alt": "Carnet ouvert, crayon et enveloppe sur une table de bois",
+      "erreurEmail": "Adresse e-mail à vérifier (exemple : nom@exemple.be).",
+      "erreurTel": "Numéro à vérifier (exemple : +32 474 00 00 00).",
+      "envoye": "Demande simulée : rien n’a été envoyé. Sur le site définitif, elle sera transmise à JeanF Jans."
+    }
+  },
+  "mentions": {
+    "titre": "Mentions légales",
+    "alt": "Plâtre lisse traversé d’une fine fissure",
+    "fiche": {
+      "titre": "Informations à compléter",
+      "texte": "Nom de l’éditeur responsable ou statut (personne physique, ASBL…) : à compléter. Numéro d’entreprise ou de TVA : à compléter. Adresse postale : à compléter. Adresse de l’atelier et conditions de visite : à compléter. Portrait de l’artiste et crédit photo : à compléter. Crédits des photographies d’œuvres : à compléter. Disponibilité et prix des pièces : à compléter. Responsable du traitement des données : à compléter."
+    },
+    "editeur": {
+      "titre": "Éditeur",
+      "texte": "JeanF Jans, artiste, Bruxelles (Belgique). E-mail : jeanfjans@gmail.com. Téléphone : +32 474 98 70 35. Statut et numéro d’entreprise : à compléter."
+    },
+    "hebergeur": {
+      "titre": "Hébergeur",
+      "texte": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis. Site : vercel.com."
+    },
+    "credits": {
+      "titre": "Crédits",
+      "texte": "Œuvres, textes, photographies et films : JeanF Jans, sauf mention contraire. Œuvres des artistes invités de Laundry IV : leurs auteurs. Traduction anglaise du texte Mauerstücke : John Barret. Polices : Archivo (Omnibus-Type) et IBM Plex Mono (IBM), licence SIL Open Font License. Les images marquées « Illustration générée » ont été créées par intelligence artificielle pour illustrer des lieux et des matières ; elles ne montrent aucune œuvre de l’artiste."
+    },
+    "confidentialite": {
+      "titre": "Confidentialité",
+      "texte": "Le formulaire de contact de cette maquette n’envoie rien. Sur le site définitif, les données transmises (nom, e-mail, téléphone, message) serviront uniquement à répondre et ne seront ni cédées ni vendues. Durée de conservation, droits d’accès, de rectification et d’effacement, contact du responsable : à compléter, conformément au RGPD. Ce site ne dépose aucun cookie de mesure d’audience. Le choix de langue et le réglage des animations sont gardés dans votre navigateur."
+    }
+  },
+  "introuvable": {
+    "titre": "Pan de mur manquant",
+    "texte": "Cette page n’existe pas ou plus. Le reste du mur tient debout.",
+    "retour": "Revenir à l’accueil",
+    "oeuvres": "Voir les œuvres",
+    "alt": "Mur de plâtre dont un pan manque, laissant voir un vide sombre"
+  }
+}

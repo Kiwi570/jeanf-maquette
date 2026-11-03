@@ -1,0 +1,20 @@
+{
+  "nom": "JeanF",
+  "adresse": "https://jeanf-maquette.vercel.app",
+  "siteActuel": "jeanf.be",
+  "version": 1,
+  "langues": ["fr", "en"],
+  "navigation": ["accueil", "oeuvres", "films", "a-propos"],
+  "actionEntete": { "page": "a-propos", "ancre": "contact" },
+  "couleurs": { "fond": "#e4e0d8", "texte": "#161514", "voile": "#161514", "ouverture": "#e4e0d8", "menu": "#161514", "theme": "#e4e0d8" },
+  "contact": {
+    "telephone": "+32 474 98 70 35",
+    "telephoneLien": "+32474987035",
+    "email": "jeanfjans@gmail.com",
+    "adresse": { "fr": "Bruxelles, adresse de l’atelier à compléter", "en": "Brussels, studio address to be completed" },
+    "facebook": "https://www.facebook.com/facquodvis"
+  },
+  "polices": ["/assets/fonts/archivo-latin-wdth.woff2"],
+  "imagePartage": "oeuvres/tr-cantico-ouvert-1280.webp",
+  "curseur": true
+}

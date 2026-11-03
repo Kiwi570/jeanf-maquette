@@ -1,0 +1,192 @@
+[
+  {
+    "num": "I",
+    "id": "houston",
+    "ville": "Houston",
+    "pays": {
+      "fr": "Texas, États-Unis",
+      "en": "Texas, USA"
+    },
+    "annee": "2013",
+    "lat": 29.76,
+    "lon": -95.37,
+    "titre": "Still Lives",
+    "avec": {
+      "fr": "avec Joëlle Verstraeten · commissaire : Y. Palix",
+      "en": "with Joëlle Verstraeten · curator: Y. Palix"
+    },
+    "formes": {
+      "fr": "Court-métrage, livre d’artiste, carnets, gravures, photo, performance",
+      "en": "Short film, artist book, diary sketches, prints, photo, performance"
+    },
+    "note": {
+      "fr": "Remi Platinum, WorldFest-Houston 2014",
+      "en": "Remi Platinum, WorldFest-Houston 2014"
+    },
+    "statut": "fait",
+    "image": "laundry/houston",
+    "source": "site/laundry/1-houston/12-still-lives-videopict.jpg",
+    "alt": {
+      "fr": "Still Lives : deux hommes dans l’embrasure d’une porte, photogramme",
+      "en": "Still Lives: two men in a doorway, film still"
+    }
+  },
+  {
+    "num": "II",
+    "id": "le-caire",
+    "ville": {
+      "fr": "Le Caire",
+      "en": "Cairo"
+    },
+    "pays": {
+      "fr": "Égypte",
+      "en": "Egypt"
+    },
+    "annee": "2015",
+    "lat": 30.04,
+    "lon": 31.24,
+    "titre": {
+      "fr": "La pratique du quotidien",
+      "en": "The Practice of Daily Life"
+    },
+    "avec": {
+      "fr": "avec Marwa Benhalim, Hagar Masoud, Sama Waly · commissaires : Medrar Gallery, Darb 1718, S. Ndjali, A. Moattaz, G. Heyvaert",
+      "en": "with Marwa Benhalim, Hagar Masoud, Sama Waly · curators: Medrar Gallery, Darb 1718, S. Ndjali, A. Moattaz, G. Heyvaert"
+    },
+    "formes": {
+      "fr": "Court-métrage, livre, photo, installation, performance",
+      "en": "Short film, book, photo, installation, performance"
+    },
+    "note": {
+      "fr": "Off Biennale du Caire, 2015",
+      "en": "Cairo Off Biennale, 2015"
+    },
+    "statut": "fait",
+    "image": "laundry/le-caire",
+    "source": "site/laundry/2-le-caire/01-tribute-to-shaimaa-al-sabbagh.jpg",
+    "alt": {
+      "fr": "Hommage à Shaimaa al Sabbagh : voiles suspendus dans un jardin du Caire",
+      "en": "Tribute to Shaimaa al Sabbagh: veils hung in a Cairo garden"
+    }
+  },
+  {
+    "num": "III",
+    "id": "naples",
+    "ville": {
+      "fr": "Naples",
+      "en": "Naples"
+    },
+    "pays": {
+      "fr": "Italie",
+      "en": "Italy"
+    },
+    "annee": "2016",
+    "lat": 40.85,
+    "lon": 14.27,
+    "titre": "Deus ex Machina",
+    "avec": {
+      "fr": "avec Giuseppe Zevola · commissaire : Nathalie Heidsieck-de Saint Phalle · Palazzo Spinelli",
+      "en": "with Giuseppe Zevola · curator: Nathalie Heidsieck-de Saint Phalle · Palazzo Spinelli"
+    },
+    "formes": {
+      "fr": "Court-métrage, livre, boîte",
+      "en": "Short film, book, box"
+    },
+    "note": null,
+    "statut": "fait",
+    "image": "laundry/naples",
+    "source": "site/laundry/3-naples/01-box01.jpg",
+    "alt": {
+      "fr": "Deus ex Machina : la boîte de Laundry III ouverte",
+      "en": "Deus ex Machina: the Laundry III box, open"
+    }
+  },
+  {
+    "num": "IV",
+    "id": "tourinnes",
+    "ville": "Tourinnes-la-Grosse",
+    "pays": {
+      "fr": "Belgique",
+      "en": "Belgium"
+    },
+    "annee": "2018",
+    "lat": 50.78,
+    "lon": 4.74,
+    "titre": "Enclos, cet horizon qui nous poursuit",
+    "avec": {
+      "fr": "commissaires : Manu vb Tintoré et JeanF Jans · avec Aljoscha, Christophe Terlinden, Philippe Herbet, Karine Marenne et Messieurs Delmotte, Dries Meddens, Patricia Martin, Joëlle Verstraeten",
+      "en": "curated by Manu vb Tintoré and JeanF Jans · with Aljoscha, Christophe Terlinden, Philippe Herbet, Karine Marenne and Messieurs Delmotte, Dries Meddens, Patricia Martin, Joëlle Verstraeten"
+    },
+    "formes": {
+      "fr": "Festival-résidence, été-automne 2018 : teaser et court-métrage",
+      "en": "Festival residency, summer-autumn 2018: teaser and short film"
+    },
+    "note": {
+      "fr": "53ᵉˢ Fêtes de la Saint-Martin",
+      "en": "53rd Saint Martin festivities"
+    },
+    "statut": "fait",
+    "image": "laundry/tourinnes",
+    "source": "site/laundry/4-tourinnes/02-aljoscha-1.jpg",
+    "alt": {
+      "fr": "Œuvre d’Aljoscha suspendue sous les voûtes de l’église de Tourinnes-la-Grosse",
+      "en": "Work by Aljoscha hanging under the vaults of the Tourinnes-la-Grosse church"
+    },
+    "credit": "Aljoscha"
+  },
+  {
+    "num": "V",
+    "id": "minsk",
+    "ville": "Minsk",
+    "pays": {
+      "fr": "Biélorussie",
+      "en": "Belarus"
+    },
+    "annee": "2020",
+    "lat": 53.9,
+    "lon": 27.56,
+    "titre": "Minskunderstanding",
+    "avec": {
+      "fr": "avec la galerie « Y » · accueil : Valentina Kiselyova et Anna Chistoserdova",
+      "en": "with “Y” Gallery · hosted by Valentina Kiselyova and Anna Chistoserdova"
+    },
+    "formes": {
+      "fr": "Résidence planifiée à l’été 2020, avortée pour cause de révolution… avortée.",
+      "en": "Residency planned for summer 2020, aborted because of a revolution… itself aborted."
+    },
+    "note": null,
+    "statut": "avortee",
+    "image": null,
+    "source": null,
+    "alt": null
+  },
+  {
+    "num": "VI",
+    "id": "igualada",
+    "ville": "Igualada",
+    "pays": {
+      "fr": "Catalogne, Espagne",
+      "en": "Catalonia, Spain"
+    },
+    "annee": "2023-2024",
+    "lat": 41.58,
+    "lon": 1.62,
+    "titre": "Camelia catalana",
+    "avec": {
+      "fr": "avec Vicente Gallego Alcaraz",
+      "en": "with Vicente Gallego Alcaraz"
+    },
+    "formes": {
+      "fr": "Résidence été-automne 2023-2024 · film en construction",
+      "en": "Residency, summer-autumn 2023-2024 · film in progress"
+    },
+    "note": {
+      "fr": "Prolongement à Sabaudia (Rome), 2024",
+      "en": "Extended to Sabaudia (Rome), 2024"
+    },
+    "statut": "encours",
+    "image": null,
+    "source": null,
+    "alt": null
+  }
+]

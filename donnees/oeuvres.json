@@ -1,0 +1,1084 @@
+{
+  "codes": [
+    {
+      "code": "L",
+      "nom": {
+        "fr": "Laundry (suivi d’un numéro)",
+        "en": "Laundry (with a number)"
+      }
+    },
+    {
+      "code": "TR",
+      "nom": {
+        "fr": "Triptyques ou Questions d’époque",
+        "en": "Triptychs, or Questions of the Times"
+      }
+    },
+    {
+      "code": "RS",
+      "nom": {
+        "fr": "Dimanches ou La Recherche du Sujet",
+        "en": "Sundays, or The Search for the Subject"
+      }
+    },
+    {
+      "code": "RM",
+      "nom": {
+        "fr": "Road Map",
+        "en": "Road Map"
+      }
+    },
+    {
+      "code": "RDM",
+      "nom": {
+        "fr": "Russian Diary Moods",
+        "en": "Russian Diary Moods"
+      }
+    },
+    {
+      "code": "Mû",
+      "nom": {
+        "fr": "Müllstücke",
+        "en": "Müllstücke"
+      }
+    },
+    {
+      "code": "CM",
+      "nom": {
+        "fr": "Courts-métrages",
+        "en": "Short films"
+      }
+    },
+    {
+      "code": "Coll",
+      "nom": {
+        "fr": "Collectifs",
+        "en": "Collectives"
+      }
+    },
+    {
+      "code": "Es",
+      "nom": {
+        "fr": "Esquisses",
+        "en": "Sketches"
+      }
+    },
+    {
+      "code": "Os",
+      "nom": {
+        "fr": "One shots, assez nombreux",
+        "en": "One-offs, quite a few"
+      }
+    }
+  ],
+  "phares": [
+    [
+      "retables",
+      "way-out"
+    ],
+    [
+      "pepiniere",
+      "rosa"
+    ],
+    [
+      "retables",
+      "songes"
+    ],
+    [
+      "road-map",
+      "torah"
+    ],
+    [
+      "rdm",
+      "livre"
+    ],
+    [
+      "derive",
+      "floating"
+    ],
+    [
+      "retables",
+      "menu"
+    ],
+    [
+      "pepiniere",
+      "nepenthes"
+    ]
+  ],
+  "series": [
+    {
+      "id": "retables",
+      "code": "TR",
+      "titre": {
+        "fr": "Retables",
+        "en": "Altarpieces"
+      },
+      "sous": {
+        "fr": "Triptyques ou Questions d’époque",
+        "en": "Triptychs, or Questions of the Times"
+      },
+      "technique": {
+        "fr": "Huile, encre de Chine, fusain, radiographies, collages",
+        "en": "Oil, Chinese ink, charcoal, X-rays, collage"
+      },
+      "annees": "2000-2018",
+      "texte": {
+        "fr": [
+          "Ils sont le fruit de visions cinématographiques, inspirées de prises personnelles auprès d’artistes en performance ou de situations rencontrées lors de mes déplacements. Les triptyques fonctionnent tantôt en symbiose séquentielle (un même sujet traité en variant les angles), tantôt par affinités de sens.",
+          "Le regard part du centre vers la périphérie et inversement, le centre étant le commencement et la fin de cet ensemble. Le sacre ou le non-sacre. L’espace laissé entre deux séquences d’un triptyque est celui du regard et de l’imaginaire du spectateur."
+        ],
+        "en": [
+          "They come from cinematic visions, drawn from my own footage of artists in performance or from situations met on my travels. The triptychs work either as a sequential symbiosis (one subject seen from varying angles) or through affinities of meaning.",
+          "The eye travels from the centre to the edges and back, the centre being the beginning and the end of the whole. Consecration, or its absence. The space left between two sequences of a triptych belongs to the viewer’s gaze and imagination."
+        ]
+      },
+      "pdf": "triptyques-synopsis.pdf",
+      "oeuvres": [
+        {
+          "id": "cantico",
+          "titre": "Cantico delle creature",
+          "technique": {
+            "fr": "Huile sur toile (ouvert), fusain sur toile brute (fermé)",
+            "en": "Oil on canvas (open), charcoal on raw canvas (closed)"
+          },
+          "dimensions": {
+            "fr": "260 × 230 cm ouvert, 230 × 140 cm fermé",
+            "en": "260 × 230 cm open, 230 × 140 cm closed"
+          },
+          "l": 260,
+          "h": 230,
+          "annee": "2016-2017",
+          "images": [
+            {
+              "nom": "oeuvres/tr-cantico-ferme",
+              "source": "site/oeuvres/retables/09-cantico-delle-creature-chiuso.jpg",
+              "etat": "ferme",
+              "cadrage": "50% 45%"
+            },
+            {
+              "nom": "oeuvres/tr-cantico-ouvert",
+              "source": "site/oeuvres/retables/08-cantico-delle-creature-aperto.jpg",
+              "etat": "ouvert",
+              "cadrage": "50% 50%"
+            }
+          ]
+        },
+        {
+          "id": "songes",
+          "titre": "Songes de ma voisine de quartier",
+          "technique": {
+            "fr": "Huile sur toile, tirages photo sur bambou, un collage sur bambou",
+            "en": "Oil on canvas, photo prints on bamboo, one collage on bamboo"
+          },
+          "dimensions": null,
+          "annee": "2017",
+          "images": [
+            {
+              "nom": "oeuvres/tr-songes-ferme",
+              "source": "site/oeuvres/retables/02-songes-ferme.jpg",
+              "etat": "ferme"
+            },
+            {
+              "nom": "oeuvres/tr-songes-ouvert",
+              "source": "site/oeuvres/retables/01-songes-de-ma-voisine-ouvert.jpg",
+              "etat": "ouvert"
+            }
+          ]
+        },
+        {
+          "id": "soloists",
+          "titre": "Soloists",
+          "technique": {
+            "fr": "Radiographies, encre de Chine, fusain sur toiles",
+            "en": "X-rays, Chinese ink, charcoal on canvases"
+          },
+          "dimensions": {
+            "fr": "157 × 102 cm",
+            "en": "157 × 102 cm"
+          },
+          "l": 157,
+          "h": 102,
+          "annee": "2017",
+          "images": [
+            {
+              "nom": "oeuvres/tr-soloists",
+              "source": "site/oeuvres/retables/03-soloists.jpg"
+            }
+          ]
+        },
+        {
+          "id": "way-out",
+          "titre": "Way out",
+          "technique": {
+            "fr": "Huile et feuilles d’argent, encre de Chine sur toiles",
+            "en": "Oil and silver leaf, Chinese ink on canvases"
+          },
+          "dimensions": {
+            "fr": "260 × 195 cm",
+            "en": "260 × 195 cm"
+          },
+          "l": 260,
+          "h": 195,
+          "annee": "2000-2016",
+          "images": [
+            {
+              "nom": "oeuvres/tr-way-out",
+              "source": "site/oeuvres/retables/04-way-out.jpg"
+            },
+            {
+              "nom": "oeuvres/tr-way-out-detail",
+              "source": "site/oeuvres/retables/05-way-out-detail.jpg",
+              "detail": true
+            }
+          ]
+        },
+        {
+          "id": "lied",
+          "titre": "Lied von der Erde",
+          "technique": {
+            "fr": "Encre de Chine sur toiles, huile sur toile (centre)",
+            "en": "Chinese ink on canvases, oil on canvas (centre)"
+          },
+          "dimensions": {
+            "fr": "130 × 99,5 cm",
+            "en": "130 × 99.5 cm"
+          },
+          "l": 130,
+          "h": 99.5,
+          "annee": "2016",
+          "images": [
+            {
+              "nom": "oeuvres/tr-lied-von-der-erde",
+              "source": "site/oeuvres/retables/06-lied-von-der-erde.jpg"
+            }
+          ]
+        },
+        {
+          "id": "prolegomenes",
+          "titre": "Prolégomènes à la chute de Rome",
+          "technique": {
+            "fr": "Encre de Chine sur toiles",
+            "en": "Chinese ink on canvases"
+          },
+          "dimensions": {
+            "fr": "116 × 110 cm",
+            "en": "116 × 110 cm"
+          },
+          "l": 116,
+          "h": 110,
+          "annee": "2016",
+          "images": [
+            {
+              "nom": "oeuvres/tr-prolegomenes",
+              "source": "site/oeuvres/retables/07-prolegomenes-chute-de-rome.jpg"
+            }
+          ]
+        },
+        {
+          "id": "eaux-calmes",
+          "titre": "Les eaux calmes",
+          "technique": {
+            "fr": "Huile sur toile (peinture achetée en Russie), journal, tirage photo sur toiles",
+            "en": "Oil on canvas (painting bought in Russia), newspaper, photo print on canvases"
+          },
+          "dimensions": {
+            "fr": "120 × 32 cm",
+            "en": "120 × 32 cm"
+          },
+          "l": 120,
+          "h": 32,
+          "annee": "2016",
+          "images": [
+            {
+              "nom": "oeuvres/tr-eaux-calmes-ferme",
+              "source": "site/oeuvres/retables/11-les-eaux-calmes-ferme.jpg",
+              "etat": "ferme"
+            },
+            {
+              "nom": "oeuvres/tr-eaux-calmes-ouvert",
+              "source": "site/oeuvres/retables/10-les-eaux-calmes.jpg",
+              "etat": "ouvert"
+            }
+          ]
+        },
+        {
+          "id": "kislarod",
+          "titre": "Kislarod",
+          "technique": {
+            "fr": "Huile sur toile, radiographies sur panneaux",
+            "en": "Oil on canvas, X-rays on panels"
+          },
+          "dimensions": {
+            "fr": "126 × 50 cm",
+            "en": "126 × 50 cm"
+          },
+          "l": 126,
+          "h": 50,
+          "annee": "2016",
+          "images": [
+            {
+              "nom": "oeuvres/tr-kislarod",
+              "source": "site/oeuvres/retables/12-kislarod.jpg"
+            }
+          ]
+        },
+        {
+          "id": "visitation",
+          "titre": "Visitation",
+          "technique": {
+            "fr": "Encre de Chine sur toiles, huile sur toile",
+            "en": "Chinese ink on canvases, oil on canvas"
+          },
+          "dimensions": {
+            "fr": "80 × 97 cm",
+            "en": "80 × 97 cm"
+          },
+          "l": 97,
+          "h": 80,
+          "annee": "2016",
+          "images": [
+            {
+              "nom": "oeuvres/tr-visitation",
+              "source": "site/oeuvres/retables/13-visitation.jpg"
+            }
+          ]
+        },
+        {
+          "id": "lumieres",
+          "titre": "Triptyque des Lumières",
+          "technique": {
+            "fr": "Encre de Chine sur toile, fusain et collage sur toiles",
+            "en": "Chinese ink on canvas, charcoal and collage on canvases"
+          },
+          "dimensions": {
+            "fr": "110 × 72,5 cm",
+            "en": "110 × 72.5 cm"
+          },
+          "l": 110,
+          "h": 72.5,
+          "annee": "2017",
+          "images": [
+            {
+              "nom": "oeuvres/tr-lumieres",
+              "source": "site/oeuvres/retables/14-triptyque-des-lumieres.jpg"
+            }
+          ]
+        },
+        {
+          "id": "marine-grecque",
+          "titre": "Marine (école grecque XXIᵉ s.)",
+          "technique": {
+            "fr": "Huile sur toiles",
+            "en": "Oil on canvases"
+          },
+          "dimensions": {
+            "fr": "160 × 38 cm",
+            "en": "160 × 38 cm"
+          },
+          "l": 160,
+          "h": 38,
+          "annee": "2017",
+          "images": [
+            {
+              "nom": "oeuvres/tr-marine-grecque",
+              "source": "site/oeuvres/retables/15-marine-ecole-grecque.jpg"
+            }
+          ]
+        },
+        {
+          "id": "marine-med",
+          "titre": "Marine (école méditerranéenne XXIᵉ s.)",
+          "technique": {
+            "fr": "Huile sur toile et radiographie",
+            "en": "Oil on canvas and X-ray"
+          },
+          "dimensions": {
+            "fr": "75 × 36 cm",
+            "en": "75 × 36 cm"
+          },
+          "l": 75,
+          "h": 36,
+          "annee": null,
+          "images": [
+            {
+              "nom": "oeuvres/tr-marine-med",
+              "source": "site/oeuvres/retables/16-marine-ecole-mediterraneenne.jpg"
+            }
+          ]
+        },
+        {
+          "id": "shaimaa",
+          "titre": "Triptyque Shaimaa al Sabbagh",
+          "technique": {
+            "fr": "Huile, fusain et silicone sur toiles",
+            "en": "Oil, charcoal and silicone on canvases"
+          },
+          "dimensions": null,
+          "annee": "2017",
+          "images": [
+            {
+              "nom": "oeuvres/tr-shaimaa-ferme",
+              "source": "site/oeuvres/retables/18-triptyque-shaimaa-ferme.jpg",
+              "etat": "ferme"
+            },
+            {
+              "nom": "oeuvres/tr-shaimaa-ouvert",
+              "source": "site/oeuvres/retables/17-triptyque-shaimaa-al-sabbagh.jpg",
+              "etat": "ouvert"
+            }
+          ]
+        },
+        {
+          "id": "burenitudes",
+          "titre": "Bur.e.nitudes",
+          "technique": {
+            "fr": "Huile sur toiles, techniques mixtes",
+            "en": "Oil on canvases, mixed media"
+          },
+          "dimensions": {
+            "fr": "35 × 80 cm",
+            "en": "35 × 80 cm"
+          },
+          "l": 80,
+          "h": 35,
+          "annee": "2018",
+          "images": [
+            {
+              "nom": "oeuvres/tr-burenitudes",
+              "source": "site/oeuvres/retables/19-bur-e-nitudes.jpg"
+            }
+          ]
+        },
+        {
+          "id": "burger-queen",
+          "titre": "Burger queen",
+          "technique": {
+            "fr": "Encre de Chine et huile sur toiles",
+            "en": "Chinese ink and oil on canvases"
+          },
+          "dimensions": {
+            "fr": "80 × 110 cm",
+            "en": "80 × 110 cm"
+          },
+          "l": 110,
+          "h": 80,
+          "annee": "2018",
+          "images": [
+            {
+              "nom": "oeuvres/tr-burger-queen",
+              "source": "site/oeuvres/retables/20-burger-queen.jpg"
+            }
+          ]
+        },
+        {
+          "id": "holy-quest",
+          "titre": "Holy quest of…",
+          "technique": {
+            "fr": "Huile sur toile et radiographie",
+            "en": "Oil on canvas and X-ray"
+          },
+          "dimensions": null,
+          "annee": null,
+          "images": [
+            {
+              "nom": "oeuvres/tr-holy-quest",
+              "source": "site/oeuvres/retables/21-holy-quest-of.jpg"
+            }
+          ]
+        },
+        {
+          "id": "menu",
+          "titre": "Menu",
+          "technique": {
+            "fr": "Huile sur panneaux, papier peint et biscuits",
+            "en": "Oil on panels, wallpaper and biscuits"
+          },
+          "dimensions": null,
+          "annee": "2017",
+          "images": [
+            {
+              "nom": "oeuvres/tr-menu-ferme",
+              "source": "site/oeuvres/retables/23-menu-ferme.jpg",
+              "etat": "ferme"
+            },
+            {
+              "nom": "oeuvres/tr-menu-ouvert",
+              "source": "site/oeuvres/retables/22-menu.jpg",
+              "etat": "ouvert"
+            }
+          ]
+        },
+        {
+          "id": "police",
+          "titre": "Police calibrée",
+          "technique": {
+            "fr": "Encre de Chine sur toiles, carton, biscuits",
+            "en": "Chinese ink on canvases, cardboard, biscuits"
+          },
+          "dimensions": null,
+          "annee": "2018",
+          "images": [
+            {
+              "nom": "oeuvres/tr-police-ferme",
+              "source": "site/oeuvres/retables/25-police-calibree-ferme.jpg",
+              "etat": "ferme"
+            },
+            {
+              "nom": "oeuvres/tr-police-ouvert",
+              "source": "site/oeuvres/retables/24-police-calibree.jpg",
+              "etat": "ouvert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pepiniere",
+      "code": null,
+      "titre": {
+        "fr": "Pépinière",
+        "en": "Garden Nursery"
+      },
+      "sous": {
+        "fr": "Sculptures de jardin",
+        "en": "Garden sculptures"
+      },
+      "technique": {
+        "fr": "Inox, corten",
+        "en": "Stainless steel, corten"
+      },
+      "annees": {
+        "fr": "depuis 2005",
+        "en": "since 2005"
+      },
+      "texte": {
+        "fr": [
+          "Des sculptures d’inox et de corten pour jardins et espaces publics, la plupart baptisées de noms latins de plantes : Rosa ‘Lady Plus’, Nepenthes sanguinea, Heracleum mantegazzianum…",
+          "Installées en collections privées à Bruxelles, à Art Nocturne Knokke (2013), square Steurs à Bruxelles (2014), dans les jardins Iweins à Rixensart (2015) et à Kreuzberg, Berlin (Veriditas, 2017)."
+        ],
+        "en": [
+          "Stainless steel and corten sculptures for gardens and public spaces, most of them named after plants in Latin: Rosa ‘Lady Plus’, Nepenthes sanguinea, Heracleum mantegazzianum…",
+          "Installed in private collections in Brussels, at Art Nocturne Knokke (2013), square Steurs in Brussels (2014), in the Iweins gardens in Rixensart (2015) and in Kreuzberg, Berlin (Veriditas, 2017)."
+        ]
+      },
+      "pdf": null,
+      "oeuvres": [
+        {
+          "id": "rosa",
+          "titre": "Rosa ‘Lady Plus’",
+          "technique": {
+            "fr": "Inox, corten",
+            "en": "Stainless steel, corten"
+          },
+          "dimensions": null,
+          "annee": null,
+          "images": [
+            {
+              "nom": "oeuvres/pe-rosa-1",
+              "source": "site/oeuvres/pepiniere/02-rosa-lady-plus.jpg",
+              "cadrage": "50% 60%"
+            },
+            {
+              "nom": "oeuvres/pe-rosa-2",
+              "source": "site/oeuvres/pepiniere/03-rosa-lady-plus.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-rosa-3",
+              "source": "site/oeuvres/pepiniere/04-rosa-lady-plus.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-rosa-4",
+              "source": "site/oeuvres/pepiniere/05-rosa-lady-plus-vue-platanus.jpg"
+            }
+          ]
+        },
+        {
+          "id": "veriditas",
+          "titre": "Veriditas",
+          "technique": {
+            "fr": "Inox, installation",
+            "en": "Stainless steel, installation"
+          },
+          "dimensions": null,
+          "annee": "2017",
+          "lieu": {
+            "fr": "Kreuzberg, Berlin",
+            "en": "Kreuzberg, Berlin"
+          },
+          "images": [
+            {
+              "nom": "oeuvres/pe-veriditas",
+              "source": "site/oeuvres/pepiniere/01-veriditas.jpg"
+            }
+          ]
+        },
+        {
+          "id": "nepenthes",
+          "titre": "Nepenthes sanguinea",
+          "technique": {
+            "fr": "Inox",
+            "en": "Stainless steel"
+          },
+          "dimensions": null,
+          "annee": "2012",
+          "lieu": {
+            "fr": "collection privée, Bruxelles",
+            "en": "private collection, Brussels"
+          },
+          "images": [
+            {
+              "nom": "oeuvres/pe-nepenthes-1",
+              "source": "site/oeuvres/pepiniere/33-nepenthes-sanguinea.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-nepenthes-2",
+              "source": "site/oeuvres/pepiniere/34-nepenthes-sanguinea.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-nepenthes-3",
+              "source": "site/oeuvres/pepiniere/35-nepenthes-sanguinea.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-nepenthes-4",
+              "source": "site/oeuvres/pepiniere/37-nepenthes-sanguinea.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-nepenthes-atelier",
+              "source": "site/oeuvres/pepiniere/31-nepenthes-sanguinea-atelier.jpg"
+            }
+          ]
+        },
+        {
+          "id": "heracleum",
+          "titre": "Heracleum mantegazzianum",
+          "technique": {
+            "fr": "Inox",
+            "en": "Stainless steel"
+          },
+          "dimensions": null,
+          "annee": "2013",
+          "lieu": {
+            "fr": "collection privée, Bruxelles",
+            "en": "private collection, Brussels"
+          },
+          "images": [
+            {
+              "nom": "oeuvres/pe-heracleum-1",
+              "source": "site/oeuvres/pepiniere/27-heracleum-mantegazzianum.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-heracleum-2",
+              "source": "site/oeuvres/pepiniere/29-heracleum-mantegazzianum.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-heracleum-3",
+              "source": "site/oeuvres/pepiniere/30-heracleum-mantegazzianum.jpg"
+            }
+          ]
+        },
+        {
+          "id": "ranunculae",
+          "titre": "Ranunculae",
+          "technique": {
+            "fr": "Inox",
+            "en": "Stainless steel"
+          },
+          "dimensions": null,
+          "annee": null,
+          "images": [
+            {
+              "nom": "oeuvres/pe-ranunculae-1",
+              "source": "site/oeuvres/pepiniere/15-ranunculae.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-ranunculae-2",
+              "source": "site/oeuvres/pepiniere/12-ranunculae.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-ranunculae-3",
+              "source": "site/oeuvres/pepiniere/18-ranunculae.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-ranunculae-4",
+              "source": "site/oeuvres/pepiniere/22-ranuncula.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-ranunculae-5",
+              "source": "site/oeuvres/pepiniere/16-ranunculae.jpg"
+            }
+          ]
+        },
+        {
+          "id": "platanus",
+          "titre": "Platanus dendrinoxis",
+          "technique": {
+            "fr": "Inox",
+            "en": "Stainless steel"
+          },
+          "dimensions": null,
+          "annee": null,
+          "images": [
+            {
+              "nom": "oeuvres/pe-platanus-1",
+              "source": "site/oeuvres/pepiniere/09-platanus-dendrinoxis.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-platanus-2",
+              "source": "site/oeuvres/pepiniere/11-platanus-dendrinoxis.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-platanus-3",
+              "source": "site/oeuvres/pepiniere/10-platanus-dendrinoxis.jpg"
+            }
+          ]
+        },
+        {
+          "id": "neottia",
+          "titre": "Neottia nidus-avis",
+          "technique": {
+            "fr": "Inox, miroir",
+            "en": "Stainless steel, mirror"
+          },
+          "dimensions": null,
+          "annee": null,
+          "images": [
+            {
+              "nom": "oeuvres/pe-neottia-1",
+              "source": "site/oeuvres/pepiniere/24-neottia-nidus-avis.jpg"
+            },
+            {
+              "nom": "oeuvres/pe-neottia-2",
+              "source": "site/oeuvres/pepiniere/26-neottia-detail.jpg",
+              "detail": true
+            },
+            {
+              "nom": "oeuvres/pe-neottia-3",
+              "source": "site/oeuvres/pepiniere/25-neottia.jpg"
+            }
+          ]
+        },
+        {
+          "id": "wisteria",
+          "titre": "Wisteria venusta",
+          "technique": {
+            "fr": "Inox",
+            "en": "Stainless steel"
+          },
+          "dimensions": null,
+          "annee": null,
+          "images": [
+            {
+              "nom": "oeuvres/pe-wisteria",
+              "source": "site/oeuvres/pepiniere/07-wisteria-venusta.jpg"
+            }
+          ]
+        },
+        {
+          "id": "tipula",
+          "titre": "Tipula paludosa",
+          "technique": {
+            "fr": "Inox, miroir",
+            "en": "Stainless steel, mirror"
+          },
+          "dimensions": null,
+          "annee": null,
+          "images": [
+            {
+              "nom": "oeuvres/pe-tipula",
+              "source": "site/oeuvres/pepiniere/06-tipula-paludosa.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "road-map",
+      "code": "RM",
+      "titre": {
+        "fr": "Road Map",
+        "en": "Road Map"
+      },
+      "sous": null,
+      "technique": {
+        "fr": "Vidéo, photo, in-folio, installation",
+        "en": "Video, photo, in-folio, installation"
+      },
+      "annees": "2008",
+      "texte": {
+        "fr": [
+          "Une mission de témoin le long du Mur, en Palestine-Israël : un film tourné de nuit le long du mur, un catalogue et un DVD auto-édités, des photographies et un objet, Untitled (Torah-Qalqylia).",
+          "Montré dans « Toute cruauté est-elle bonne à dire ? », Centrale for Contemporary Art, Bruxelles (2008), puis dans Survival, CAM de Casoria, Naples (2016)."
+        ],
+        "en": [
+          "A witness mission along the Wall in Palestine-Israel: a film shot at night along the wall, a self-published catalogue and DVD, photographs and an object, Untitled (Torah-Qalqylia).",
+          "Shown in “Toute cruauté est-elle bonne à dire ?”, Centrale for Contemporary Art, Brussels (2008), then in Survival, CAM Casoria, Naples (2016)."
+        ]
+      },
+      "pdf": "road-map.pdf",
+      "oeuvres": [
+        {
+          "id": "torah",
+          "titre": "Untitled (Torah-Qalqylia)",
+          "technique": {
+            "fr": "Technique mixte sur impression alu",
+            "en": "Mixed media on aluminium print"
+          },
+          "dimensions": {
+            "fr": "80 × 24 × 40 cm",
+            "en": "80 × 24 × 40 cm"
+          },
+          "l": 80,
+          "h": 40,
+          "annee": null,
+          "images": [
+            {
+              "nom": "oeuvres/rm-torah",
+              "source": "site/oeuvres/road-map/01-torah.jpg"
+            }
+          ]
+        },
+        {
+          "id": "road-map-film",
+          "titre": "Road Map",
+          "film": "road-map",
+          "technique": {
+            "fr": "Court-métrage, MiniDV, 9’11",
+            "en": "Short film, MiniDV, 9’11"
+          },
+          "dimensions": null,
+          "annee": "2008",
+          "images": [
+            {
+              "nom": "films/road-map",
+              "source": "site/films/06-road-map.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rdm",
+      "code": "RDM",
+      "titre": {
+        "fr": "Russian Diary Moods",
+        "en": "Russian Diary Moods"
+      },
+      "sous": null,
+      "technique": {
+        "fr": "Court-métrage, photo, livre d’expédition",
+        "en": "Short film, photo, expedition book"
+      },
+      "annees": "2006-2008",
+      "texte": {
+        "fr": [
+          "Un projet de réconciliation entre vétérans allemands et russes autour de Rjev, en Russie : le film Streitquartett, des photographies et un livre d’expédition publié par le Kuratorium Rsjew Stiftung en 2008, sous la direction d’Ernst Martin Rhein, puis réédité en 2016.",
+          "Exposé à la G. Circle, Bruxelles, en 2014."
+        ],
+        "en": [
+          "A reconciliation project between German and Russian veterans around Rzhev, Russia: the film Streitquartett, photographs and an expedition book published by the Kuratorium Rsjew Stiftung in 2008, edited by Ernst Martin Rhein, and reissued in 2016.",
+          "Shown at G. Circle, Brussels, in 2014."
+        ]
+      },
+      "pdf": "russian-diary-moods-2016.pdf",
+      "oeuvres": [
+        {
+          "id": "livre",
+          "titre": {
+            "fr": "Russian Diary Moods, livre d’expédition",
+            "en": "Russian Diary Moods, expedition book"
+          },
+          "technique": {
+            "fr": "Photographies et textes, édition 2016, 80 pages",
+            "en": "Photographs and texts, 2016 edition, 80 pages"
+          },
+          "dimensions": null,
+          "annee": "2008-2016",
+          "images": [
+            {
+              "nom": "oeuvres/rdm-eglise-neige",
+              "source": "rdm/rdm-eglise-neige.jpg"
+            },
+            {
+              "nom": "oeuvres/rdm-riviere",
+              "source": "rdm/rdm-riviere.jpg"
+            },
+            {
+              "nom": "oeuvres/rdm-maison",
+              "source": "rdm/rdm-maison.jpg"
+            },
+            {
+              "nom": "oeuvres/rdm-arcades",
+              "source": "rdm/rdm-arcades.jpg"
+            },
+            {
+              "nom": "oeuvres/rdm-poteaux-neige",
+              "source": "rdm/rdm-poteaux-neige.jpg"
+            },
+            {
+              "nom": "oeuvres/rdm-gare",
+              "source": "rdm/rdm-gare.jpg"
+            },
+            {
+              "nom": "oeuvres/rdm-village-neige",
+              "source": "rdm/rdm-village-neige.jpg"
+            }
+          ]
+        },
+        {
+          "id": "streitquartett-film",
+          "titre": "Streitquartett",
+          "film": "streitquartett",
+          "technique": {
+            "fr": "Court-métrage, MiniDV, 16’54",
+            "en": "Short film, MiniDV, 16’54"
+          },
+          "dimensions": null,
+          "annee": "2007",
+          "images": [
+            {
+              "nom": "films/streitquartett",
+              "source": "site/films/02-streitquartett.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "derive",
+      "code": null,
+      "titre": {
+        "fr": "Dérive-Dérêve",
+        "en": "Dérive-Dérêve"
+      },
+      "sous": {
+        "fr": "Floating migrants",
+        "en": "Floating migrants"
+      },
+      "technique": {
+        "fr": "Vitraux de déchets plastiques",
+        "en": "Plastic-waste stained glass"
+      },
+      "annees": {
+        "fr": "depuis 2019",
+        "en": "since 2019"
+      },
+      "texte": {
+        "fr": [
+          "Appréhender l’expérience fluide de la dérive. Ou du dé-rêve qui conduit à la rêverie : dérive et dé-rêve flottent ensemble, créés par l’image.",
+          "Le matériau est le plastique, partagé par toute l’humanité dans notre système de production effréné, dont les déchets dérivent à la surface des océans et forment des îles flottantes dévitalisées. Comment ne pas y voir aussi le regard porté sur les exilés, lorsque leur dérive incertaine leur donne la chance d’arriver jusqu’à nos côtes ?"
+        ],
+        "en": [
+          "To grasp the fluid experience of drifting. Or of un-dreaming, which leads to reverie: drift and un-dream float together, created by the image.",
+          "The material is plastic, shared by all humanity in our frantic system of production, whose waste drifts on the surface of the oceans and forms lifeless floating islands. How not to see in it, too, the way we look at exiles, when their uncertain drift gives them the chance to reach our shores?"
+        ]
+      },
+      "pdf": "derive-dereve-synopsis.pdf",
+      "oeuvres": [
+        {
+          "id": "floating",
+          "titre": "Floating migrants",
+          "technique": {
+            "fr": "Installation de vitraux de déchets plastiques, Fondation Josefa",
+            "en": "Plastic-waste stained glass installation, Josefa Foundation"
+          },
+          "dimensions": null,
+          "annee": "2020",
+          "images": [
+            {
+              "nom": "oeuvres/dd-floating-1",
+              "source": "site/oeuvres/derive-dereve/03-dd03.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-floating-2",
+              "source": "site/oeuvres/derive-dereve/01-dd01.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-floating-3",
+              "source": "site/oeuvres/derive-dereve/04-dd05.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-floating-4",
+              "source": "site/oeuvres/derive-dereve/02-dd02.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-floating-5",
+              "source": "site/oeuvres/derive-dereve/05-dd04.jpg"
+            }
+          ]
+        },
+        {
+          "id": "vitrail",
+          "titre": {
+            "fr": "Détails de vitrail",
+            "en": "Stained-glass details"
+          },
+          "technique": {
+            "fr": "Déchets plastiques en vitrail",
+            "en": "Plastic waste as stained glass"
+          },
+          "dimensions": null,
+          "annee": {
+            "fr": "depuis 2019",
+            "en": "since 2019"
+          },
+          "images": [
+            {
+              "nom": "oeuvres/dd-vitrail-1",
+              "source": "site/oeuvres/derive-dereve/07-dd12-vitrail.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-vitrail-2",
+              "source": "site/oeuvres/derive-dereve/06-dd13-vitrail.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-vitrail-3",
+              "source": "site/oeuvres/derive-dereve/09-dd10-vitrail.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-vitrail-4",
+              "source": "site/oeuvres/derive-dereve/10-dd09-vitrail.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-vitrail-5",
+              "source": "site/oeuvres/derive-dereve/08-dd11-vitrail.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-vitrail-6",
+              "source": "site/oeuvres/derive-dereve/13-dd06-vitrail.jpg"
+            }
+          ]
+        },
+        {
+          "id": "home-window",
+          "titre": "Home window",
+          "technique": {
+            "fr": "Vitrail de déchets plastiques",
+            "en": "Plastic-waste stained glass"
+          },
+          "dimensions": null,
+          "annee": null,
+          "images": [
+            {
+              "nom": "oeuvres/dd-home-window-1",
+              "source": "site/oeuvres/derive-dereve/14-home-window.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-home-window-2",
+              "source": "site/oeuvres/derive-dereve/15-home-window.jpg"
+            },
+            {
+              "nom": "oeuvres/dd-home-window-3",
+              "source": "site/oeuvres/derive-dereve/16-home-window-detail.jpg",
+              "detail": true
+            },
+            {
+              "nom": "oeuvres/dd-home-window-4",
+              "source": "site/oeuvres/derive-dereve/17-home-window-detail.jpg",
+              "detail": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

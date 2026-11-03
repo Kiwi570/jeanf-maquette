@@ -1,0 +1,33 @@
+{
+  "parcours": [
+    { "quand": "°1961", "quoi": { "fr": "Naissance à Anvers. Vit et travaille à Bruxelles.", "en": "Born in Antwerp. Lives and works in Brussels." } },
+    { "quand": { "fr": "Études", "en": "Studies" }, "quoi": { "fr": "Droit (Saint-Louis, Bruxelles). Licence en archéologie et histoire de l’art (UCL, Louvain-la-Neuve).", "en": "Law (Saint-Louis, Brussels). Degree in archaeology and art history (UCL, Louvain-la-Neuve)." } },
+    { "quand": { "fr": "Spécialisations", "en": "Further training" }, "quoi": { "fr": "Histoire de l’architecture palladienne, Istituto Andrea Palladio, Vicence. Conservation et restauration de peintures murales, Florence. Techniques de restauration de l’art moderne, WZK, Düsseldorf. Techniques anciennes de maçonnerie et de peinture murale, San Servolo, Venise. Techniques appliquées du bâti ancien, Brera, Milan.", "en": "History of Palladian architecture, Istituto Andrea Palladio, Vicenza. Conservation and restoration of mural paintings, Florence. Modern art restoration techniques, WZK, Düsseldorf. Ancient masonry and mural painting techniques, San Servolo, Venice. Applied techniques of historic building, Brera, Milan." } },
+    { "quand": "1996-1999", "quoi": { "fr": "Académie des beaux-arts d’Ixelles : sculpture et dessin.", "en": "Ixelles Academy of Fine Arts: sculpture and drawing." } },
+    { "quand": "1990-2000", "quoi": { "fr": "Indépendant : restauration d’œuvres anciennes et contemporaines, techniques appliquées sur des bâtiments anciens et modernes (Allemagne, Italie, France, Belgique), design et intérieurs. Professeur invité au Collège des architectes de Córdoba (Argentine).", "en": "Freelance: restoration of ancient and contemporary works, applied techniques on ancient and modern buildings (Germany, Italy, France, Belgium), design and interiors. Guest teacher at the Architects’ College, Córdoba (Argentina)." } },
+    { "quand": "2000", "quoi": { "fr": "Salzburger Sommerakademie : vidéo, « Ausdruck des Privaten », avec Ellen Cantor. Se consacre désormais entièrement à son travail d’artiste.", "en": "Salzburger Sommerakademie: video, “Ausdruck des Privaten”, with Ellen Cantor. From then on, works full time as an artist." } },
+    { "quand": "2006", "quoi": { "fr": "Salzburger Sommerakademie : atelier média avec Shirin Neshat et Shoja Azari.", "en": "Salzburger Sommerakademie: media workshop with Shirin Neshat and Shoja Azari." } },
+    { "quand": "2009", "quoi": { "fr": "Salzburger Sommerakademie : dessin élargi avec Lia et Dan Perjovschi.", "en": "Salzburger Sommerakademie: expanded drawing with Lia and Dan Perjovschi." } },
+    { "quand": "2010-2011", "quoi": { "fr": "Brussels Playhouse : méthode Meisner et direction d’acteurs, avec Larry Silverberg et Catherine Zavlav.", "en": "Brussels Playhouse: Meisner technique and directing, with Larry Silverberg and Catherine Zavlav." } }
+  ],
+  "bibliographie": [
+    { "annee": "1996", "texte": { "fr": "Uni Dufour, un projet pour un bicentenaire, D. Hentsch & Cie, Genève", "en": "Uni Dufour, a project for a bicentenary, D. Hentsch & Cie, Geneva" } },
+    { "annee": "2001", "texte": { "fr": "3-1=3, dans Media 10/10, 23ᵉ Festival du court métrage, Namur", "en": "3-1=3, in Media 10/10, 23rd Short Film Festival, Namur" } },
+    { "annee": "2005", "texte": { "fr": "Lettre d’une prostituée à sa mère, dans Néon Nord (Projet Rousseau, Espace P), Bruxelles", "en": "Lettre d’une prostituée à sa mère, in Néon Nord (Projet Rousseau, Espace P), Brussels" } },
+    { "annee": "2005", "texte": { "fr": "Lettre d’une prostituée à sa mère, Argos Arts, Bruxelles", "en": "Lettre d’une prostituée à sa mère, Argos Arts, Brussels" } },
+    { "annee": "2007", "texte": { "fr": "Through the looking glass, avec P. et M.-F. Martin, catalogue Bozar Expo", "en": "Through the looking glass, with P. and M.-F. Martin, Bozar Expo catalogue" } },
+    { "annee": "2008", "texte": { "fr": "Russian Diary Moods, Ein Versöhnungsprojekt zwischen Deutschen/Russischen Veteranen, Kuratorium Rsjew Stiftung Verlag, dir. Ernst Martin Rhein, Gütersloh-Rjev", "en": "Russian Diary Moods, Ein Versöhnungsprojekt zwischen Deutschen/Russischen Veteranen, Kuratorium Rsjew Stiftung Verlag, ed. Ernst Martin Rhein, Gütersloh-Rzhev" } },
+    { "annee": "2008", "texte": { "fr": "Road Map, catalogue et DVD auto-édités d’une mission de témoin le long du Mur, Palestine-Israël", "en": "Road Map, self-published catalogue and DVD of a witness mission along the Wall, Palestine-Israel" } },
+    { "annee": "2008", "texte": { "fr": "Road Map, dans « Toute cruauté est-elle bonne à dire ? », Centrale for Contemporary Art, Bruxelles", "en": "Road Map, in “Toute cruauté est-elle bonne à dire ?”, Centrale for Contemporary Art, Brussels" } },
+    { "annee": "2009", "texte": { "fr": "Forget me not(e), dans « Passe mémoire », Fondation Famawiwi, éd. Mardaga", "en": "Forget me not(e), in “Passe mémoire”, Famawiwi Foundation, Mardaga" } },
+    { "annee": "2011", "texte": { "fr": "222 autobiographies de Robert Kaplan, Kaplan’s Project II, Naples-Paris", "en": "222 autobiographies de Robert Kaplan, Kaplan’s Project II, Naples-Paris" } },
+    { "annee": "2011-2017", "texte": { "fr": "Chronique du rattachement de la Belgique au Congo, Collectif Manifestement, éd. Maelström", "en": "Chronique du rattachement de la Belgique au Congo, Collectif Manifestement, Maelström" } },
+    { "annee": "2017", "texte": { "fr": "Carte blanche sur fond noir, collectif, Laurent d’Ursel, Similix Éditeur", "en": "Carte blanche sur fond noir, collective, Laurent d’Ursel, Similix" } },
+    { "annee": "", "texte": { "fr": "Divers catalogues d’art et de foires", "en": "Various art and fair catalogues" } }
+  ],
+  "avec": [
+    "Joëlle Verstraeten", "Y. Palix", "Marwa Benhalim", "Hagar Masoud", "Sama Waly", "Giuseppe Zevola", "Nathalie Heidsieck-de Saint Phalle",
+    "Manu vb Tintoré", "Aljoscha", "Christophe Terlinden", "Philippe Herbet", "Karine Marenne", "Messieurs Delmotte", "Dries Meddens", "Patricia Martin",
+    "Eric Brücher", "Vicente Gallego Alcaraz", "NONO_C", "Dan Perjovschi", "Laurent d’Ursel", "Collectif Manifestement", "John Barret"
+  ]
+}

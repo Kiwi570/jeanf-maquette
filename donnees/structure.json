@@ -1,0 +1,16 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "JeanF Jans",
+  "alternateName": "JeanF",
+  "url": "https://jeanf-maquette.vercel.app/",
+  "jobTitle": { "fr": "Artiste polymedia", "en": "Polymedia artist" },
+  "description": { "fr": "Artiste polymedia né à Anvers en 1961, vivant et travaillant à Bruxelles : triptyques, sculptures de jardin, vitraux de déchets plastiques, courts-métrages et résidences Laundry.", "en": "Polymedia artist born in Antwerp in 1961, living and working in Brussels: triptychs, garden sculptures, plastic-waste stained glass, short films and Laundry residencies." },
+  "birthDate": "1961",
+  "birthPlace": { "@type": "Place", "name": "Antwerpen" },
+  "homeLocation": { "@type": "Place", "name": { "fr": "Bruxelles", "en": "Brussels" } },
+  "email": "mailto:jeanfjans@gmail.com",
+  "telephone": "+32474987035",
+  "award": "Remi Platinum Award, WorldFest-Houston 2014 (Still Lives)",
+  "sameAs": ["https://www.facebook.com/facquodvis"]
+}

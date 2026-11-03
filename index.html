@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-gabarit="accueil" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JeanF Jans, Nomade Polymedia : peinture, sculpture, films</title>
+<meta name="description" content="Artiste polymedia installé à Bruxelles : triptyques, sculptures de jardin, vitraux de déchets plastiques, courts-métrages et résidences Laundry.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://jeanf-maquette.vercel.app/">
+<link rel="alternate" hreflang="fr" href="https://jeanf-maquette.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://jeanf-maquette.vercel.app/en">
+<link rel="alternate" hreflang="x-default" href="https://jeanf-maquette.vercel.app/">
+<style>:root{--fond:#e4e0d8;--texte:#161514;--voile-fond:#161514;--ouverture-fond:#e4e0d8;--menu-fond:#161514}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/archivo-latin-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#e4e0d8">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JeanF Jans">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:title" content="JeanF Jans, Nomade Polymedia : peinture, sculpture, films">
+<meta property="og:description" content="Artiste polymedia installé à Bruxelles : triptyques, sculptures de jardin, vitraux de déchets plastiques, courts-métrages et résidences Laundry.">
+<meta property="og:url" content="https://jeanf-maquette.vercel.app/">
+<meta property="og:image" content="https://jeanf-maquette.vercel.app/assets/partage/accueil-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="JeanF, Nomade Polymedia, et le triptyque Cantico delle creature ouvert">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"JeanF Jans","alternateName":"JeanF","url":"https://jeanf-maquette.vercel.app/","jobTitle":"Artiste polymedia","description":"Artiste polymedia né à Anvers en 1961, vivant et travaillant à Bruxelles : triptyques, sculptures de jardin, vitraux de déchets plastiques, courts-métrages et résidences Laundry.","birthDate":"1961","birthPlace":{"@type":"Place","name":"Antwerpen"},"homeLocation":{"@type":"Place","name":"Bruxelles"},"email":"mailto:jeanfjans@gmail.com","telephone":"+32474987035","award":"Remi Platinum Award, WorldFest-Houston 2014 (Still Lives)","sameAs":["https://www.facebook.com/facquodvis"]}</script>
+</head>
+<body id="haut" class="page-accueil">
+<div data-voile aria-hidden="true"><span class="voile-joint"></span><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="56" height="56"><span data-voile-libelle>Accueil</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <span class="ouverture-joints"><i></i><i></i><i></i><i></i><i></i></span>
+  <span class="ouverture-minutage" data-intro-minutage>00:00:00:00</span>
+  <div class="ouverture-centre">
+    <div class="ouverture-blocs"><span class="bloc" style="grid-column:2;grid-row:7;--i:0"></span><span class="bloc" style="grid-column:3;grid-row:7;--i:1"></span><span class="bloc" style="grid-column:7;grid-row:7;--i:2"></span><span class="bloc" style="grid-column:8;grid-row:7;--i:3"></span><span class="bloc" style="grid-column:9;grid-row:7;--i:4"></span><span class="bloc" style="grid-column:12;grid-row:7;--i:5"></span><span class="bloc" style="grid-column:13;grid-row:7;--i:6"></span><span class="bloc" style="grid-column:14;grid-row:7;--i:7"></span><span class="bloc" style="grid-column:16;grid-row:7;--i:8"></span><span class="bloc" style="grid-column:19;grid-row:7;--i:9"></span><span class="bloc" style="grid-column:21;grid-row:7;--i:10"></span><span class="bloc" style="grid-column:1;grid-row:6;--i:11"></span><span class="bloc" style="grid-column:4;grid-row:6;--i:12"></span><span class="bloc" style="grid-column:6;grid-row:6;--i:13"></span><span class="bloc" style="grid-column:11;grid-row:6;--i:14"></span><span class="bloc" style="grid-column:14;grid-row:6;--i:15"></span><span class="bloc" style="grid-column:16;grid-row:6;--i:16"></span><span class="bloc" style="grid-column:19;grid-row:6;--i:17"></span><span class="bloc" style="grid-column:21;grid-row:6;--i:18"></span><span class="bloc" style="grid-column:4;grid-row:5;--i:19"></span><span class="bloc" style="grid-column:6;grid-row:5;--i:20"></span><span class="bloc" style="grid-column:7;grid-row:5;--i:21"></span><span class="bloc" style="grid-column:8;grid-row:5;--i:22"></span><span class="bloc" style="grid-column:9;grid-row:5;--i:23"></span><span class="bloc" style="grid-column:12;grid-row:5;--i:24"></span><span class="bloc" style="grid-column:13;grid-row:5;--i:25"></span><span class="bloc" style="grid-column:14;grid-row:5;--i:26"></span><span class="bloc" style="grid-column:16;grid-row:5;--i:27"></span><span class="bloc" style="grid-column:19;grid-row:5;--i:28"></span><span class="bloc" style="grid-column:21;grid-row:5;--i:29"></span><span class="bloc" style="grid-column:4;grid-row:4;--i:30"></span><span class="bloc" style="grid-column:6;grid-row:4;--i:31"></span><span class="bloc" style="grid-column:9;grid-row:4;--i:32"></span><span class="bloc" style="grid-column:14;grid-row:4;--i:33"></span><span class="bloc" style="grid-column:16;grid-row:4;--i:34"></span><span class="bloc" style="grid-column:19;grid-row:4;--i:35"></span><span class="bloc" style="grid-column:21;grid-row:4;--i:36"></span><span class="bloc" style="grid-column:22;grid-row:4;--i:37"></span><span class="bloc" style="grid-column:23;grid-row:4;--i:38"></span><span class="bloc" style="grid-column:4;grid-row:3;--i:39"></span><span class="bloc" style="grid-column:7;grid-row:3;--i:40"></span><span class="bloc" style="grid-column:8;grid-row:3;--i:41"></span><span class="bloc" style="grid-column:12;grid-row:3;--i:42"></span><span class="bloc" style="grid-column:13;grid-row:3;--i:43"></span><span class="bloc" style="grid-column:16;grid-row:3;--i:44"></span><span class="bloc" style="grid-column:17;grid-row:3;--i:45"></span><span class="bloc" style="grid-column:18;grid-row:3;--i:46"></span><span class="bloc" style="grid-column:21;grid-row:3;--i:47"></span><span class="bloc" style="grid-column:4;grid-row:2;--i:48"></span><span class="bloc" style="grid-column:21;grid-row:2;--i:49"></span><span class="bloc" style="grid-column:2;grid-row:1;--i:50"></span><span class="bloc" style="grid-column:3;grid-row:1;--i:51"></span><span class="bloc" style="grid-column:4;grid-row:1;--i:52"></span><span class="bloc" style="grid-column:21;grid-row:1;--i:53"></span><span class="bloc" style="grid-column:22;grid-row:1;--i:54"></span><span class="bloc" style="grid-column:23;grid-row:1;--i:55"></span><span class="bloc" style="grid-column:24;grid-row:1;--i:56"></span></div>
+    <p class="ouverture-etiquette"><span>Nomade Polymedia</span><span>Bruxelles</span></p>
+  </div>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil" aria-current="page">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span class="entete-nom">JeanF</span>
+    </a>
+    <span class="minutage" data-minutage aria-hidden="true" data-audit-ignorer>00:00:00:00</span>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/oeuvres" data-libelle="Œuvres">Œuvres</a></li><li><a href="/films" data-libelle="Films">Films</a></li><li><a href="/a-propos" data-libelle="À propos">À propos</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-langue" href="/en" hreflang="en" lang="en" data-langue="en" aria-label="English version">en</a>
+      <a class="bouton bouton--entete" href="/a-propos#contact" data-libelle="À propos" data-magnetique>Écrire à JeanF</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><span class="menu-num" aria-hidden="true">01</span><a href="/" class="menu-lien" data-libelle="Accueil" aria-current="page">Accueil</a></li><li style="--i:1"><span class="menu-num" aria-hidden="true">02</span><a href="/oeuvres" class="menu-lien" data-libelle="Œuvres">Œuvres</a></li><li style="--i:2"><span class="menu-num" aria-hidden="true">03</span><a href="/films" class="menu-lien" data-libelle="Films">Films</a></li><li style="--i:3"><span class="menu-num" aria-hidden="true">04</span><a href="/a-propos" class="menu-lien" data-libelle="À propos">À propos</a></li></ul>
+  <div class="menu-bas">
+    <p><a class="bouton" href="/a-propos#contact" data-libelle="À propos">Écrire à JeanF</a></p>
+    <p class="menu-contact"><a href="mailto:jeanfjans@gmail.com">jeanfjans@gmail.com</a><br><a href="tel:+32474987035">+32 474 98 70 35</a></p>
+    <p><a class="entete-langue entete-langue--menu" href="/en" hreflang="en" lang="en" data-langue="en">English version</a></p>
+    <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+  </div>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="hero ecran" id="debut">
+  <figure class="media hero-fond" data-grok style="--cadrage:50% 40%;--cadrage-mobile:50% 40%;--teinte:#b2a99f;--teinte-mobile:#b1aaa1">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/accueil-mur-mobile-640.webp 640w, /assets/images/grok/accueil-mur-mobile-784.webp 784w" sizes="100vw">
+    <img src="/assets/images/grok/accueil-mur-1168.webp" srcset="/assets/images/grok/accueil-mur-640.webp 640w, /assets/images/grok/accueil-mur-1168.webp 1168w" sizes="100vw" alt="" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="hero-grille">
+    <div class="hero-texte">
+      <h1 class="hero-titre"><span class="hero-nom" data-anime="gsap">JeanF</span><span class="visuellement-cache">, Nomade Polymedia</span></h1>
+      <p class="hero-etiquette" data-anime="gsap"><span class="etiquette-pastille" aria-hidden="true"></span><span>JeanF Jans · Nomade Polymedia · Bruxelles</span></p>
+      <p class="hero-intro" data-anime="gsap">Peintures, sculptures, vitraux, films et résidences, accrochés pan après pan pour former un seul mur.</p>
+      <p class="hero-actions" data-anime="gsap">
+        <a href="/oeuvres" class="bouton" data-libelle="Œuvres" data-action-principale data-magnetique>Parcourir le mur</a>
+        <a href="/films" class="bouton bouton--contour" data-libelle="Films">Voir les films</a>
+      </p>
+      <p class="hero-info" data-info-cle data-anime="gsap">Dernière résidence : Laundry VI, Igualada, 2023-2024</p>
+    </div>
+    <figure class="hero-oeuvre" data-anime="gsap">
+      <div class="accroche volets" data-volets data-etat="ferme" style="--ratio:1.3833;--ratio-ferme:0.7107">
+  <div class="volet volet--ouvert"><figure class="media media--oeuvre " style="--cadrage:50% 50%;aspect-ratio:1920 / 1388;--teinte:#696456">
+  <picture>
+    <img src="/assets/images/oeuvres/tr-cantico-ouvert-1280.webp" srcset="/assets/images/oeuvres/tr-cantico-ouvert-640.webp 640w, /assets/images/oeuvres/tr-cantico-ouvert-1280.webp 1280w, /assets/images/oeuvres/tr-cantico-ouvert-1920.webp 1920w" sizes="(max-width: 760px) 70vw, 34vw" alt="Cantico delle creature, ouvert" width="1280" height="925" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure></div>
+  <div class="volet volet--ferme" data-ephemere><figure class="media media--oeuvre " style="--cadrage:50% 45%;aspect-ratio:1410 / 1984;--teinte:#8a7a57">
+  <picture>
+    <img src="/assets/images/oeuvres/tr-cantico-ferme-1280.webp" srcset="/assets/images/oeuvres/tr-cantico-ferme-640.webp 640w, /assets/images/oeuvres/tr-cantico-ferme-1280.webp 1280w, /assets/images/oeuvres/tr-cantico-ferme-1410.webp 1410w" sizes="(max-width: 760px) 70vw, 34vw" alt="Cantico delle creature, fermé" width="1280" height="1801" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure></div>
+</div>
+<button type="button" class="volets-bouton" data-volets-bouton aria-pressed="false" id="volets-hero" data-libelle-ouvrir="Ouvrir les volets" data-libelle-fermer="Fermer les volets"><span class="volets-icone" aria-hidden="true"></span><span data-libelle-bouton>Ouvrir les volets</span><span class="visuellement-cache"> : Cantico delle creature</span></button>
+      <figcaption><p class="etiquette " data-tampon>
+  <span class="etiquette-code" title="Triptyques ou Questions d’époque">TR</span>
+  <span class="etiquette-texte"><span class="etiquette-titre">Cantico delle creature</span>
+  <span class="etiquette-ligne">2016-2017 · 260 × 230 cm ouvert, 230 × 140 cm fermé</span><span class="etiquette-ligne">Huile sur toile (ouvert), fusain sur toile brute (fermé)</span></span>
+</p></figcaption>
+    </figure>
+  </div>
+</section>
+<section class="manifeste" id="manifeste">
+  <div class="conteneur manifeste-grille">
+    <div class="manifeste-cote">
+      <h2 class="titre-section" data-decoupe>Mauerstücke</h2>
+      <p class="surtitre">Pans de mur</p>
+      <div class="stuck" data-stuck>
+        <p class="stuck-mot" lang="de"><span class="stuck-avant">Müll</span><span class="stuck-fin">stück</span><span class="stuck-glose" lang="fr">relief de palette, déchets</span></p><p class="stuck-mot" lang="de"><span class="stuck-avant">Kurz</span><span class="stuck-fin">stück</span><span class="stuck-glose" lang="fr">court-métrage</span></p><p class="stuck-mot" lang="de"><span class="stuck-avant">Skulp</span><span class="stuck-fin stuck-fin--court">tück</span><span class="stuck-glose" lang="fr">pièce montée</span></p><p class="stuck-mot" lang="de"><span class="stuck-avant">Bild</span><span class="stuck-fin">stück</span><span class="stuck-glose" lang="fr">image peinte, photographiée, imprimée</span></p>
+      </div>
+      <figure class="media manifeste-media" data-grok style="--cadrage:50% 50%;--teinte:#bfb5a6">
+  <picture>
+    <img src="/assets/images/grok/joints-784.webp" srcset="/assets/images/grok/joints-640.webp 640w, /assets/images/grok/joints-784.webp 784w" sizes="(max-width: 760px) 100vw, 30vw" alt="Deux pans de plâtre qui se rejoignent le long d’un joint" width="784" height="1168" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+    </div>
+    <div class="manifeste-texte">
+      <p class="manifeste-p manifeste-p--grand" data-anime>MAUERSTÜCKE peut s’entendre comme le diorama d’une bataille intérieure dans la guerre des mondes, des concepts, de l’implosion des sens et des perceptions qui font de chacun de nous une sorte de Wunderkammer ambulant d’idées qui s’entrechoquent… C’est l’assise d’une manière de construire et d’habiter un lieu, une esthétique dans le(a)quel(le) s’étireraient le temps, l’espace et les profondeurs. Une affaire de territoires, en somme.</p>
+      <p class="manifeste-p" data-anime>MAUERSTÜCKE sont une sélection d’« antiquités » mêlées à des travaux plus contemporains, agencés selon des affinités de sens ou d’affects que le regard recueille dans son parcours à travers des publications variées. Chaque pièce hypercontextualisée au départ est mise à l’épreuve d’un décloisonnement inédit pour elle par le voisinage immédiat, tantôt d’un relief de palette (Müllstück), tantôt d’un court-métrage (Kurzstück), d’une pièce montée (Skulptück) ou d’une image peinte, photographiée, imprimée (Bildstück)… le tout formant un pan de mur qui aura son caractère propre dans le défilement de pans qui lui précèdent ou lui succèdent, le tout formant un seul mur. Un peu comme le processus de montage « fait » le film. En somme, le (pan de) mur fait œuvre.</p>
+      <p class="manifeste-p" data-anime>MAUERSTÜCKE imagine le geste du collectionneur, avec ce côté poétique dans la construction de sa collection (premières esquisses, commencement d’une série de style défini, première expédition…) ; une scénographie émerge au fur et à mesure d’une sélection de travaux tantôt « figuratifs », tantôt « abstraits », pris dans la nasse de façon aléatoire ; la mise en perspective sera immanquablement enrichie par le regard extérieur invité à reconstituer ou alimenter sa propre guerre civile. Une suggestion d’échos, en somme.</p>
+      <p class="manifeste-note" data-anime>Mauerstücke : de l’allemand, pans de mur ; ici, plutôt des pièces accrochées au mur.<br>Texte de JeanF Jans. Traduction anglaise : John Barret.</p>
+      <div class="codes" data-anime>
+        <p class="codes-titre">Code des étiquettes</p>
+        <ul class="codes-liste"><li><span class="etiquette-code">L</span> Laundry (suivi d’un numéro)</li><li><span class="etiquette-code">TR</span> Triptyques ou Questions d’époque</li><li><span class="etiquette-code">RS</span> Dimanches ou La Recherche du Sujet</li><li><span class="etiquette-code">RM</span> Road Map</li><li><span class="etiquette-code">RDM</span> Russian Diary Moods</li><li><span class="etiquette-code">Mû</span> Müllstücke</li><li><span class="etiquette-code">CM</span> Courts-métrages</li><li><span class="etiquette-code">Coll</span> Collectifs</li><li><span class="etiquette-code">Es</span> Esquisses</li><li><span class="etiquette-code">Os</span> One shots, assez nombreux</li></ul>
+        <p class="codes-texte">Quand l’artiste en a défini une, l’étiquette de la pièce porte l’abréviation de la démarche à laquelle elle appartient.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mur ecran epingle" id="mur" data-entete-cache>
+  <div class="mur-tete conteneur">
+    <h2 class="titre-section">Le mur</h2>
+    <p>Huit pièces tirées des cinq séries. Les triptyques ouvrent leurs volets en passant au centre.</p>
+  </div>
+  <div class="piste mur-piste" data-galerie tabindex="0" role="region" aria-label="Le mur, défilement horizontal">
+    <article class="carte-oeuvre" data-serie="retables" data-code="TR" data-titre="Way out" style="--ratio:1.2743;--echelle:1.000">
+  <div class="carte-oeuvre-mur">
+    <div class="accroche" style="--ratio:1.2743"><figure class="media media--oeuvre " style="--cadrage:50% 50%;aspect-ratio:1417 / 1112;--teinte:#75736f">
+  <picture>
+    <img src="/assets/images/oeuvres/tr-way-out-1280.webp" srcset="/assets/images/oeuvres/tr-way-out-640.webp 640w, /assets/images/oeuvres/tr-way-out-1280.webp 1280w, /assets/images/oeuvres/tr-way-out-1417.webp 1417w" sizes="(max-width: 760px) 78vw, 34vw" alt="Way out" width="1280" height="1004" loading="lazy" decoding="async">
+  </picture>
+</figure><p class="carte-oeuvre-nb">2 photos</p></div>
+    <a href="/oeuvres#oeuvre-way-out" class="carte-lien" data-libelle="Œuvres"><span class="visuellement-cache">Agrandir : Way out</span></a>
+  </div>
+  <p class="etiquette " data-tampon>
+  <span class="etiquette-code" title="Triptyques ou Questions d’époque">TR</span>
+  <span class="etiquette-texte"><span class="etiquette-titre">Way out</span>
+  <span class="etiquette-ligne">2000-2016 · 260 × 195 cm</span></span>
+</p>
+</article><span class="coupe" aria-hidden="true"><i></i></span><article class="carte-oeuvre" data-serie="pepiniere" data-code="" data-titre="Rosa ‘Lady Plus’" style="--ratio:1.506;--echelle:0.860">
+  <div class="carte-oeuvre-mur">
+    <div class="accroche" style="--ratio:1.506"><figure class="media media--oeuvre " style="--cadrage:50% 60%;aspect-ratio:1134 / 753;--teinte:#364024">
+  <picture>
+    <img src="/assets/images/oeuvres/pe-rosa-1-1134.webp" srcset="/assets/images/oeuvres/pe-rosa-1-640.webp 640w, /assets/images/oeuvres/pe-rosa-1-1134.webp 1134w" sizes="(max-width: 760px) 78vw, 34vw" alt="Rosa ‘Lady Plus’" width="1134" height="753" loading="lazy" decoding="async">
+  </picture>
+</figure><p class="carte-oeuvre-nb">4 photos</p></div>
+    <a href="/oeuvres#oeuvre-rosa" class="carte-lien" data-libelle="Œuvres"><span class="visuellement-cache">Agrandir : Rosa ‘Lady Plus’</span></a>
+  </div>
+  <p class="etiquette " data-tampon>
+  <span class="etiquette-texte"><span class="etiquette-titre">Rosa ‘Lady Plus’</span>
+  <span class="etiquette-ligne"><span class="a-completer a-completer--etiquette">année et dimensions à compléter</span></span></span>
+</p>
+</article><span class="coupe" aria-hidden="true"><i></i></span><article class="carte-oeuvre" data-serie="retables" data-code="TR" data-titre="Songes de ma voisine de quartier" style="--ratio:2.2248;--echelle:0.860">
+  <div class="carte-oeuvre-mur">
+    <div class="accroche volets" data-volets data-etat="ferme" style="--ratio:2.2248;--ratio-ferme:1.3052">
+  <div class="volet volet--ouvert"><figure class="media media--oeuvre " style="--cadrage:50% 50%;aspect-ratio:1920 / 863;--teinte:#ac9c81">
+  <picture>
+    <img src="/assets/images/oeuvres/tr-songes-ouvert-1280.webp" srcset="/assets/images/oeuvres/tr-songes-ouvert-640.webp 640w, /assets/images/oeuvres/tr-songes-ouvert-1280.webp 1280w, /assets/images/oeuvres/tr-songes-ouvert-1920.webp 1920w" sizes="(max-width: 760px) 78vw, 34vw" alt="Songes de ma voisine de quartier, ouvert" width="1280" height="575" loading="lazy" decoding="async">
+  </picture>
+</figure></div>
+  <div class="volet volet--ferme" data-ephemere><figure class="media media--oeuvre " style="--cadrage:50% 50%;aspect-ratio:1920 / 1471;--teinte:#c7a877">
+  <picture>
+    <img src="/assets/images/oeuvres/tr-songes-ferme-1280.webp" srcset="/assets/images/oeuvres/tr-songes-ferme-640.webp 640w, /assets/images/oeuvres/tr-songes-ferme-1280.webp 1280w, /assets/images/oeuvres/tr-songes-ferme-1920.webp 1920w" sizes="(max-width: 760px) 78vw, 34vw" alt="Songes de ma voisine de quartier, fermé" width="1280" height="981" loading="lazy" decoding="async">
+  </picture>
+</figure></div>
+</div>
+<button type="button" class="volets-bouton" data-volets-bouton aria-pressed="false" data-libelle-ouvrir="Ouvrir les volets" data-libelle-fermer="Fermer les volets"><span class="volets-icone" aria-hidden="true"></span><span data-libelle-bouton>Ouvrir les volets</span><span class="visuellement-cache"> : Songes de ma voisine de quartier</span></button>
+    <a href="/oeuvres#oeuvre-songes" class="carte-lien" data-libelle="Œuvres"><span class="visuellement-cache">Agrandir : Songes de ma voisine de quartier</span></a>
+  </div>
+  <p class="etiquette " data-tampon>
+  <span class="etiquette-code" title="Triptyques ou Questions d’époque">TR</span>
+  <span class="etiquette-texte"><span class="etiquette-titre">Songes de ma voisine de quartier</span>
+  <span class="etiquette-ligne">2017 · <span class="a-completer a-completer--etiquette">dimensions à compléter</span></span></span>
+</p>
+</article><span class="coupe" aria-hidden="true"><i></i></span><article class="carte-oeuvre" data-serie="road-map" data-code="RM" data-titre="Untitled (Torah-Qalqylia)" style="--ratio:1.8019;--echelle:0.624">
+  <div class="carte-oeuvre-mur">
+    <div class="accroche" style="--ratio:1.8019"><figure class="media media--oeuvre " style="--cadrage:50% 50%;aspect-ratio:1701 / 944;--teinte:#b6aca9">
+  <picture>
+    <img src="/assets/images/oeuvres/rm-torah-1280.webp" srcset="/assets/images/oeuvres/rm-torah-640.webp 640w, /assets/images/oeuvres/rm-torah-1280.webp 1280w, /assets/images/oeuvres/rm-torah-1701.webp 1701w" sizes="(max-width: 760px) 78vw, 34vw" alt="Untitled (Torah-Qalqylia)" width="1280" height="710" loading="lazy" decoding="async">
+  </picture>
+</figure></div>
+    <a href="/oeuvres#oeuvre-torah" class="carte-lien" data-libelle="Œuvres"><span class="visuellement-cache">Agrandir : Untitled (Torah-Qalqylia)</span></a>
+  </div>
+  <p class="etiquette " data-tampon>
+  <span class="etiquette-code" title="Road Map">RM</span>
+  <span class="etiquette-texte"><span class="etiquette-titre">Untitled (Torah-Qalqylia)</span>
+  <span class="etiquette-ligne"><span class="a-completer a-completer--etiquette">année à compléter</span> · 80 × 24 × 40 cm</span></span>
+</p>
+</article><span class="coupe" aria-hidden="true"><i></i></span><article class="carte-oeuvre" data-serie="rdm" data-code="RDM" data-titre="Russian Diary Moods, livre d’expédition" style="--ratio:1.4773;--echelle:0.860">
+  <div class="carte-oeuvre-mur">
+    <div class="accroche" style="--ratio:1.4773"><figure class="media media--oeuvre " style="--cadrage:50% 50%;aspect-ratio:1009 / 683;--teinte:#acb6c9">
+  <picture>
+    <img src="/assets/images/oeuvres/rdm-eglise-neige-1009.webp" srcset="/assets/images/oeuvres/rdm-eglise-neige-640.webp 640w, /assets/images/oeuvres/rdm-eglise-neige-1009.webp 1009w" sizes="(max-width: 760px) 78vw, 34vw" alt="Russian Diary Moods, livre d’expédition" width="1009" height="683" loading="lazy" decoding="async">
+  </picture>
+</figure><p class="carte-oeuvre-nb">7 photos</p></div>
+    <a href="/oeuvres#oeuvre-livre" class="carte-lien" data-libelle="Œuvres"><span class="visuellement-cache">Agrandir : Russian Diary Moods, livre d’expédition</span></a>
+  </div>
+  <p class="etiquette " data-tampon>
+  <span class="etiquette-code" title="Russian Diary Moods">RDM</span>
+  <span class="etiquette-texte"><span class="etiquette-titre">Russian Diary Moods, livre d’expédition</span>
+  <span class="etiquette-ligne">2008-2016 · <span class="a-completer a-completer--etiquette">dimensions à compléter</span></span></span>
+</p>
+</article><span class="coupe" aria-hidden="true"><i></i></span><article class="carte-oeuvre" data-serie="derive" data-code="" data-titre="Floating migrants" style="--ratio:1.7778;--echelle:0.860">
+  <div class="carte-oeuvre-mur">
+    <div class="accroche" style="--ratio:1.7778"><figure class="media media--oeuvre " style="--cadrage:50% 50%;aspect-ratio:1920 / 1080;--teinte:#767674">
+  <picture>
+    <img src="/assets/images/oeuvres/dd-floating-1-1280.webp" srcset="/assets/images/oeuvres/dd-floating-1-640.webp 640w, /assets/images/oeuvres/dd-floating-1-1280.webp 1280w, /assets/images/oeuvres/dd-floating-1-1920.webp 1920w" sizes="(max-width: 760px) 78vw, 34vw" alt="Floating migrants" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure><p class="carte-oeuvre-nb">5 photos</p></div>
+    <a href="/oeuvres#oeuvre-floating" class="carte-lien" data-libelle="Œuvres"><span class="visuellement-cache">Agrandir : Floating migrants</span></a>
+  </div>
+  <p class="etiquette " data-tampon>
+  <span class="etiquette-texte"><span class="etiquette-titre">Floating migrants</span>
+  <span class="etiquette-ligne">2020 · <span class="a-completer a-completer--etiquette">dimensions à compléter</span></span></span>
+</p>
+</article><span class="coupe" aria-hidden="true"><i></i></span><article class="carte-oeuvre" data-serie="retables" data-code="TR" data-titre="Menu" style="--ratio:1.5823;--echelle:0.860">
+  <div class="carte-oeuvre-mur">
+    <div class="accroche volets" data-volets data-etat="ferme" style="--ratio:1.5823;--ratio-ferme:0.8638">
+  <div class="volet volet--ouvert"><figure class="media media--oeuvre " style="--cadrage:50% 50%;aspect-ratio:1701 / 1075;--teinte:#787373">
+  <picture>
+    <img src="/assets/images/oeuvres/tr-menu-ouvert-1280.webp" srcset="/assets/images/oeuvres/tr-menu-ouvert-640.webp 640w, /assets/images/oeuvres/tr-menu-ouvert-1280.webp 1280w, /assets/images/oeuvres/tr-menu-ouvert-1701.webp 1701w" sizes="(max-width: 760px) 78vw, 34vw" alt="Menu, ouvert" width="1280" height="809" loading="lazy" decoding="async">
+  </picture>
+</figure></div>
+  <div class="volet volet--ferme" data-ephemere><figure class="media media--oeuvre " style="--cadrage:50% 50%;aspect-ratio:1224 / 1417;--teinte:#b4aea1">
+  <picture>
+    <img src="/assets/images/oeuvres/tr-menu-ferme-1224.webp" srcset="/assets/images/oeuvres/tr-menu-ferme-640.webp 640w, /assets/images/oeuvres/tr-menu-ferme-1224.webp 1224w" sizes="(max-width: 760px) 78vw, 34vw" alt="Menu, fermé" width="1224" height="1417" loading="lazy" decoding="async">
+  </picture>
+</figure></div>
+</div>
+<button type="button" class="volets-bouton" data-volets-bouton aria-pressed="false" data-libelle-ouvrir="Ouvrir les volets" data-libelle-fermer="Fermer les volets"><span class="volets-icone" aria-hidden="true"></span><span data-libelle-bouton>Ouvrir les volets</span><span class="visuellement-cache"> : Menu</span></button>
+    <a href="/oeuvres#oeuvre-menu" class="carte-lien" data-libelle="Œuvres"><span class="visuellement-cache">Agrandir : Menu</span></a>
+  </div>
+  <p class="etiquette " data-tampon>
+  <span class="etiquette-code" title="Triptyques ou Questions d’époque">TR</span>
+  <span class="etiquette-texte"><span class="etiquette-titre">Menu</span>
+  <span class="etiquette-ligne">2017 · <span class="a-completer a-completer--etiquette">dimensions à compléter</span></span></span>
+</p>
+</article><span class="coupe" aria-hidden="true"><i></i></span><article class="carte-oeuvre" data-serie="pepiniere" data-code="" data-titre="Nepenthes sanguinea" style="--ratio:1.5023;--echelle:0.860">
+  <div class="carte-oeuvre-mur">
+    <div class="accroche" style="--ratio:1.5023"><figure class="media media--oeuvre " style="--cadrage:50% 50%;aspect-ratio:640 / 426;--teinte:#56643a">
+  <picture>
+    <img src="/assets/images/oeuvres/pe-nepenthes-1-640.webp" srcset="/assets/images/oeuvres/pe-nepenthes-1-640.webp 640w" sizes="(max-width: 760px) 78vw, 34vw" alt="Nepenthes sanguinea" width="640" height="426" loading="lazy" decoding="async">
+  </picture>
+</figure><p class="carte-oeuvre-nb">5 photos</p></div>
+    <a href="/oeuvres#oeuvre-nepenthes" class="carte-lien" data-libelle="Œuvres"><span class="visuellement-cache">Agrandir : Nepenthes sanguinea</span></a>
+  </div>
+  <p class="etiquette " data-tampon>
+  <span class="etiquette-texte"><span class="etiquette-titre">Nepenthes sanguinea</span>
+  <span class="etiquette-ligne">2012 · <span class="a-completer a-completer--etiquette">dimensions à compléter</span></span></span>
+</p>
+</article>
+    <div class="mur-fin"><a href="/oeuvres" class="bouton" data-libelle="Œuvres">Parcourir tout le mur</a></div>
+  </div>
+  <div class="mur-bas conteneur">
+    <div class="mur-progres" aria-hidden="true"><span></span></div>
+    <p class="mur-glisser">Faites glisser le mur</p>
+  </div>
+</section>
+<section class="laundry" id="laundry">
+  <div class="conteneur laundry-tete">
+    <h2 class="titre-section" data-decoupe>Laundry</h2>
+    <blockquote class="laundry-citation" data-anime><p>« Un lessivage de perceptions mutuelles entre un (ou plusieurs) artiste(s), un curateur et moi-même sur le génie des lieux. »</p><footer>JeanF Jans</footer></blockquote>
+    <p class="laundry-texte" data-anime>Des résidences de trois à cinq semaines, qui donnent un court-métrage, un livre, une installation ou une performance.</p>
+  </div>
+  <div class="conteneur laundry-grille">
+    <figure class="laundry-carte" data-visuel>
+  <div class="carte-cadre">
+    <svg viewBox="0 0 1000 560" role="img" aria-label="Carte des six résidences Laundry : Houston, Le Caire, Naples, Tourinnes-la-Grosse, Minsk, Igualada" preserveAspectRatio="xMidYMid meet">
+      <line x1="347.5" y1="40" x2="347.5" y2="540" class="graticule"/><line x1="522.5" y1="40" x2="522.5" y2="540" class="graticule"/><line x1="697.5" y1="40" x2="697.5" y2="540" class="graticule"/><line x1="872.5" y1="40" x2="872.5" y2="540" class="graticule"/><line x1="230" y1="487.18" x2="990" y2="487.18" class="graticule"/><line x1="230" y1="322.88" x2="990" y2="322.88" class="graticule"/><line x1="230" y1="158.57999999999998" x2="990" y2="158.57999999999998" class="graticule"/>
+      <line x1="70" y1="40" x2="70" y2="540" class="graticule"/>
+      <g class="carte-coupe"><line x1="150" y1="40" x2="170" y2="540"/><line x1="166" y1="40" x2="186" y2="540"/></g>
+      <path d="M70.0 491.1 Q482.1 -60.5 894.2 486.5 M894.2 486.5 Q745.7 248.9 597.2 308.9 M597.2 308.9 Q513.8 95.8 430.5 145.8" class="carte-route" data-trace/>
+      <path d="M430.5 145.8 Q630.1 54.5 829.8 94.5" class="carte-route carte-route--avortee" data-trace/>
+      <path d="M829.8 94.5 Q602.8 24.5 375.9 296.9" class="carte-route" data-trace/>
+      <g class="carte-point"><circle cx="70.0" cy="491.1" r="9"/><circle cx="70.0" cy="491.1" r="3.5" class="carte-coeur"/></g><g class="carte-point"><circle cx="894.2" cy="486.5" r="9"/><circle cx="894.2" cy="486.5" r="3.5" class="carte-coeur"/></g><g class="carte-point"><circle cx="597.2" cy="308.9" r="9"/><circle cx="597.2" cy="308.9" r="3.5" class="carte-coeur"/></g><g class="carte-point"><circle cx="430.5" cy="145.8" r="9"/><circle cx="430.5" cy="145.8" r="3.5" class="carte-coeur"/></g><g class="carte-point carte-point--avorte"><circle cx="829.8" cy="94.5" r="9"/><circle cx="829.8" cy="94.5" r="3.5" class="carte-coeur"/></g><g class="carte-point"><circle cx="375.9" cy="296.9" r="9"/><circle cx="375.9" cy="296.9" r="3.5" class="carte-coeur"/></g>
+    </svg>
+    <a class="carte-etiquette carte-etiquette--droite" href="#laundry-houston" data-repere data-sans-transition style="left:7.00%;top:87.70%"><span class="carte-num">I</span><span class="carte-ville">Houston</span></a><a class="carte-etiquette carte-etiquette--gauche" href="#laundry-le-caire" data-repere data-sans-transition style="left:89.42%;top:86.88%"><span class="carte-num">II</span><span class="carte-ville">Le Caire</span></a><a class="carte-etiquette carte-etiquette--droite" href="#laundry-naples" data-repere data-sans-transition style="left:59.72%;top:55.16%"><span class="carte-num">III</span><span class="carte-ville">Naples</span></a><a class="carte-etiquette carte-etiquette--gauche" href="#laundry-tourinnes" data-repere data-sans-transition style="left:43.05%;top:26.03%"><span class="carte-num">IV</span><span class="carte-ville">Tourinnes-la-Grosse</span></a><a class="carte-etiquette carte-etiquette--gauche" href="#laundry-minsk" data-repere data-sans-transition style="left:82.98%;top:16.88%"><span class="carte-num">V</span><span class="carte-ville">Minsk</span></a><a class="carte-etiquette carte-etiquette--gauche" href="#laundry-igualada" data-repere data-sans-transition style="left:37.59%;top:53.02%"><span class="carte-num">VI</span><span class="carte-ville">Igualada</span></a>
+  </div>
+  <figcaption>Six résidences, de Houston à Igualada<span class="carte-legende-villes"> · I Houston · II Le Caire · III Naples · IV Tourinnes-la-Grosse · V Minsk · VI Igualada</span><br><span class="carte-legende-coupe" aria-hidden="true"></span>double trait rouge : coupure d’échelle, l’Atlantique est raccourci</figcaption>
+</figure>
+    <ol class="laundry-liste">
+      <li class="residence residence--fait" id="laundry-houston" data-anime>
+        <figure class="media residence-media media--entier media--entier-laundry" style="--cadrage:50% 50%;--teinte:#23221e">
+  <picture>
+    <img src="/assets/images/laundry/houston-853.webp" srcset="/assets/images/laundry/houston-640.webp 640w, /assets/images/laundry/houston-853.webp 853w" sizes="(max-width: 760px) 40vw, 12vw" alt="Still Lives : deux hommes dans l’embrasure d’une porte, photogramme" width="853" height="480" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <div class="residence-texte">
+          <p class="residence-num"><span class="etiquette-code">L1</span> <span class="insecable">Laundry I</span> · Houston · 2013</p>
+          <h3>Still Lives</h3>
+          <p>avec Joëlle Verstraeten · commissaire : Y. Palix</p>
+          <p class="residence-formes">Court-métrage, livre d’artiste, carnets, gravures, photo, performance · Remi Platinum, WorldFest-Houston 2014</p>
+        </div>
+      </li><li class="residence residence--fait" id="laundry-le-caire" data-anime>
+        <figure class="media residence-media media--entier media--entier-laundry" style="--cadrage:50% 50%;--teinte:#686d65">
+  <picture>
+    <img src="/assets/images/laundry/le-caire-1280.webp" srcset="/assets/images/laundry/le-caire-640.webp 640w, /assets/images/laundry/le-caire-1280.webp 1280w, /assets/images/laundry/le-caire-1417.webp 1417w" sizes="(max-width: 760px) 40vw, 12vw" alt="Hommage à Shaimaa al Sabbagh : voiles suspendus dans un jardin du Caire" width="1280" height="854" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <div class="residence-texte">
+          <p class="residence-num"><span class="etiquette-code">L2</span> <span class="insecable">Laundry II</span> · Le Caire · 2015</p>
+          <h3>La pratique du quotidien</h3>
+          <p>avec Marwa Benhalim, Hagar Masoud, Sama Waly · commissaires : Medrar Gallery, Darb 1718, S. Ndjali, A. Moattaz, G. Heyvaert</p>
+          <p class="residence-formes">Court-métrage, livre, photo, installation, performance · Off Biennale du Caire, 2015</p>
+        </div>
+      </li><li class="residence residence--fait" id="laundry-naples" data-anime>
+        <figure class="media residence-media media--entier media--entier-laundry" style="--cadrage:50% 50%;--teinte:#b6afa7">
+  <picture>
+    <img src="/assets/images/laundry/naples-1134.webp" srcset="/assets/images/laundry/naples-640.webp 640w, /assets/images/laundry/naples-1134.webp 1134w" sizes="(max-width: 760px) 40vw, 12vw" alt="Deus ex Machina : la boîte de Laundry III ouverte" width="1134" height="1701" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <div class="residence-texte">
+          <p class="residence-num"><span class="etiquette-code">L3</span> <span class="insecable">Laundry III</span> · Naples · 2016</p>
+          <h3>Deus ex Machina</h3>
+          <p>avec Giuseppe Zevola · commissaire : Nathalie Heidsieck-de Saint Phalle · Palazzo Spinelli</p>
+          <p class="residence-formes">Court-métrage, livre, boîte</p>
+        </div>
+      </li><li class="residence residence--fait" id="laundry-tourinnes" data-anime>
+        <figure class="media residence-media media--entier media--entier-laundry" style="--cadrage:50% 50%;--teinte:#a59999">
+  <picture>
+    <img src="/assets/images/laundry/tourinnes-1280.webp" srcset="/assets/images/laundry/tourinnes-640.webp 640w, /assets/images/laundry/tourinnes-1280.webp 1280w, /assets/images/laundry/tourinnes-1417.webp 1417w" sizes="(max-width: 760px) 40vw, 12vw" alt="Œuvre d’Aljoscha suspendue sous les voûtes de l’église de Tourinnes-la-Grosse" width="1280" height="941" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <div class="residence-texte">
+          <p class="residence-num"><span class="etiquette-code">L4</span> <span class="insecable">Laundry IV</span> · Tourinnes-la-Grosse · 2018</p>
+          <h3>Enclos, cet horizon qui nous poursuit</h3>
+          <p>commissaires : Manu vb Tintoré et JeanF Jans · avec Aljoscha, Christophe Terlinden, Philippe Herbet, Karine Marenne et Messieurs Delmotte, Dries Meddens, Patricia Martin, Joëlle Verstraeten</p>
+          <p class="residence-formes">Festival-résidence, été-automne 2018 : teaser et court-métrage · 53ᵉˢ Fêtes de la Saint-Martin</p>
+          <p class="residence-credit">© Aljoscha</p>
+        </div>
+      </li><li class="residence residence--avortee" id="laundry-minsk" data-anime>
+        <div class="residence-media residence-vide" data-visuel aria-hidden="true"><span class="residence-vide-num">V</span><span class="residence-vide-texte">Pas encore de photo</span></div>
+        <div class="residence-texte">
+          <p class="residence-num"><span class="etiquette-code">L5</span> <span class="insecable">Laundry V</span> · Minsk · 2020 <span class="statut statut--avorte">avortée</span></p>
+          <h3>Minskunderstanding</h3>
+          <p>avec la galerie « Y » · accueil : Valentina Kiselyova et Anna Chistoserdova</p>
+          <p class="residence-formes">Résidence planifiée à l’été 2020, avortée pour cause de révolution… avortée.</p>
+        </div>
+      </li><li class="residence residence--encours" id="laundry-igualada" data-anime>
+        <div class="residence-media residence-vide" data-visuel aria-hidden="true"><span class="residence-vide-num">VI</span><span class="residence-vide-texte">Pas encore de photo</span></div>
+        <div class="residence-texte">
+          <p class="residence-num"><span class="etiquette-code">L6</span> <span class="insecable">Laundry VI</span> · Igualada · 2023-2024 <span class="statut">film en construction</span></p>
+          <h3>Camelia catalana</h3>
+          <p>avec Vicente Gallego Alcaraz</p>
+          <p class="residence-formes">Résidence été-automne 2023-2024 · film en construction · Prolongement à Sabaudia (Rome), 2024</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="films-accueil" id="films">
+  <div class="conteneur">
+    <div class="films-accueil-tete">
+      <h2 class="titre-section" data-decoupe>Kurzstücke</h2>
+      <p>Douze courts-métrages, de 2000 à 2015 : performances, voyages, mémoires de lieux.</p>
+    </div>
+    <article class="vedette">
+      <a class="vedette-cadre pellicule" href="/films#film-still-lives" data-libelle="Films">
+        <figure class="media vedette-media media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#393c42">
+  <picture>
+    <img src="/assets/images/films/still-lives-1280.webp" srcset="/assets/images/films/still-lives-640.webp 640w, /assets/images/films/still-lives-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 60vw" alt="Still Lives, Voir la fiche" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <span class="vedette-minutage" aria-hidden="true">12’08</span>
+      </a>
+      <div class="vedette-texte">
+        <p class="prix" data-tampon>Remi Platinum, WorldFest-Houston 2014</p>
+        <h3>Still Lives <span class="vedette-sous">Laundry I</span></h3>
+        <p class="vedette-meta">2013 · ProHD · 12’08</p>
+        <p>Un étranger au Texas, épousant les codes sociaux du lieu, court après lui-même et son double. Ceci, alors qu’un attentat à la cocotte-minute a lieu à Boston, que le Congrès repousse une initiative de réguler le port d’armes, qu’un enfant de cinq ans abat sa sœur de deux ans avec une arme reçue à son précédent anniversaire…</p>
+      </div>
+    </article>
+    <ul class="films-accueil-liste">
+      <li><a class="film-mini" href="/films#film-streitquartett" data-libelle="Films">
+        <figure class="media film-mini-media media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#897768">
+  <picture>
+    <img src="/assets/images/films/streitquartett-640.webp" srcset="/assets/images/films/streitquartett-640.webp 640w" sizes="(max-width: 760px) 80vw, 24vw" alt="" width="640" height="480" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <span class="film-mini-titre">Streitquartett</span><span class="film-mini-meta">2007 · 16’54</span></a></li><li><a class="film-mini" href="/films#film-road-map" data-libelle="Films">
+        <figure class="media film-mini-media media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#836d6b">
+  <picture>
+    <img src="/assets/images/films/road-map-1280.webp" srcset="/assets/images/films/road-map-640.webp 640w, /assets/images/films/road-map-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 24vw" alt="" width="1280" height="960" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <span class="film-mini-titre">Road Map</span><span class="film-mini-meta">2008 · 9’11</span></a></li><li><a class="film-mini" href="/films#film-o-mensch" data-libelle="Films">
+        <figure class="media film-mini-media media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#15120f">
+  <picture>
+    <img src="/assets/images/films/o-mensch-1280.webp" srcset="/assets/images/films/o-mensch-640.webp 640w, /assets/images/films/o-mensch-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 24vw" alt="" width="1280" height="1024" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <span class="film-mini-titre">O, Mensch…</span><span class="film-mini-meta">2014 · 29’30</span></a></li>
+    </ul>
+    <p class="films-accueil-action"><a href="/films" class="bouton bouton--contour" data-libelle="Films">Tous les films</a></p>
+  </div>
+</section>
+<section class="gare conteneur" id="gare">
+  <figure class="media gare-media media--entier media--entier-gare" style="--cadrage:40% 50%;--teinte:#898e90">
+  <picture>
+    <img src="/assets/images/gare/couverture-1280.webp" srcset="/assets/images/gare/couverture-640.webp 640w, /assets/images/gare/couverture-1280.webp 1280w, /assets/images/gare/couverture-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 50vw" alt="Couverture du livret Gare aux Rumeurs : la gare de Grupont" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  <div class="gare-texte">
+    <h2 class="titre-section" data-decoupe>Gare aux Rumeurs</h2>
+    <p class="gare-chapeau" data-anime>Projet collectif de création d’un espace d’art, de recherche et d’expérimentation pour lanceurs d’alerte polymedia.</p>
+    <p data-anime>Dans la gare de Grupont, sur la ligne 161 entre Bruxelles et Luxembourg, un « Mus_e de l’insaisissable » consacré à la rumeur : expositions, ateliers, films, conférences performées.</p>
+    <p class="gare-statut" data-anime><span class="etiquette-code">Coll</span> Livret, deuxième édition, novembre 2025</p>
+    <p data-anime><a class="bouton bouton--contour" href="/assets/documents/gare-aux-rumeurs-livret.pdf" target="_blank" rel="noopener" data-sans-transition>Lire le livret (PDF)</a></p>
+  </div>
+</section>
+<section class="reperes conteneur" id="reperes">
+  <div class="reperes-tete">
+    <h2 class="titre-section" data-decoupe>Derniers repères</h2>
+    <p>Les dates les plus récentes de l’agenda.</p>
+    <div class="reperes-annees" data-visuel aria-hidden="true"><span>2024</span><span>2023</span></div>
+    <p><a href="/a-propos#agenda" class="bouton bouton--contour" data-libelle="À propos">Tout l’agenda</a></p>
+  </div>
+  <ol class="reperes-liste">
+    <li class="repere" data-anime>
+      <p class="repere-date"><span>05</span> 2024</p>
+      <div><p class="repere-type">Résidence</p>
+      <h3>Sabaudia, Città modello fascista</h3><p>Projet de soutien à Vicente Gallego Alcaraz (Laundry VI), Rome</p></div>
+    </li><li class="repere" data-anime>
+      <p class="repere-date"><span>05</span> 2024</p>
+      <div><p class="repere-type">Atelier</p>
+      <h3>Atelier ouvert</h3><p>Atelier in Beeld</p></div>
+    </li><li class="repere" data-anime>
+      <p class="repere-date"><span>02</span> 2024</p>
+      <div><p class="repere-type">Résidence</p>
+      <h3>Laundry VI</h3><p>Avec Vicente Gallego Alcaraz, Igualada</p></div>
+    </li><li class="repere" data-anime>
+      <p class="repere-date"><span>08</span> 2023</p>
+      <div><p class="repere-type">Exposition</p>
+      <h3>Retables</h3><p>Artists Meeting Knokke, Grand Casino. Commissaires : Willem Elias, Hugo Brutin, Hilde Van Canneyt</p></div>
+    </li><li class="repere" data-anime>
+      <p class="repere-date"><span>07</span> 2023</p>
+      <div><p class="repere-type">Film ou festival</p>
+      <h3>Fratres</h3><p>Court-métrage et performance musicale, Pietrasanta Music Festival, avec Zee Zee, Jing Zhao, Michael Guttman</p></div>
+    </li>
+  </ol>
+</section>
+<section class="contact-accueil" id="contact">
+  <figure class="media contact-accueil-media" data-grok style="--cadrage:40% 50%;--teinte:#847a6d;--teinte-mobile:#7e776d">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/atelier-mobile-640.webp 640w, /assets/images/grok/atelier-mobile-784.webp 784w" sizes="100vw">
+    <img src="/assets/images/grok/atelier-1168.webp" srcset="/assets/images/grok/atelier-640.webp 640w, /assets/images/grok/atelier-1168.webp 1168w" sizes="100vw" alt="Atelier vide, lumière de fenêtre, toiles retournées contre le mur" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="contact-accueil-carte">
+    <h2 class="titre-section" data-decoupe>Écrire à JeanF</h2>
+    <p>Une œuvre, une projection, une résidence ou une question : un message suffit.</p>
+    <p><a href="/a-propos#contact" class="bouton" data-libelle="À propos" data-magnetique>Écrire un message</a></p>
+    <p class="contact-direct"><a href="mailto:jeanfjans@gmail.com">jeanfjans@gmail.com</a><br><a href="tel:+32474987035">+32 474 98 70 35</a></p>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-nom">
+      <p class="pied-marque"><img src="/assets/images/logo.svg" alt="" width="44" height="44"><span><strong>JeanF Jans</strong><br>Nomade Polymedia</span></p>
+      <p>Bruxelles, adresse de l’atelier à compléter</p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <ul>
+        <li><a href="mailto:jeanfjans@gmail.com">jeanfjans@gmail.com</a></li>
+        <li><a href="tel:+32474987035">+32 474 98 70 35</a></li>
+        <li><a href="https://www.facebook.com/facquodvis" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil" aria-current="page">Accueil</a></li><li><a href="/oeuvres" data-libelle="Œuvres">Œuvres</a></li><li><a href="/films" data-libelle="Films">Films</a></li><li><a href="/a-propos" data-libelle="À propos">À propos</a></li><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Confort de lecture</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : les informations marquées « à compléter » seront fournies par l’artiste.</p><p>© JeanF Jans</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+32474987035">Appeler</a>
+  <a class="bouton" href="/a-propos#contact" data-libelle="À propos">Écrire</a>
+</div>
+</body>
+</html>

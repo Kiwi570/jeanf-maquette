@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-gabarit="films" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Films : les courts-métrages de JeanF Jans</title>
+<meta name="description" content="Douze courts-métrages de 2000 à 2015, dont Still Lives, Remi Platinum au WorldFest-Houston 2014.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://jeanf-maquette.vercel.app/films">
+<link rel="alternate" hreflang="fr" href="https://jeanf-maquette.vercel.app/films">
+<link rel="alternate" hreflang="en" href="https://jeanf-maquette.vercel.app/en/films">
+<link rel="alternate" hreflang="x-default" href="https://jeanf-maquette.vercel.app/films">
+<style>:root{--fond:#e4e0d8;--texte:#161514;--voile-fond:#161514;--ouverture-fond:#e4e0d8;--menu-fond:#161514}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/archivo-latin-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#e4e0d8">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JeanF Jans">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:title" content="Films : les courts-métrages de JeanF Jans">
+<meta property="og:description" content="Douze courts-métrages de 2000 à 2015, dont Still Lives, Remi Platinum au WorldFest-Houston 2014.">
+<meta property="og:url" content="https://jeanf-maquette.vercel.app/films">
+<meta property="og:image" content="https://jeanf-maquette.vercel.app/assets/partage/films-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Photogramme du film Still Lives de JeanF Jans">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"JeanF Jans","alternateName":"JeanF","url":"https://jeanf-maquette.vercel.app/","jobTitle":"Artiste polymedia","description":"Artiste polymedia né à Anvers en 1961, vivant et travaillant à Bruxelles : triptyques, sculptures de jardin, vitraux de déchets plastiques, courts-métrages et résidences Laundry.","birthDate":"1961","birthPlace":{"@type":"Place","name":"Antwerpen"},"homeLocation":{"@type":"Place","name":"Bruxelles"},"email":"mailto:jeanfjans@gmail.com","telephone":"+32474987035","award":"Remi Platinum Award, WorldFest-Houston 2014 (Still Lives)","sameAs":["https://www.facebook.com/facquodvis"]}</script>
+</head>
+<body id="haut" class="page-films">
+<div data-voile aria-hidden="true"><span class="voile-joint"></span><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="56" height="56"><span data-voile-libelle>Films</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <span class="ouverture-joints"><i></i><i></i><i></i><i></i><i></i></span>
+  <span class="ouverture-minutage" data-intro-minutage>00:00:00:00</span>
+  <div class="ouverture-centre">
+    <div class="ouverture-blocs"><span class="bloc" style="grid-column:2;grid-row:7;--i:0"></span><span class="bloc" style="grid-column:3;grid-row:7;--i:1"></span><span class="bloc" style="grid-column:7;grid-row:7;--i:2"></span><span class="bloc" style="grid-column:8;grid-row:7;--i:3"></span><span class="bloc" style="grid-column:9;grid-row:7;--i:4"></span><span class="bloc" style="grid-column:12;grid-row:7;--i:5"></span><span class="bloc" style="grid-column:13;grid-row:7;--i:6"></span><span class="bloc" style="grid-column:14;grid-row:7;--i:7"></span><span class="bloc" style="grid-column:16;grid-row:7;--i:8"></span><span class="bloc" style="grid-column:19;grid-row:7;--i:9"></span><span class="bloc" style="grid-column:21;grid-row:7;--i:10"></span><span class="bloc" style="grid-column:1;grid-row:6;--i:11"></span><span class="bloc" style="grid-column:4;grid-row:6;--i:12"></span><span class="bloc" style="grid-column:6;grid-row:6;--i:13"></span><span class="bloc" style="grid-column:11;grid-row:6;--i:14"></span><span class="bloc" style="grid-column:14;grid-row:6;--i:15"></span><span class="bloc" style="grid-column:16;grid-row:6;--i:16"></span><span class="bloc" style="grid-column:19;grid-row:6;--i:17"></span><span class="bloc" style="grid-column:21;grid-row:6;--i:18"></span><span class="bloc" style="grid-column:4;grid-row:5;--i:19"></span><span class="bloc" style="grid-column:6;grid-row:5;--i:20"></span><span class="bloc" style="grid-column:7;grid-row:5;--i:21"></span><span class="bloc" style="grid-column:8;grid-row:5;--i:22"></span><span class="bloc" style="grid-column:9;grid-row:5;--i:23"></span><span class="bloc" style="grid-column:12;grid-row:5;--i:24"></span><span class="bloc" style="grid-column:13;grid-row:5;--i:25"></span><span class="bloc" style="grid-column:14;grid-row:5;--i:26"></span><span class="bloc" style="grid-column:16;grid-row:5;--i:27"></span><span class="bloc" style="grid-column:19;grid-row:5;--i:28"></span><span class="bloc" style="grid-column:21;grid-row:5;--i:29"></span><span class="bloc" style="grid-column:4;grid-row:4;--i:30"></span><span class="bloc" style="grid-column:6;grid-row:4;--i:31"></span><span class="bloc" style="grid-column:9;grid-row:4;--i:32"></span><span class="bloc" style="grid-column:14;grid-row:4;--i:33"></span><span class="bloc" style="grid-column:16;grid-row:4;--i:34"></span><span class="bloc" style="grid-column:19;grid-row:4;--i:35"></span><span class="bloc" style="grid-column:21;grid-row:4;--i:36"></span><span class="bloc" style="grid-column:22;grid-row:4;--i:37"></span><span class="bloc" style="grid-column:23;grid-row:4;--i:38"></span><span class="bloc" style="grid-column:4;grid-row:3;--i:39"></span><span class="bloc" style="grid-column:7;grid-row:3;--i:40"></span><span class="bloc" style="grid-column:8;grid-row:3;--i:41"></span><span class="bloc" style="grid-column:12;grid-row:3;--i:42"></span><span class="bloc" style="grid-column:13;grid-row:3;--i:43"></span><span class="bloc" style="grid-column:16;grid-row:3;--i:44"></span><span class="bloc" style="grid-column:17;grid-row:3;--i:45"></span><span class="bloc" style="grid-column:18;grid-row:3;--i:46"></span><span class="bloc" style="grid-column:21;grid-row:3;--i:47"></span><span class="bloc" style="grid-column:4;grid-row:2;--i:48"></span><span class="bloc" style="grid-column:21;grid-row:2;--i:49"></span><span class="bloc" style="grid-column:2;grid-row:1;--i:50"></span><span class="bloc" style="grid-column:3;grid-row:1;--i:51"></span><span class="bloc" style="grid-column:4;grid-row:1;--i:52"></span><span class="bloc" style="grid-column:21;grid-row:1;--i:53"></span><span class="bloc" style="grid-column:22;grid-row:1;--i:54"></span><span class="bloc" style="grid-column:23;grid-row:1;--i:55"></span><span class="bloc" style="grid-column:24;grid-row:1;--i:56"></span></div>
+    <p class="ouverture-etiquette"><span>Nomade Polymedia</span><span>Bruxelles</span></p>
+  </div>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span class="entete-nom">JeanF</span>
+    </a>
+    <span class="minutage" data-minutage aria-hidden="true" data-audit-ignorer>00:00:00:00</span>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/oeuvres" data-libelle="Œuvres">Œuvres</a></li><li><a href="/films" data-libelle="Films" aria-current="page">Films</a></li><li><a href="/a-propos" data-libelle="À propos">À propos</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-langue" href="/en/films" hreflang="en" lang="en" data-langue="en" aria-label="English version">en</a>
+      <a class="bouton bouton--entete" href="/a-propos#contact" data-libelle="À propos" data-magnetique>Écrire à JeanF</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><span class="menu-num" aria-hidden="true">01</span><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><span class="menu-num" aria-hidden="true">02</span><a href="/oeuvres" class="menu-lien" data-libelle="Œuvres">Œuvres</a></li><li style="--i:2"><span class="menu-num" aria-hidden="true">03</span><a href="/films" class="menu-lien" data-libelle="Films" aria-current="page">Films</a></li><li style="--i:3"><span class="menu-num" aria-hidden="true">04</span><a href="/a-propos" class="menu-lien" data-libelle="À propos">À propos</a></li></ul>
+  <div class="menu-bas">
+    <p><a class="bouton" href="/a-propos#contact" data-libelle="À propos">Écrire à JeanF</a></p>
+    <p class="menu-contact"><a href="mailto:jeanfjans@gmail.com">jeanfjans@gmail.com</a><br><a href="tel:+32474987035">+32 474 98 70 35</a></p>
+    <p><a class="entete-langue entete-langue--menu" href="/en/films" hreflang="en" lang="en" data-langue="en">English version</a></p>
+    <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+  </div>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="tete tete--films ecran" id="debut">
+  <figure class="media tete-fond" data-grok style="--cadrage:60% 50%;--teinte:#474138;--teinte-mobile:#635c54">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/montage-mobile-640.webp 640w, /assets/images/grok/montage-mobile-784.webp 784w" sizes="100vw">
+    <img src="/assets/images/grok/montage-1168.webp" srcset="/assets/images/grok/montage-640.webp 640w, /assets/images/grok/montage-1168.webp 1168w" sizes="100vw" alt="" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="tete-grille">
+    <div class="tete-texte tete-texte--sombre">
+      <p class="surtitre" data-anime="gsap">Kurzstücke, 2000-2015</p>
+      <h1 class="tete-titre"><span data-anime="gsap" class="tete-ligne">Films</span></h1>
+      <p class="tete-intro" data-anime="gsap">Douze courts-métrages : performances, voyages, mémoires de lieux, du Texas à la Biélorussie.</p>
+      <p class="tete-actions" data-anime="gsap"><a class="bouton" href="#film-still-lives" data-action-principale data-magnetique data-sans-transition>Voir Still Lives</a></p>
+      <p class="tete-info prix" data-info-cle data-anime="gsap">Remi Platinum, WorldFest-Houston 2014</p>
+    </div>
+    <figure class="tete-film pellicule" data-anime="gsap">
+      <figure class="media tete-film-media media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#393c42">
+  <picture>
+    <img src="/assets/images/films/still-lives-1280.webp" srcset="/assets/images/films/still-lives-640.webp 640w, /assets/images/films/still-lives-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 46vw" alt="Still Lives, 2013" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+      <figcaption><span class="etiquette-code">L1</span> Still Lives · 2013 · 12’08</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="table-montage" id="table">
+  <figure class="media table-montage-fond" data-grok style="--cadrage:50% 50%;--teinte:#44423e">
+  <picture>
+    <img src="/assets/images/grok/pellicule-1168.webp" srcset="/assets/images/grok/pellicule-640.webp 640w, /assets/images/grok/pellicule-1168.webp 1168w" sizes="100vw" alt="" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="conteneur table-montage-tete">
+    <h2 class="titre-section" data-decoupe>La table de montage</h2>
+    <p><span class="aide-tactile">La longueur de chaque bande suit la durée du film. Touchez une bande pour ouvrir la fiche.</span><span class="aide-souris">La longueur de chaque bande suit la durée du film. Cliquez sur une bande pour ouvrir la fiche.</span></p>
+    <p class="echelle" aria-hidden="true"><span class="echelle-ligne"><span class="echelle-trait" style="--part:0.0339"></span><span>1 minute</span></span></p>
+  </div>
+  <ol class="bandes conteneur" aria-label="Table de montage des films">
+    <li class="bande" id="film-issues" style="--part:0.1751">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-issues" data-bande data-duree="00:05:10:00">
+        <span class="bande-annee">2000</span>
+        <span class="bande-titre"><span class="etiquette-code">CM</span>Issues</span>
+        <span class="bande-duree" data-bande-compteur>5’10</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#4f4f4f">
+  <picture>
+    <img src="/assets/images/films/issues-640.webp" srcset="/assets/images/films/issues-640.webp 640w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="640" height="480" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-issues" role="region" aria-label="Issues" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="" data-id="g4hMYa8mYK4" data-titre="Issues">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:05:10:00</span><span class="lecteur-titre">Issues</span></div>
+    <p class="lecteur-prive">Vidéo non intégrable en ligne</p>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement"></p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2000</dd></div>
+      <div><dt>Format</dt><dd>MiniDV</dd></div>
+      <div><dt>Durée</dt><dd>5’10</dd></div>
+      <div><dt>Lieu</dt><dd>Salzburger Sommerakademie, Autriche</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Exercice d’écriture de scénario décliné à l’infini.</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://www.youtube.com/watch?v=g4hMYa8mYK4" target="_blank" rel="noopener">Voir sur YouTube</a>
+      <a class="bouton" href="/a-propos?sujet=projection&amp;oeuvre=Issues#contact" data-libelle="À propos">Demander le lien</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-huis-clos" style="--part:0.9232">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-huis-clos" data-bande data-duree="00:27:14:00">
+        <span class="bande-annee">2000</span>
+        <span class="bande-titre"><span class="etiquette-code">CM</span>Huis clos</span>
+        <span class="bande-duree" data-bande-compteur>27’14</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#5d5c5a">
+  <picture>
+    <img src="/assets/images/films/huis-clos-640.webp" srcset="/assets/images/films/huis-clos-640.webp 640w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="640" height="480" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-huis-clos" role="region" aria-label="Huis clos" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="" data-id="wYsh67C8Xr8" data-titre="Huis clos">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:27:14:00</span><span class="lecteur-titre">Huis clos</span></div>
+    <p class="lecteur-prive">Vidéo non intégrable en ligne</p>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement"></p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2000</dd></div>
+      <div><dt>Format</dt><dd>MiniDV</dd></div>
+      <div><dt>Durée</dt><dd>27’14</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Deux ombres chinoises se racontent l’inéluctable de leur destin, qui a la forme d’un surprenant filigrane de cœurs en chaloupe.</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://www.youtube.com/watch?v=wYsh67C8Xr8" target="_blank" rel="noopener">Voir sur YouTube</a>
+      <a class="bouton" href="/a-propos?sujet=projection&amp;oeuvre=Huis%20clos#contact" data-libelle="À propos">Demander le lien</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-trois-moins-un" style="--part:0.2486">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-trois-moins-un" data-bande data-duree="00:07:20:00">
+        <span class="bande-annee">2001</span>
+        <span class="bande-titre"><span class="etiquette-code">CM</span>3 - 1 = 3</span>
+        <span class="bande-duree" data-bande-compteur>7’20</span>
+        <span class="bande-film" aria-hidden="true">
+          <span class="bande-image bande-image--code" data-visuel><span>3-1=3</span></span>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-trois-moins-un" role="region" aria-label="3 - 1 = 3" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="youtube" data-id="-1EXVnvczzY" data-titre="3 - 1 = 3">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:07:20:00</span><span class="lecteur-titre">3 - 1 = 3</span></div>
+    <button type="button" class="lecteur-jouer" data-lecteur-jouer><span class="lecteur-triangle" aria-hidden="true"></span><span>Lire le film<span class="visuellement-cache"> : 3 - 1 = 3</span></span></button>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement">Le lecteur se charge au clic, depuis YouTube.</p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2001</dd></div>
+      <div><dt>Format</dt><dd>MiniDV</dd></div>
+      <div><dt>Durée</dt><dd>7’20</dd></div>
+      <div class="fiche-montre"><dt>Montré</dt><dd>Media 10/10, 23ᵉ Festival du court métrage de Namur, 2001</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Chant pour un musicien absent.</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://www.youtube.com/watch?v=-1EXVnvczzY" target="_blank" rel="noopener">Voir sur YouTube</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-apocalypse" style="--part:0.2655">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-apocalypse" data-bande data-duree="00:07:50:00">
+        <span class="bande-annee">2005</span>
+        <span class="bande-titre"><span class="etiquette-code">CM</span>Apocalypse</span>
+        <span class="bande-duree" data-bande-compteur>7’50</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#826a63">
+  <picture>
+    <img src="/assets/images/films/apocalypse-640.webp" srcset="/assets/images/films/apocalypse-640.webp 640w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="640" height="480" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-apocalypse" role="region" aria-label="Apocalypse" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="" data-id="vcpzPSj2X_g" data-titre="Apocalypse">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:07:50:00</span><span class="lecteur-titre">Apocalypse</span></div>
+    <p class="lecteur-prive">Vidéo non intégrable en ligne</p>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement"></p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2005</dd></div>
+      <div><dt>Format</dt><dd>Formats variés</dd></div>
+      <div><dt>Durée</dt><dd>7’50</dd></div>
+      <div><dt>Lieu</dt><dd>Wolubilis, Bruxelles</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Une lecture de l’Apocalypse de saint Jean sur un filet continu d’un chant de Messiaen.</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://www.youtube.com/watch?v=vcpzPSj2X_g" target="_blank" rel="noopener">Voir sur YouTube</a>
+      <a class="bouton" href="/a-propos?sujet=projection&amp;oeuvre=Apocalypse#contact" data-libelle="À propos">Demander le lien</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-streitquartett" style="--part:0.5729">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-streitquartett" data-bande data-duree="00:16:54:00">
+        <span class="bande-annee">2007</span>
+        <span class="bande-titre"><span class="etiquette-code">RDM</span>Streitquartett</span>
+        <span class="bande-duree" data-bande-compteur>16’54</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#897768">
+  <picture>
+    <img src="/assets/images/films/streitquartett-640.webp" srcset="/assets/images/films/streitquartett-640.webp 640w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="640" height="480" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-streitquartett" role="region" aria-label="Streitquartett" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="youtube" data-id="zB2zqGE2ZJ8" data-titre="Streitquartett">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:16:54:00</span><span class="lecteur-titre">Streitquartett</span></div>
+    <button type="button" class="lecteur-jouer" data-lecteur-jouer><span class="lecteur-triangle" aria-hidden="true"></span><span>Lire le film<span class="visuellement-cache"> : Streitquartett</span></span></button>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement">Le lecteur se charge au clic, depuis YouTube.</p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2007</dd></div>
+      <div><dt>Format</dt><dd>MiniDV</dd></div>
+      <div><dt>Durée</dt><dd>16’54</dd></div>
+      <div><dt>Lieu</dt><dd>Rjev, Russie</dd></div>
+      <div class="fiche-montre"><dt>Montré</dt><dd>Survival, Casoria Contemporary Art Museum, Naples, 2019</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Dans un lieu-carrefour à Rjev, en Russie, on découvre comment la lutte pour la mémoire et la réconciliation d’un ancien officier allemand de la Wehrmacht rencontre la destinée de deux Russes et d’un chercheur allemand.</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://www.youtube.com/watch?v=zB2zqGE2ZJ8" target="_blank" rel="noopener">Voir sur YouTube</a>
+      <a class="lien-fleche" href="https://www.youtube.com/watch?v=5zwkZxHRQF0" target="_blank" rel="noopener">Version sous-titrée en français</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-minskunderstanding" style="--part:0.2887">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-minskunderstanding" data-bande data-duree="00:08:31:00">
+        <span class="bande-annee">2007</span>
+        <span class="bande-titre"><span class="etiquette-code">CM</span>Minsk­understanding</span>
+        <span class="bande-duree" data-bande-compteur>8’31</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#6d4c3e">
+  <picture>
+    <img src="/assets/images/films/minskunderstanding-640.webp" srcset="/assets/images/films/minskunderstanding-640.webp 640w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="640" height="480" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-minskunderstanding" role="region" aria-label="Minskunderstanding" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="youtube" data-id="OmP3B30-u1o" data-titre="Minskunderstanding">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:08:31:00</span><span class="lecteur-titre">Minskunderstanding</span></div>
+    <button type="button" class="lecteur-jouer" data-lecteur-jouer><span class="lecteur-triangle" aria-hidden="true"></span><span>Lire le film<span class="visuellement-cache"> : Minskunderstanding</span></span></button>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement">Le lecteur se charge au clic, depuis YouTube.</p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2007</dd></div>
+      <div><dt>Format</dt><dd>MiniDV</dd></div>
+      <div><dt>Durée</dt><dd>8’31</dd></div>
+      <div><dt>Lieu</dt><dd>Minsk, Biélorussie</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Vision gigogne d’une capitale inconnue : Minsk.</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://www.youtube.com/watch?v=OmP3B30-u1o" target="_blank" rel="noopener">Voir sur YouTube</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-road-map" style="--part:0.3113">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-road-map" data-bande data-duree="00:09:11:00">
+        <span class="bande-annee">2008</span>
+        <span class="bande-titre"><span class="etiquette-code">RM</span>Road Map</span>
+        <span class="bande-duree" data-bande-compteur>9’11</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#836d6b">
+  <picture>
+    <img src="/assets/images/films/road-map-1280.webp" srcset="/assets/images/films/road-map-640.webp 640w, /assets/images/films/road-map-1280.webp 1280w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="1280" height="960" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-road-map" role="region" aria-label="Road Map" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="vimeo" data-id="306567385" data-titre="Road Map">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:09:11:00</span><span class="lecteur-titre">Road Map</span></div>
+    <button type="button" class="lecteur-jouer" data-lecteur-jouer><span class="lecteur-triangle" aria-hidden="true"></span><span>Lire le film<span class="visuellement-cache"> : Road Map</span></span></button>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement">Le lecteur se charge au clic, depuis Vimeo.</p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2008</dd></div>
+      <div><dt>Format</dt><dd>MiniDV</dd></div>
+      <div><dt>Durée</dt><dd>9’11</dd></div>
+      <div><dt>Lieu</dt><dd>Le long du Mur, Palestine-Israël</dd></div>
+      <div class="fiche-montre"><dt>Montré</dt><dd>Centrale for Contemporary Art, Bruxelles, 2008 · Survival, CAM de Casoria, 2016</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Essai du parcours inextricable d’une langue de signes : une veille de nuit le long du mur israélo-palestinien.</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://vimeo.com/306567385" target="_blank" rel="noopener">Voir sur Vimeo</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-du-mein-spiegel" style="--part:0.2655">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-du-mein-spiegel" data-bande data-duree="00:07:50:00">
+        <span class="bande-annee">2010</span>
+        <span class="bande-titre"><span class="etiquette-code">CM</span>Du, mein Spiegel !</span>
+        <span class="bande-duree" data-bande-compteur>7’50</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#64585b">
+  <picture>
+    <img src="/assets/images/films/du-mein-spiegel-640.webp" srcset="/assets/images/films/du-mein-spiegel-640.webp 640w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="640" height="480" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-du-mein-spiegel" role="region" aria-label="Du, mein Spiegel !" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="youtube" data-id="WZqi5hGiS2s" data-titre="Du, mein Spiegel !">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:07:50:00</span><span class="lecteur-titre">Du, mein Spiegel !</span></div>
+    <button type="button" class="lecteur-jouer" data-lecteur-jouer><span class="lecteur-triangle" aria-hidden="true"></span><span>Lire le film<span class="visuellement-cache"> : Du, mein Spiegel !</span></span></button>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement">Le lecteur se charge au clic, depuis YouTube.</p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2010</dd></div>
+      <div><dt>Format</dt><dd>MiniDV</dd></div>
+      <div><dt>Durée</dt><dd>7’50 <span class="a-completer">durée à vérifier</span></dd></div>
+      <div><dt>Lieu</dt><dd>Bozar, Bruxelles</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Tentatives de deux sœurs jumelles de nettoyer la part de « Tu » dans le « Je ».</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://www.youtube.com/watch?v=WZqi5hGiS2s" target="_blank" rel="noopener">Voir sur YouTube</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-still-lives" style="--part:0.4113">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-still-lives" data-bande data-duree="00:12:08:00">
+        <span class="bande-annee">2013</span>
+        <span class="bande-titre"><span class="etiquette-code">L1</span>Still Lives <span class="bande-prix">Remi Platinum</span></span>
+        <span class="bande-duree" data-bande-compteur>12’08</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-laundry" style="--cadrage:50% 50%;--teinte:#23221e">
+  <picture>
+    <img src="/assets/images/laundry/houston-853.webp" srcset="/assets/images/laundry/houston-640.webp 640w, /assets/images/laundry/houston-853.webp 853w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="853" height="480" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-still-lives" role="region" aria-label="Still Lives" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="youtube" data-id="GPkHf9Xq1ow" data-titre="Still Lives">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:12:08:00</span><span class="lecteur-titre">Still Lives</span></div>
+    <button type="button" class="lecteur-jouer" data-lecteur-jouer><span class="lecteur-triangle" aria-hidden="true"></span><span>Lire le film<span class="visuellement-cache"> : Still Lives</span></span></button>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement">Le lecteur se charge au clic, depuis YouTube.</p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2013</dd></div>
+      <div><dt>Format</dt><dd>ProHD</dd></div>
+      <div><dt>Durée</dt><dd>12’08</dd></div>
+      <div><dt>Lieu</dt><dd>Houston, Texas</dd></div>
+      <div class="fiche-montre"><dt>Montré</dt><dd>Remi Platinum, WorldFest-Houston 2014 · House of Cards, Anya Tish Gallery, Houston, 2014</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Un étranger au Texas, épousant les codes sociaux du lieu, court après lui-même et son double. Ceci, alors qu’un attentat à la cocotte-minute a lieu à Boston, que le Congrès repousse une initiative de réguler le port d’armes, qu’un enfant de cinq ans abat sa sœur de deux ans avec une arme reçue à son précédent anniversaire…</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://www.youtube.com/watch?v=GPkHf9Xq1ow" target="_blank" rel="noopener">Voir sur YouTube</a>
+      <a class="lien-fleche" href="https://vimeo.com/306555907" target="_blank" rel="noopener">Version Vimeo</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-mi-chiami" style="--part:0.1537">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-mi-chiami" data-bande data-duree="00:04:32:00">
+        <span class="bande-annee">2013</span>
+        <span class="bande-titre"><span class="etiquette-code">CM</span>Mi chiami ?</span>
+        <span class="bande-duree" data-bande-compteur>4’32</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#1f2618">
+  <picture>
+    <img src="/assets/images/films/mi-chiami-640.webp" srcset="/assets/images/films/mi-chiami-640.webp 640w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="640" height="480" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-mi-chiami" role="region" aria-label="Mi chiami ?" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="youtube" data-id="xnSs5e39hRk" data-titre="Mi chiami ?">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:04:32:00</span><span class="lecteur-titre">Mi chiami ?</span></div>
+    <button type="button" class="lecteur-jouer" data-lecteur-jouer><span class="lecteur-triangle" aria-hidden="true"></span><span>Lire le film<span class="visuellement-cache"> : Mi chiami ?</span></span></button>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement">Le lecteur se charge au clic, depuis YouTube.</p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2013</dd></div>
+      <div><dt>Format</dt><dd>ProHD</dd></div>
+      <div><dt>Durée</dt><dd>4’32</dd></div>
+      <div><dt>Lieu</dt><dd>Kaplan’s Project 3, Naples</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Paraphrase d’Enrique Lihn qui sert de prétexte à un feuilleté de séquences situées entre la Vie et la Mort, à savoir au Purgatoire.</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://www.youtube.com/watch?v=xnSs5e39hRk" target="_blank" rel="noopener">Voir sur YouTube</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-o-mensch" style="--part:1.0000">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-o-mensch" data-bande data-duree="00:29:30:00">
+        <span class="bande-annee">2014</span>
+        <span class="bande-titre"><span class="etiquette-code">CM</span>O, Mensch…</span>
+        <span class="bande-duree" data-bande-compteur>29’30</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#15120f">
+  <picture>
+    <img src="/assets/images/films/o-mensch-1280.webp" srcset="/assets/images/films/o-mensch-640.webp 640w, /assets/images/films/o-mensch-1280.webp 1280w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="1280" height="1024" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-o-mensch" role="region" aria-label="O, Mensch…" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="vimeo" data-id="212601321" data-titre="O, Mensch…">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:29:30:00</span><span class="lecteur-titre">O, Mensch…</span></div>
+    <button type="button" class="lecteur-jouer" data-lecteur-jouer><span class="lecteur-triangle" aria-hidden="true"></span><span>Lire le film<span class="visuellement-cache"> : O, Mensch…</span></span></button>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement">Le lecteur se charge au clic, depuis Vimeo.</p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2014</dd></div>
+      <div><dt>Format</dt><dd>ProHD</dd></div>
+      <div><dt>Durée</dt><dd>29’30</dd></div>
+      <div><dt>Lieu</dt><dd>Kietvitnest, Anvers</dd></div>
+      <div class="fiche-montre"><dt>Montré</dt><dd>DaMuVi, sélection officielle, Los Angeles, 2017 · Borders Art Fair, Venice Experimental, Palazzo Albrizzi-Capello, Venise, 2023</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Captation de la performance de NONO_C, créée et interprétée par NONO_C.</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://vimeo.com/212601321" target="_blank" rel="noopener">Voir sur Vimeo</a>
+    </p>
+  </div>
+</div>
+    </li><li class="bande" id="film-osiris" style="--part:0.2966">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-osiris" data-bande data-duree="00:08:45:00">
+        <span class="bande-annee">2015</span>
+        <span class="bande-titre"><span class="etiquette-code">L2</span>Scattered Limbs of Osiris</span>
+        <span class="bande-duree" data-bande-compteur>8’45</span>
+        <span class="bande-film" aria-hidden="true">
+          <figure class="media bande-image media--entier media--entier-films" style="--cadrage:50% 50%;--teinte:#7f7e7c">
+  <picture>
+    <img src="/assets/images/films/osiris-1280.webp" srcset="/assets/images/films/osiris-640.webp 640w, /assets/images/films/osiris-1280.webp 1280w" sizes="(max-width: 760px) 40vw, 18vw" alt="" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </span>
+      </button>
+      <div class="fiche" id="fiche-osiris" role="region" aria-label="Scattered Limbs of Osiris" hidden>
+  <div class="fiche-lecteur lecteur" data-lecteur="youtube" data-id="axvxYVy1sT4" data-titre="Scattered Limbs of Osiris">
+    <div class="lecteur-affiche" data-visuel aria-hidden="true"><span class="lecteur-minutage">00:08:45:00</span><span class="lecteur-titre">Scattered Limbs of Osiris</span></div>
+    <button type="button" class="lecteur-jouer" data-lecteur-jouer><span class="lecteur-triangle" aria-hidden="true"></span><span>Lire le film<span class="visuellement-cache"> : Scattered Limbs of Osiris</span></span></button>
+  </div>
+  <div class="fiche-texte">
+    <p class="fiche-chargement">Le lecteur se charge au clic, depuis YouTube.</p>
+    <dl class="fiche-donnees">
+      <div><dt>Production</dt><dd>2015</dd></div>
+      <div><dt>Format</dt><dd>Formats variés</dd></div>
+      <div><dt>Durée</dt><dd>8’45 <span class="a-completer">durée à vérifier</span></dd></div>
+      <div><dt>Lieu</dt><dd>Le Caire, Égypte</dd></div>
+      <div class="fiche-montre"><dt>Montré</dt><dd>« Something Else », Off Biennale du Caire, 2015</dd></div>
+    </dl>
+    <p class="fiche-synopsis">Où parler de l’Égypte actuelle peut accidentellement amener à parler de sa propre histoire.</p>
+    <p class="fiche-actions">
+      <a class="bouton bouton--contour" href="https://www.youtube.com/watch?v=axvxYVy1sT4" target="_blank" rel="noopener">Voir sur YouTube</a>
+      <a class="lien-fleche" href="https://vimeo.com/306554462" target="_blank" rel="noopener">Version Vimeo</a>
+    </p>
+  </div>
+</div>
+    </li>
+  </ol>
+</section>
+<section class="fin-films" id="fin">
+  <figure class="media fin-films-media" data-grok style="--cadrage:35% 50%;--teinte:#4a453f">
+  <picture>
+    <img src="/assets/images/grok/faisceau-1168.webp" srcset="/assets/images/grok/faisceau-640.webp 640w, /assets/images/grok/faisceau-1168.webp 1168w" sizes="100vw" alt="Faisceau de projecteur sur un mur de plâtre vide" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="conteneur fin-films-texte">
+    <h2 class="titre-section" data-decoupe>Programmer un film</h2>
+    <p>Festivals, lieux, écoles : demandez une projection ou un lien de visionnage.</p>
+    <p><a href="/a-propos?sujet=projection#contact" class="bouton" data-libelle="À propos" data-magnetique>Demander une projection</a></p>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-nom">
+      <p class="pied-marque"><img src="/assets/images/logo.svg" alt="" width="44" height="44"><span><strong>JeanF Jans</strong><br>Nomade Polymedia</span></p>
+      <p>Bruxelles, adresse de l’atelier à compléter</p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <ul>
+        <li><a href="mailto:jeanfjans@gmail.com">jeanfjans@gmail.com</a></li>
+        <li><a href="tel:+32474987035">+32 474 98 70 35</a></li>
+        <li><a href="https://www.facebook.com/facquodvis" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/oeuvres" data-libelle="Œuvres">Œuvres</a></li><li><a href="/films" data-libelle="Films" aria-current="page">Films</a></li><li><a href="/a-propos" data-libelle="À propos">À propos</a></li><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Confort de lecture</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : les informations marquées « à compléter » seront fournies par l’artiste.</p><p>© JeanF Jans</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+32474987035">Appeler</a>
+  <a class="bouton" href="/a-propos#contact" data-libelle="À propos">Écrire</a>
+</div>
+</body>
+</html>

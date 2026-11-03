@@ -1,0 +1,545 @@
+[
+ {
+  "source": "recu/site/oeuvres/retables/09-cantico-delle-creature-chiuso.jpg",
+  "nom": "oeuvres/tr-cantico-ferme",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/08-cantico-delle-creature-aperto.jpg",
+  "nom": "oeuvres/tr-cantico-ouvert",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/02-songes-ferme.jpg",
+  "nom": "oeuvres/tr-songes-ferme",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/01-songes-de-ma-voisine-ouvert.jpg",
+  "nom": "oeuvres/tr-songes-ouvert",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/03-soloists.jpg",
+  "nom": "oeuvres/tr-soloists",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/04-way-out.jpg",
+  "nom": "oeuvres/tr-way-out",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/05-way-out-detail.jpg",
+  "nom": "oeuvres/tr-way-out-detail",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/06-lied-von-der-erde.jpg",
+  "nom": "oeuvres/tr-lied-von-der-erde",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/07-prolegomenes-chute-de-rome.jpg",
+  "nom": "oeuvres/tr-prolegomenes",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/11-les-eaux-calmes-ferme.jpg",
+  "nom": "oeuvres/tr-eaux-calmes-ferme",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/10-les-eaux-calmes.jpg",
+  "nom": "oeuvres/tr-eaux-calmes-ouvert",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/12-kislarod.jpg",
+  "nom": "oeuvres/tr-kislarod",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/13-visitation.jpg",
+  "nom": "oeuvres/tr-visitation",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/14-triptyque-des-lumieres.jpg",
+  "nom": "oeuvres/tr-lumieres",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/15-marine-ecole-grecque.jpg",
+  "nom": "oeuvres/tr-marine-grecque",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/16-marine-ecole-mediterraneenne.jpg",
+  "nom": "oeuvres/tr-marine-med",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/18-triptyque-shaimaa-ferme.jpg",
+  "nom": "oeuvres/tr-shaimaa-ferme",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/17-triptyque-shaimaa-al-sabbagh.jpg",
+  "nom": "oeuvres/tr-shaimaa-ouvert",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/19-bur-e-nitudes.jpg",
+  "nom": "oeuvres/tr-burenitudes",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/20-burger-queen.jpg",
+  "nom": "oeuvres/tr-burger-queen",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/21-holy-quest-of.jpg",
+  "nom": "oeuvres/tr-holy-quest",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/23-menu-ferme.jpg",
+  "nom": "oeuvres/tr-menu-ferme",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/22-menu.jpg",
+  "nom": "oeuvres/tr-menu-ouvert",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/25-police-calibree-ferme.jpg",
+  "nom": "oeuvres/tr-police-ferme",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/retables/24-police-calibree.jpg",
+  "nom": "oeuvres/tr-police-ouvert",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/02-rosa-lady-plus.jpg",
+  "nom": "oeuvres/pe-rosa-1",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/03-rosa-lady-plus.jpg",
+  "nom": "oeuvres/pe-rosa-2",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/04-rosa-lady-plus.jpg",
+  "nom": "oeuvres/pe-rosa-3",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/05-rosa-lady-plus-vue-platanus.jpg",
+  "nom": "oeuvres/pe-rosa-4",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/01-veriditas.jpg",
+  "nom": "oeuvres/pe-veriditas",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/33-nepenthes-sanguinea.jpg",
+  "nom": "oeuvres/pe-nepenthes-1",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/34-nepenthes-sanguinea.jpg",
+  "nom": "oeuvres/pe-nepenthes-2",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/35-nepenthes-sanguinea.jpg",
+  "nom": "oeuvres/pe-nepenthes-3",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/37-nepenthes-sanguinea.jpg",
+  "nom": "oeuvres/pe-nepenthes-4",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/31-nepenthes-sanguinea-atelier.jpg",
+  "nom": "oeuvres/pe-nepenthes-atelier",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/27-heracleum-mantegazzianum.jpg",
+  "nom": "oeuvres/pe-heracleum-1",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/29-heracleum-mantegazzianum.jpg",
+  "nom": "oeuvres/pe-heracleum-2",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/30-heracleum-mantegazzianum.jpg",
+  "nom": "oeuvres/pe-heracleum-3",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/15-ranunculae.jpg",
+  "nom": "oeuvres/pe-ranunculae-1",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/12-ranunculae.jpg",
+  "nom": "oeuvres/pe-ranunculae-2",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/18-ranunculae.jpg",
+  "nom": "oeuvres/pe-ranunculae-3",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/22-ranuncula.jpg",
+  "nom": "oeuvres/pe-ranunculae-4",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/16-ranunculae.jpg",
+  "nom": "oeuvres/pe-ranunculae-5",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/09-platanus-dendrinoxis.jpg",
+  "nom": "oeuvres/pe-platanus-1",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/11-platanus-dendrinoxis.jpg",
+  "nom": "oeuvres/pe-platanus-2",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/10-platanus-dendrinoxis.jpg",
+  "nom": "oeuvres/pe-platanus-3",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/24-neottia-nidus-avis.jpg",
+  "nom": "oeuvres/pe-neottia-1",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/26-neottia-detail.jpg",
+  "nom": "oeuvres/pe-neottia-2",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/25-neottia.jpg",
+  "nom": "oeuvres/pe-neottia-3",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/07-wisteria-venusta.jpg",
+  "nom": "oeuvres/pe-wisteria",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/06-tipula-paludosa.jpg",
+  "nom": "oeuvres/pe-tipula",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/road-map/01-torah.jpg",
+  "nom": "oeuvres/rm-torah",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/films/06-road-map.jpg",
+  "nom": "films/road-map",
+  "qualite": 82
+ },
+ {
+  "source": "recu/rdm/rdm-eglise-neige.jpg",
+  "nom": "oeuvres/rdm-eglise-neige",
+  "qualite": 82
+ },
+ {
+  "source": "recu/rdm/rdm-riviere.jpg",
+  "nom": "oeuvres/rdm-riviere",
+  "qualite": 82
+ },
+ {
+  "source": "recu/rdm/rdm-maison.jpg",
+  "nom": "oeuvres/rdm-maison",
+  "qualite": 82
+ },
+ {
+  "source": "recu/rdm/rdm-arcades.jpg",
+  "nom": "oeuvres/rdm-arcades",
+  "qualite": 82
+ },
+ {
+  "source": "recu/rdm/rdm-poteaux-neige.jpg",
+  "nom": "oeuvres/rdm-poteaux-neige",
+  "qualite": 82
+ },
+ {
+  "source": "recu/rdm/rdm-gare.jpg",
+  "nom": "oeuvres/rdm-gare",
+  "qualite": 82
+ },
+ {
+  "source": "recu/rdm/rdm-village-neige.jpg",
+  "nom": "oeuvres/rdm-village-neige",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/films/02-streitquartett.jpg",
+  "nom": "films/streitquartett",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/03-dd03.jpg",
+  "nom": "oeuvres/dd-floating-1",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/01-dd01.jpg",
+  "nom": "oeuvres/dd-floating-2",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/04-dd05.jpg",
+  "nom": "oeuvres/dd-floating-3",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/02-dd02.jpg",
+  "nom": "oeuvres/dd-floating-4",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/05-dd04.jpg",
+  "nom": "oeuvres/dd-floating-5",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/07-dd12-vitrail.jpg",
+  "nom": "oeuvres/dd-vitrail-1",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/06-dd13-vitrail.jpg",
+  "nom": "oeuvres/dd-vitrail-2",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/09-dd10-vitrail.jpg",
+  "nom": "oeuvres/dd-vitrail-3",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/10-dd09-vitrail.jpg",
+  "nom": "oeuvres/dd-vitrail-4",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/08-dd11-vitrail.jpg",
+  "nom": "oeuvres/dd-vitrail-5",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/13-dd06-vitrail.jpg",
+  "nom": "oeuvres/dd-vitrail-6",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/14-home-window.jpg",
+  "nom": "oeuvres/dd-home-window-1",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/15-home-window.jpg",
+  "nom": "oeuvres/dd-home-window-2",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/16-home-window-detail.jpg",
+  "nom": "oeuvres/dd-home-window-3",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/oeuvres/derive-dereve/17-home-window-detail.jpg",
+  "nom": "oeuvres/dd-home-window-4",
+  "qualite": 82
+ },
+ {
+  "source": "recu/site/films/09-issues-cadastre-du-regard.jpg",
+  "nom": "films/issues",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/films/10-huis-clos.jpg",
+  "nom": "films/huis-clos",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/films/05-apocalypse.jpg",
+  "nom": "films/apocalypse",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/films/04-minskunderstanding.jpg",
+  "nom": "films/minskunderstanding",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/films/07-du-mein-spiegel.jpg",
+  "nom": "films/du-mein-spiegel",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/films/01-still-lives.jpg",
+  "nom": "films/still-lives",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/films/12-mi-chiami.jpg",
+  "nom": "films/mi-chiami",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/films/08-o-mensch.jpg",
+  "nom": "films/o-mensch",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/films/03-scattered-limbs-of-osiris.jpg",
+  "nom": "films/osiris",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/laundry/1-houston/12-still-lives-videopict.jpg",
+  "nom": "laundry/houston",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/laundry/2-le-caire/01-tribute-to-shaimaa-al-sabbagh.jpg",
+  "nom": "laundry/le-caire",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/laundry/3-naples/01-box01.jpg",
+  "nom": "laundry/naples",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/laundry/4-tourinnes/02-aljoscha-1.jpg",
+  "nom": "laundry/tourinnes",
+  "qualite": 80
+ },
+ {
+  "source": "recu/grok/accueil-ouverture-mur-16x9.jpg",
+  "nom": "grok/accueil-mur",
+  "sourceMobile": "recu/grok/accueil-ouverture-mur-9x16.jpg",
+  "qualite": 76
+ },
+ {
+  "source": "recu/grok/accueil-manifeste-joints-4x5.jpg",
+  "nom": "grok/joints",
+  "qualite": 76
+ },
+ {
+  "source": "recu/grok/accueil-contact-atelier-16x9.jpg",
+  "nom": "grok/atelier",
+  "sourceMobile": "recu/grok/accueil-contact-atelier-4x5.jpg",
+  "qualite": 76
+ },
+ {
+  "source": "recu/grok/oeuvres-ouverture-galerie-16x9.jpg",
+  "nom": "grok/galerie",
+  "sourceMobile": "recu/grok/oeuvres-ouverture-galerie-9x16.jpg",
+  "qualite": 76
+ },
+ {
+  "source": "recu/grok/oeuvres-voir-au-mur-16x9.jpg",
+  "nom": "grok/voir-au-mur",
+  "sourceMobile": "recu/grok/oeuvres-voir-au-mur-9x16.jpg",
+  "qualite": 78
+ },
+ {
+  "source": "recu/grok/oeuvres-coupe-mur-21x9.jpg",
+  "nom": "grok/coupe-mur",
+  "qualite": 76
+ },
+ {
+  "source": "recu/grok/films-ouverture-montage-16x9.jpg",
+  "nom": "grok/montage",
+  "sourceMobile": "recu/grok/films-ouverture-montage-9x16.jpg",
+  "qualite": 78
+ },
+ {
+  "source": "recu/grok/films-pellicule-texture-21x9.jpg",
+  "nom": "grok/pellicule",
+  "qualite": 76
+ },
+ {
+  "source": "recu/grok/films-projection-faisceau-16x9.jpg",
+  "nom": "grok/faisceau",
+  "qualite": 76
+ },
+ {
+  "source": "recu/grok/apropos-outils-restauration-4x5.jpg",
+  "nom": "grok/outils",
+  "qualite": 78
+ },
+ {
+  "source": "recu/grok/apropos-catalogues-3x2.jpg",
+  "nom": "grok/catalogues",
+  "qualite": 78
+ },
+ {
+  "source": "recu/grok/apropos-contact-carnet-16x9.jpg",
+  "nom": "grok/carnet",
+  "qualite": 78
+ },
+ {
+  "source": "recu/grok/apropos-agenda-traces-3x2.jpg",
+  "nom": "grok/traces",
+  "qualite": 76
+ },
+ {
+  "source": "recu/grok/mentions-legales-platre-16x9.jpg",
+  "nom": "grok/platre",
+  "sourceMobile": "recu/grok/mentions-legales-platre-9x16.jpg",
+  "qualite": 76
+ },
+ {
+  "source": "recu/grok/404-pan-manquant-16x9.jpg",
+  "nom": "grok/pan-manquant",
+  "sourceMobile": "recu/grok/404-pan-manquant-9x16.jpg",
+  "qualite": 76
+ },
+ {
+  "source": "recu/site/gare-aux-rumeurs/01-couverture-livret.jpg",
+  "nom": "gare/couverture",
+  "qualite": 78
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/31-nepenthes-sanguinea-atelier.jpg",
+  "nom": "apropos/atelier",
+  "sourceMobile": "recu/site/oeuvres/pepiniere/32-nepenthes-sanguinea-atelier.jpg",
+  "qualite": 80
+ },
+ {
+  "source": "recu/site/oeuvres/pepiniere/08-atelier-sculpt.jpg",
+  "nom": "apropos/atelier-sculpt",
+  "qualite": 80
+ }
+]

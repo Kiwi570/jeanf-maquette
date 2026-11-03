@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en" data-v="1" data-gabarit="a-propos" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About and contact: JeanF Jans</title>
+<meta name="description" content="Background, training, 2012-2024 timeline, bibliography and contact for the artist JeanF Jans.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://jeanf-maquette.vercel.app/en/a-propos">
+<link rel="alternate" hreflang="fr" href="https://jeanf-maquette.vercel.app/a-propos">
+<link rel="alternate" hreflang="en" href="https://jeanf-maquette.vercel.app/en/a-propos">
+<link rel="alternate" hreflang="x-default" href="https://jeanf-maquette.vercel.app/a-propos">
+<style>:root{--fond:#e4e0d8;--texte:#161514;--voile-fond:#161514;--ouverture-fond:#e4e0d8;--menu-fond:#161514}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/archivo-latin-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#e4e0d8">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JeanF Jans">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="About and contact: JeanF Jans">
+<meta property="og:description" content="Background, training, 2012-2024 timeline, bibliography and contact for the artist JeanF Jans.">
+<meta property="og:url" content="https://jeanf-maquette.vercel.app/en/a-propos">
+<meta property="og:image" content="https://jeanf-maquette.vercel.app/assets/partage/a-propos-en.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="JeanF Jans’s studio: a Garden Nursery sculpture in progress">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"JeanF Jans","alternateName":"JeanF","url":"https://jeanf-maquette.vercel.app/","jobTitle":"Polymedia artist","description":"Polymedia artist born in Antwerp in 1961, living and working in Brussels: triptychs, garden sculptures, plastic-waste stained glass, short films and Laundry residencies.","birthDate":"1961","birthPlace":{"@type":"Place","name":"Antwerpen"},"homeLocation":{"@type":"Place","name":"Brussels"},"email":"mailto:jeanfjans@gmail.com","telephone":"+32474987035","award":"Remi Platinum Award, WorldFest-Houston 2014 (Still Lives)","sameAs":["https://www.facebook.com/facquodvis"]}</script>
+</head>
+<body id="haut" class="page-a-propos">
+<div data-voile aria-hidden="true"><span class="voile-joint"></span><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="56" height="56"><span data-voile-libelle>About</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <span class="ouverture-joints"><i></i><i></i><i></i><i></i><i></i></span>
+  <span class="ouverture-minutage" data-intro-minutage>00:00:00:00</span>
+  <div class="ouverture-centre">
+    <div class="ouverture-blocs"><span class="bloc" style="grid-column:2;grid-row:7;--i:0"></span><span class="bloc" style="grid-column:3;grid-row:7;--i:1"></span><span class="bloc" style="grid-column:7;grid-row:7;--i:2"></span><span class="bloc" style="grid-column:8;grid-row:7;--i:3"></span><span class="bloc" style="grid-column:9;grid-row:7;--i:4"></span><span class="bloc" style="grid-column:12;grid-row:7;--i:5"></span><span class="bloc" style="grid-column:13;grid-row:7;--i:6"></span><span class="bloc" style="grid-column:14;grid-row:7;--i:7"></span><span class="bloc" style="grid-column:16;grid-row:7;--i:8"></span><span class="bloc" style="grid-column:19;grid-row:7;--i:9"></span><span class="bloc" style="grid-column:21;grid-row:7;--i:10"></span><span class="bloc" style="grid-column:1;grid-row:6;--i:11"></span><span class="bloc" style="grid-column:4;grid-row:6;--i:12"></span><span class="bloc" style="grid-column:6;grid-row:6;--i:13"></span><span class="bloc" style="grid-column:11;grid-row:6;--i:14"></span><span class="bloc" style="grid-column:14;grid-row:6;--i:15"></span><span class="bloc" style="grid-column:16;grid-row:6;--i:16"></span><span class="bloc" style="grid-column:19;grid-row:6;--i:17"></span><span class="bloc" style="grid-column:21;grid-row:6;--i:18"></span><span class="bloc" style="grid-column:4;grid-row:5;--i:19"></span><span class="bloc" style="grid-column:6;grid-row:5;--i:20"></span><span class="bloc" style="grid-column:7;grid-row:5;--i:21"></span><span class="bloc" style="grid-column:8;grid-row:5;--i:22"></span><span class="bloc" style="grid-column:9;grid-row:5;--i:23"></span><span class="bloc" style="grid-column:12;grid-row:5;--i:24"></span><span class="bloc" style="grid-column:13;grid-row:5;--i:25"></span><span class="bloc" style="grid-column:14;grid-row:5;--i:26"></span><span class="bloc" style="grid-column:16;grid-row:5;--i:27"></span><span class="bloc" style="grid-column:19;grid-row:5;--i:28"></span><span class="bloc" style="grid-column:21;grid-row:5;--i:29"></span><span class="bloc" style="grid-column:4;grid-row:4;--i:30"></span><span class="bloc" style="grid-column:6;grid-row:4;--i:31"></span><span class="bloc" style="grid-column:9;grid-row:4;--i:32"></span><span class="bloc" style="grid-column:14;grid-row:4;--i:33"></span><span class="bloc" style="grid-column:16;grid-row:4;--i:34"></span><span class="bloc" style="grid-column:19;grid-row:4;--i:35"></span><span class="bloc" style="grid-column:21;grid-row:4;--i:36"></span><span class="bloc" style="grid-column:22;grid-row:4;--i:37"></span><span class="bloc" style="grid-column:23;grid-row:4;--i:38"></span><span class="bloc" style="grid-column:4;grid-row:3;--i:39"></span><span class="bloc" style="grid-column:7;grid-row:3;--i:40"></span><span class="bloc" style="grid-column:8;grid-row:3;--i:41"></span><span class="bloc" style="grid-column:12;grid-row:3;--i:42"></span><span class="bloc" style="grid-column:13;grid-row:3;--i:43"></span><span class="bloc" style="grid-column:16;grid-row:3;--i:44"></span><span class="bloc" style="grid-column:17;grid-row:3;--i:45"></span><span class="bloc" style="grid-column:18;grid-row:3;--i:46"></span><span class="bloc" style="grid-column:21;grid-row:3;--i:47"></span><span class="bloc" style="grid-column:4;grid-row:2;--i:48"></span><span class="bloc" style="grid-column:21;grid-row:2;--i:49"></span><span class="bloc" style="grid-column:2;grid-row:1;--i:50"></span><span class="bloc" style="grid-column:3;grid-row:1;--i:51"></span><span class="bloc" style="grid-column:4;grid-row:1;--i:52"></span><span class="bloc" style="grid-column:21;grid-row:1;--i:53"></span><span class="bloc" style="grid-column:22;grid-row:1;--i:54"></span><span class="bloc" style="grid-column:23;grid-row:1;--i:55"></span><span class="bloc" style="grid-column:24;grid-row:1;--i:56"></span></div>
+    <p class="ouverture-etiquette"><span>Nomade Polymedia</span><span>Brussels</span></p>
+  </div>
+</div>
+<a class="evitement" href="#contenu">Skip to content</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/en" data-libelle="Home">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span class="entete-nom">JeanF</span>
+    </a>
+    <span class="minutage" data-minutage aria-hidden="true" data-audit-ignorer>00:00:00:00</span>
+    <nav data-nav aria-label="Main navigation">
+      <ul><li><a href="/en/oeuvres" data-libelle="Works">Works</a></li><li><a href="/en/films" data-libelle="Films">Films</a></li><li><a href="/en/a-propos" data-libelle="About" aria-current="page">About</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-langue" href="/a-propos" hreflang="fr" lang="fr" data-langue="fr" aria-label="Version française">fr</a>
+      <a class="bouton bouton--entete" href="/en/a-propos#contact" data-libelle="About" data-magnetique>Write to JeanF</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Close"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><span class="menu-num" aria-hidden="true">01</span><a href="/en" class="menu-lien" data-libelle="Home">Home</a></li><li style="--i:1"><span class="menu-num" aria-hidden="true">02</span><a href="/en/oeuvres" class="menu-lien" data-libelle="Works">Works</a></li><li style="--i:2"><span class="menu-num" aria-hidden="true">03</span><a href="/en/films" class="menu-lien" data-libelle="Films">Films</a></li><li style="--i:3"><span class="menu-num" aria-hidden="true">04</span><a href="/en/a-propos" class="menu-lien" data-libelle="About" aria-current="page">About</a></li></ul>
+  <div class="menu-bas">
+    <p><a class="bouton" href="/en/a-propos#contact" data-libelle="About">Write to JeanF</a></p>
+    <p class="menu-contact"><a href="mailto:jeanfjans@gmail.com">jeanfjans@gmail.com</a><br><a href="tel:+32474987035">+32 474 98 70 35</a></p>
+    <p><a class="entete-langue entete-langue--menu" href="/a-propos" hreflang="fr" lang="fr" data-langue="fr">Version française</a></p>
+    <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Reduce motion" data-libelle-retablir="Restore motion" data-libelle-systeme="Motion reduced by your device setting"><span data-libelle-bouton>Reduce motion</span></button></p>
+  </div>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="tete tete--apropos ecran" id="debut">
+  <figure class="media tete-fond tete-fond--photo" style="--cadrage:45% 50%;--cadrage-mobile:50% 45%;--teinte:#7b746c;--teinte-mobile:#766c5e">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/apropos/atelier-mobile-640.webp 640w" sizes="100vw">
+    <img src="/assets/images/apropos/atelier-1134.webp" srcset="/assets/images/apropos/atelier-640.webp 640w, /assets/images/apropos/atelier-1134.webp 1134w" sizes="100vw" alt="Studio: the sculpture Nepenthes sanguinea being assembled" width="1134" height="756" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+  <div class="tete-grille">
+    <div class="tete-texte tete-texte--carte">
+      <p class="surtitre" data-anime="gsap">JeanF Jans</p>
+      <h1 class="tete-titre"><span data-anime="gsap" class="tete-ligne">About</span></h1>
+      <p class="tete-intro" data-anime="gsap">Background, timeline, bibliography and contact.</p>
+      <p class="tete-actions" data-anime="gsap"><a class="bouton" href="#contact" data-action-principale data-magnetique>Write to JeanF</a></p>
+      <p class="tete-info" data-info-cle data-anime="gsap"><span class="a-completer">Portrait of the artist: to be completed</span></p>
+    </div>
+  </div>
+</section>
+<section class="bio conteneur" id="bio">
+  <figure class="media bio-media" data-grok style="--cadrage:50% 50%;--teinte:#90877b">
+  <picture>
+    <img src="/assets/images/grok/outils-784.webp" srcset="/assets/images/grok/outils-640.webp 640w, /assets/images/grok/outils-784.webp 784w" sizes="(max-width: 760px) 100vw, 34vw" alt="Restorer’s table: brushes, spatulas, pigments" width="784" height="1168" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">AI-generated illustration</figcaption>
+</figure>
+  <div>
+    <h2 class="titre-section" data-decoupe>Old emerging artist</h2>
+    <p class="bio-texte" data-anime>A law graduate, archaeologist and art historian, JeanF Jans spent ten years restoring ancient and contemporary works and buildings in Germany, Italy, France and Belgium. In 2000 he decided to devote himself entirely to his work as an artist: an “old emerging artist, or Nomade Polymedia”.</p>
+  </div>
+</section>
+<section class="parcours conteneur" id="parcours">
+  <div class="parcours-cote">
+    <h2 class="titre-section" data-decoupe>Training and background</h2>
+    <figure class="media parcours-media" style="--cadrage:50% 50%;--teinte:#646667">
+  <picture>
+    <img src="/assets/images/apropos/atelier-sculpt-1134.webp" srcset="/assets/images/apropos/atelier-sculpt-640.webp 640w, /assets/images/apropos/atelier-sculpt-1134.webp 1134w" sizes="(max-width: 760px) 100vw, 34vw" alt="JeanF Jans’s studio: a Garden Nursery sculpture in progress" width="1134" height="638" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div>
+  <ol class="parcours-liste">
+    <li data-anime><p class="parcours-quand">°1961</p><p>Born in Antwerp. Lives and works in Brussels.</p></li><li data-anime><p class="parcours-quand">Studies</p><p>Law (Saint-Louis, Brussels). Degree in archaeology and art history (UCL, Louvain-la-Neuve).</p></li><li data-anime><p class="parcours-quand">Further training</p><p>History of Palladian architecture, Istituto Andrea Palladio, Vicenza. Conservation and restoration of mural paintings, Florence. Modern art restoration techniques, WZK, Düsseldorf. Ancient masonry and mural painting techniques, San Servolo, Venice. Applied techniques of historic building, Brera, Milan.</p></li><li data-anime><p class="parcours-quand">1996-1999</p><p>Ixelles Academy of Fine Arts: sculpture and drawing.</p></li><li data-anime><p class="parcours-quand">1990-2000</p><p>Freelance: restoration of ancient and contemporary works, applied techniques on ancient and modern buildings (Germany, Italy, France, Belgium), design and interiors. Guest teacher at the Architects’ College, Córdoba (Argentina).</p></li><li data-anime><p class="parcours-quand">2000</p><p>Salzburger Sommerakademie: video, “Ausdruck des Privaten”, with Ellen Cantor. From then on, works full time as an artist.</p></li><li data-anime><p class="parcours-quand">2006</p><p>Salzburger Sommerakademie: media workshop with Shirin Neshat and Shoja Azari.</p></li><li data-anime><p class="parcours-quand">2009</p><p>Salzburger Sommerakademie: expanded drawing with Lia and Dan Perjovschi.</p></li><li data-anime><p class="parcours-quand">2010-2011</p><p>Brussels Playhouse: Meisner technique and directing, with Larry Silverberg and Catherine Zavlav.</p></li>
+  </ol>
+</section>
+<section class="agenda" id="agenda">
+  <figure class="media agenda-media" data-grok style="--cadrage:50% 50%;--teinte:#c9c2b8">
+  <picture>
+    <img src="/assets/images/grok/traces-1168.webp" srcset="/assets/images/grok/traces-640.webp 640w, /assets/images/grok/traces-1168.webp 1168w" sizes="100vw" alt="Traces of removed frames and posters on a plaster wall" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">AI-generated illustration</figcaption>
+</figure>
+  <div class="conteneur">
+    <div class="agenda-tete">
+      <h2 class="titre-section" data-decoupe>Timeline</h2>
+      <p>2012-2024. All dates are in the past.</p>
+      <div class="filtres" role="group" aria-label="Show" data-filtres-agenda>
+        <button type="button" class="filtre" data-filtre="tous" aria-pressed="true">All</button>
+        <button type="button" class="filtre" data-filtre="exposition" aria-pressed="false">Exhibitions</button><button type="button" class="filtre" data-filtre="film" aria-pressed="false">Films and festivals</button><button type="button" class="filtre" data-filtre="residence" aria-pressed="false">Residencies</button><button type="button" class="filtre" data-filtre="performance" aria-pressed="false">Performances and talks</button><button type="button" class="filtre" data-filtre="curation" aria-pressed="false">Curating</button><button type="button" class="filtre" data-filtre="atelier" aria-pressed="false">Studio</button>
+      </div>
+    </div>
+    <div class="agenda-annees" data-agenda>
+      <div class="agenda-annee" data-annee="2024">
+        <h3 class="agenda-an">2024</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="residence">
+          <p class="agenda-mois">05</p>
+          <div><p class="agenda-type">Residency</p>
+          <p class="agenda-titre">Sabaudia, Città modello fascista</p>
+          <p class="agenda-detail">Support project for Vicente Gallego Alcaraz (Laundry VI), Rome</p></div>
+        </li><li class="agenda-date" data-type="atelier">
+          <p class="agenda-mois">05</p>
+          <div><p class="agenda-type">Studio</p>
+          <p class="agenda-titre">Open studio</p>
+          <p class="agenda-detail">Atelier in Beeld</p></div>
+        </li><li class="agenda-date" data-type="residence">
+          <p class="agenda-mois">02</p>
+          <div><p class="agenda-type">Residency</p>
+          <p class="agenda-titre">Laundry VI</p>
+          <p class="agenda-detail">With Vicente Gallego Alcaraz, Igualada</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2023">
+        <h3 class="agenda-an">2023</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">08</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Retables</p>
+          <p class="agenda-detail">Artists Meeting Knokke, Grand Casino. Curators: Willem Elias, Hugo Brutin, Hilde Van Canneyt</p></div>
+        </li><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">07</p>
+          <div><p class="agenda-type">Film or festival</p>
+          <p class="agenda-titre">Fratres</p>
+          <p class="agenda-detail">Short film and music performance, Pietrasanta Music Festival, with Zee Zee, Jing Zhao, Michael Guttman</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">05-06</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">M.U.R.S (el relat de ses pedres)</p>
+          <p class="agenda-detail">With Manu vb Tintoré, Capella Abramovic, Alaior, Menorca</p></div>
+        </li><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">05</p>
+          <div><p class="agenda-type">Film or festival</p>
+          <p class="agenda-titre">O, Mensch…</p>
+          <p class="agenda-detail">Borders Art Fair, Venice Experimental, Palazzo Albrizzi-Capello, Venice</p></div>
+        </li><li class="agenda-date" data-type="atelier">
+          <p class="agenda-mois">05</p>
+          <div><p class="agenda-type">Studio</p>
+          <p class="agenda-titre">Open studio</p>
+          <p class="agenda-detail">Atelier in Beeld</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2021-2022">
+        <h3 class="agenda-an agenda-an--plage">2021-2022</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="atelier">
+          <p class="agenda-mois">—</p>
+          <div><p class="agenda-type">Studio</p>
+          <p class="agenda-titre">Corona years</p>
+          <p class="agenda-detail">Rethinking the whole production: Mauer(stücke)</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">11</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">M.U.R.S (el relat de ses pedres)</p>
+          <p class="agenda-detail">With Manu vb Tintoré, Art i Natura, Menorca</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2020">
+        <h3 class="agenda-an">2020</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="residence">
+          <p class="agenda-mois">09-10</p>
+          <div><p class="agenda-type">Residency <span class="statut statut--avorte">aborted</span></p>
+          <p class="agenda-titre">Minskunderstanding (Laundry V)</p>
+          <p class="agenda-detail">Residency planned with “Y” Gallery, Minsk, hosted by Valentina Kiselyova and Anna Chistoserdova</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">04-09</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Corona projects</p>
+          <p class="agenda-detail">Cancelled or postponed</p></div>
+        </li><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">06</p>
+          <div><p class="agenda-type">Film or festival</p>
+          <p class="agenda-titre">Je brûle de partout</p>
+          <p class="agenda-detail">Music video project by Messieurs Delmotte and Leur Chazam, Boghossian Foundation (and Nadja Vilenne)</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">04</p>
+          <div><p class="agenda-type">Exhibition <span class="statut statut--avorte">postponed</span></p>
+          <p class="agenda-titre">About Victor Bourgeois</p>
+          <p class="agenda-detail">Collaboration with Christophe Terlinden, Dries Meddens and CIVA for Art Brussels (Covid-19)</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">01</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Dérive-Dérêve</p>
+          <p class="agenda-detail">Installation, Josefa Foundation</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2019">
+        <h3 class="agenda-an">2019</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">11</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Dérive-Dérêve (#1)</p>
+          <p class="agenda-detail">Mixed-media waste experiment, several places in Brussels (month to be completed)</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">08</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Solitudes (portraits)</p>
+          <p class="agenda-detail">Art Nocturne Knokke</p></div>
+        </li><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">07</p>
+          <div><p class="agenda-type">Film or festival</p>
+          <p class="agenda-titre">Survival</p>
+          <p class="agenda-detail">Video Streitquartett, Casoria Contemporary Art Museum, Naples</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2018">
+        <h3 class="agenda-an">2018</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="curation">
+          <p class="agenda-mois">10-11</p>
+          <div><p class="agenda-type">Curating</p>
+          <p class="agenda-titre">Enclos, cet horizon qui nous poursuit</p>
+          <p class="agenda-detail">Curated with Manuel vb Tintoré, Tourinnes-la-Grosse, 53rd Saint Martin festivities. Artists: Christophe Terlinden, Karine Marenne and Messieurs Delmotte, Aljoscha, Dries Meddens, Philippe Herbet, Patricia Martin, Joëlle Verstraeten. Writer: Eric Brücher</p></div>
+        </li><li class="agenda-date" data-type="residence">
+          <p class="agenda-mois">08-09</p>
+          <div><p class="agenda-type">Residency</p>
+          <p class="agenda-titre">Enclos, cet horizon qui nous poursuit</p>
+          <p class="agenda-detail">Artists’ residency, Tourinnes-la-Grosse</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">07-08</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Survival</p>
+          <p class="agenda-detail">“Marina, scuola greca XXI° sec.”, Casoria Contemporary Art Museum, Naples</p></div>
+        </li><li class="agenda-date" data-type="residence">
+          <p class="agenda-mois">04-11</p>
+          <div><p class="agenda-type">Residency</p>
+          <p class="agenda-titre">Laundry IV</p>
+          <p class="agenda-detail">With Manuel vb Tintoré, joint curating of Tourinnes Fest’2018</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">04</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Nourritures terrestres</p>
+          <p class="agenda-detail">Installation in a former monastery, Brussels</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2017">
+        <h3 class="agenda-an">2017</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">09-10</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Survival</p>
+          <p class="agenda-detail">Casoria Art Museum, Naples</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">09</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Garden celebration</p>
+          <p class="agenda-detail">CIVA, Brussels</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">09</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Fanzine</p>
+          <p class="agenda-detail">With Dan Perjovschi, Extra City, Antwerp</p></div>
+        </li><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">08</p>
+          <div><p class="agenda-type">Film or festival</p>
+          <p class="agenda-titre">O, Mensch…</p>
+          <p class="agenda-detail">Official selection, DaMuVi Film Festival, Los Angeles</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">05</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Veriditas</p>
+          <p class="agenda-detail">Installation, Kreuzberg, Berlin</p></div>
+        </li><li class="agenda-date" data-type="performance">
+          <p class="agenda-mois">04</p>
+          <div><p class="agenda-type">Performance or talk</p>
+          <p class="agenda-titre">Action painting</p>
+          <p class="agenda-detail">Carte blanche sur fond noir, by Laurent d’Ursel et al., Centre J. Francq, Brussels</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">04</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">You no speak American original</p>
+          <p class="agenda-detail">Contemporary Art Museum, Casoria, Naples</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2016">
+        <h3 class="agenda-an">2016</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="residence">
+          <p class="agenda-mois">10</p>
+          <div><p class="agenda-type">Residency</p>
+          <p class="agenda-titre">Laundry III</p>
+          <p class="agenda-detail">With Giuseppe Zevola and Nathalie Heidsieck-de Saint Phalle, Palazzo Spinelli, Naples</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">09</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Road Map</p>
+          <p class="agenda-detail">As part of Survival, CAM Casoria, curator: Antonio Manfredi</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">09</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Garden of Earthly Delights</p>
+          <p class="agenda-detail">Sculpture, painting, sketches, books, films, 23 September to 2 October, patrons Marie-Hélène and Sébastien D’Hondt, Beersel</p></div>
+        </li><li class="agenda-date" data-type="atelier">
+          <p class="agenda-mois">05-06</p>
+          <div><p class="agenda-type">Studio</p>
+          <p class="agenda-titre">Open studio (Question d’époque)</p>
+          <p class="agenda-detail">Saloon, Brussels</p></div>
+        </li><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">03-04</p>
+          <div><p class="agenda-type">Film or festival</p>
+          <p class="agenda-titre">Last shots for Paradiso</p>
+          <p class="agenda-detail">Belarus</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">03-04</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Premio Arte Laguna</p>
+          <p class="agenda-detail">Triptych series, 19 March to 3 April, Venice</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2015">
+        <h3 class="agenda-an">2015</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">11-12</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Something Else</p>
+          <p class="agenda-detail">Cairo Off Biennale of contemporary art, curators Simon Ndjali, A. Moattaz, with Laundry II (Hagar Masoud, Sama Waly, Marwa Benhalim): Scattered Limbs of Osiris</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">05</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Garden Nursery</p>
+          <p class="agenda-detail">Installed in the Iweins gardens, Rixensart</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">03</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Laundry sketches</p>
+          <p class="agenda-detail">Opening on 22 March, Belgian embassy, Cairo</p></div>
+        </li><li class="agenda-date" data-type="residence">
+          <p class="agenda-mois">02-03</p>
+          <div><p class="agenda-type">Residency</p>
+          <p class="agenda-titre">Laundry II</p>
+          <p class="agenda-detail">Residency in Cairo. Curators: Dina Eldeeb, Mohamed Allam (Medrar Gallery), with Hagar Masoud, Sama Waly, Marwa Benhalim</p></div>
+        </li><li class="agenda-date" data-type="performance">
+          <p class="agenda-mois">01</p>
+          <div><p class="agenda-type">Performance or talk</p>
+          <p class="agenda-titre">Fatwa contre les intégristes de l’intégration</p>
+          <p class="agenda-detail">Collectif Manifestement, street performance, 25 January</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2014">
+        <h3 class="agenda-an">2014</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">09</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Popocatepetl</p>
+          <p class="agenda-detail">Monumental installation (300 ft) of the Garden Nursery series, square Steurs, Brussels</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">06</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Russian Diary Moods</p>
+          <p class="agenda-detail">Opening, G. Circle, Brussels</p></div>
+        </li><li class="agenda-date" data-type="performance">
+          <p class="agenda-mois">04</p>
+          <div><p class="agenda-type">Performance or talk</p>
+          <p class="agenda-titre">House of Cards</p>
+          <p class="agenda-detail">Screening-performance with J. Verstraeten, Anya Tish Gallery, and TFA Ailleurs-Elsewhere, French Consulate, Houston, curated by Y. Palix</p></div>
+        </li><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">04</p>
+          <div><p class="agenda-type">Film or festival <span class="statut statut--prix">Remi Platinum</span></p>
+          <p class="agenda-titre">WorldFest-Houston</p>
+          <p class="agenda-detail">Still Lives, Remi Platinum (indie shorts), 3 to 14 April</p></div>
+        </li><li class="agenda-date" data-type="performance">
+          <p class="agenda-mois">03</p>
+          <div><p class="agenda-type">Performance or talk</p>
+          <p class="agenda-titre">Art and Memory</p>
+          <p class="agenda-detail">Guest artist at the seminar, UCL, Louvain-la-Neuve, 18 March</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2013">
+        <h3 class="agenda-an">2013</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">10</p>
+          <div><p class="agenda-type">Film or festival</p>
+          <p class="agenda-titre">Il Purgatorio</p>
+          <p class="agenda-detail">Filming (second session), Palazzo Spinelli, Naples</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">06-08</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Garden Nursery</p>
+          <p class="agenda-detail">Four monumental sculptures, Art Nocturne Knokke (La Réserve, De Scharpoord), 18 June to 18 August, opening on 10 August</p></div>
+        </li><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">06</p>
+          <div><p class="agenda-type">Film or festival</p>
+          <p class="agenda-titre">O, Mensch</p>
+          <p class="agenda-detail">Film, NONO-C dance company, Kietvitnest, Antwerp, 17 to 20 June</p></div>
+        </li><li class="agenda-date" data-type="residence">
+          <p class="agenda-mois">04-05</p>
+          <div><p class="agenda-type">Residency</p>
+          <p class="agenda-titre">Laundry I (or a still lifestyle)</p>
+          <p class="agenda-detail">Polymedia installation in G. Petit’s residence (watercolour, screen prints, photo, film), residency-workshop, Houston, Texas, 14 April to 5 May. Curator: Y. Palix</p></div>
+        </li><li class="agenda-date" data-type="performance">
+          <p class="agenda-mois">02</p>
+          <div><p class="agenda-type">Performance or talk</p>
+          <p class="agenda-titre">Three Parmenidean instants</p>
+          <p class="agenda-detail">TTroc Bozar, Brussels, 1 to 3 February</p></div>
+        </li><li class="agenda-date" data-type="performance">
+          <p class="agenda-mois">01</p>
+          <div><p class="agenda-type">Performance or talk</p>
+          <p class="agenda-titre">Sans titre</p>
+          <p class="agenda-detail">Collectif Manifestement, street performance, Brussels, 27 January</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">01</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Heracleum mantegazzianum (última Venere)</p>
+          <p class="agenda-detail">Installation, private collection, Brussels, 14 to 30 January</p></div>
+        </li></ul>
+      </div><div class="agenda-annee" data-annee="2012">
+        <h3 class="agenda-an">2012</h3>
+        <ul class="agenda-liste"><li class="agenda-date" data-type="performance">
+          <p class="agenda-mois">11</p>
+          <div><p class="agenda-type">Performance or talk</p>
+          <p class="agenda-titre">Pour le rattachement de la Belgique au Congo</p>
+          <p class="agenda-detail">Carte blanche at the Africa Museum, Tervuren, with Collectif Manifestement</p></div>
+        </li><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">10</p>
+          <div><p class="agenda-type">Film or festival</p>
+          <p class="agenda-titre">Mi chiami</p>
+          <p class="agenda-detail">Video, Palazzo Marigliano (R. Kaplan project), Naples, and Il Purgatorio film set</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">08</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Nepenthes sanguinea</p>
+          <p class="agenda-detail">Garden Nursery installation, private collection, Brussels</p></div>
+        </li><li class="agenda-date" data-type="film">
+          <p class="agenda-mois">07</p>
+          <div><p class="agenda-type">Film or festival</p>
+          <p class="agenda-titre">Il Paradiso</p>
+          <p class="agenda-detail">Film seminar coaching children, Borisov, Belarus</p></div>
+        </li><li class="agenda-date" data-type="performance">
+          <p class="agenda-mois">05</p>
+          <div><p class="agenda-type">Performance or talk</p>
+          <p class="agenda-titre">Dégagisme is not surrealist !</p>
+          <p class="agenda-detail">Collectif Manifestement street performance for Arte (“Le quai des Belges”)</p></div>
+        </li><li class="agenda-date" data-type="exposition">
+          <p class="agenda-mois">04-07</p>
+          <div><p class="agenda-type">Exhibition</p>
+          <p class="agenda-titre">Three Sculpture Art Festival</p>
+          <p class="agenda-detail">Lavaux-Sainte-Anne</p></div>
+        </li><li class="agenda-date" data-type="performance">
+          <p class="agenda-mois">04</p>
+          <div><p class="agenda-type">Performance or talk</p>
+          <p class="agenda-titre">Rock’n’roll prints</p>
+          <p class="agenda-detail">Performance-workshop and Wonderland prints, Gallery M Squared, Houston, 10 to 13 April</p></div>
+        </li></ul>
+      </div>
+      <p class="agenda-vide" data-agenda-vide hidden>No date for this filter.</p>
+    </div>
+  </div>
+</section>
+<section class="biblio conteneur" id="bibliographie">
+  <div class="biblio-cote">
+    <h2 class="titre-section" data-decoupe>Bibliography and catalogues</h2>
+    <figure class="media biblio-media" data-grok style="--cadrage:50% 50%;--teinte:#a49e95">
+  <picture>
+    <img src="/assets/images/grok/catalogues-1168.webp" srcset="/assets/images/grok/catalogues-640.webp 640w, /assets/images/grok/catalogues-1168.webp 1168w" sizes="(max-width: 760px) 100vw, 34vw" alt="Stack of closed, untitled catalogues" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">AI-generated illustration</figcaption>
+</figure>
+  </div>
+  <ol class="biblio-liste">
+    <li data-anime><span class="biblio-annee">1996</span><span>Uni Dufour, a project for a bicentenary, D. Hentsch &amp; Cie, Geneva</span></li><li data-anime><span class="biblio-annee">2001</span><span>3-1=3, in Media 10/10, 23rd Short Film Festival, Namur</span></li><li data-anime><span class="biblio-annee">2005</span><span>Lettre d’une prostituée à sa mère, in Néon Nord (Projet Rousseau, Espace P), Brussels</span></li><li data-anime><span class="biblio-annee">2005</span><span>Lettre d’une prostituée à sa mère, Argos Arts, Brussels</span></li><li data-anime><span class="biblio-annee">2007</span><span>Through the looking glass, with P. and M.-F. Martin, Bozar Expo catalogue</span></li><li data-anime><span class="biblio-annee">2008</span><span>Russian Diary Moods, Ein Versöhnungsprojekt zwischen Deutschen/Russischen Veteranen, Kuratorium Rsjew Stiftung Verlag, ed. Ernst Martin Rhein, Gütersloh-Rzhev</span></li><li data-anime><span class="biblio-annee">2008</span><span>Road Map, self-published catalogue and DVD of a witness mission along the Wall, Palestine-Israel</span></li><li data-anime><span class="biblio-annee">2008</span><span>Road Map, in “Toute cruauté est-elle bonne à dire ?”, Centrale for Contemporary Art, Brussels</span></li><li data-anime><span class="biblio-annee">2009</span><span>Forget me not(e), in “Passe mémoire”, Famawiwi Foundation, Mardaga</span></li><li data-anime><span class="biblio-annee">2011</span><span>222 autobiographies de Robert Kaplan, Kaplan’s Project II, Naples-Paris</span></li><li data-anime><span class="biblio-annee">2011-2017</span><span>Chronique du rattachement de la Belgique au Congo, Collectif Manifestement, Maelström</span></li><li data-anime><span class="biblio-annee">2017</span><span>Carte blanche sur fond noir, collective, Laurent d’Ursel, Similix</span></li><li data-anime><span class="biblio-annee">—</span><span>Various art and fair catalogues</span></li>
+  </ol>
+</section>
+<section class="avec conteneur" id="avec">
+  <h2 class="titre-section" data-decoupe>With</h2>
+  <p>Artists, curators, collectives and collaborators met in the Laundry residencies and collective projects.</p>
+  <ul class="avec-mur" data-visuel><li style="--i:0">Joëlle Verstraeten</li><li style="--i:1">Y. Palix</li><li style="--i:2">Marwa Benhalim</li><li style="--i:3">Hagar Masoud</li><li style="--i:4">Sama Waly</li><li style="--i:5">Giuseppe Zevola</li><li style="--i:6">Nathalie Heidsieck-de Saint Phalle</li><li style="--i:7">Manu vb Tintoré</li><li style="--i:8">Aljoscha</li><li style="--i:9">Christophe Terlinden</li><li style="--i:10">Philippe Herbet</li><li style="--i:11">Karine Marenne</li><li style="--i:12">Messieurs Delmotte</li><li style="--i:13">Dries Meddens</li><li style="--i:14">Patricia Martin</li><li style="--i:15">Eric Brücher</li><li style="--i:16">Vicente Gallego Alcaraz</li><li style="--i:17">NONO_C</li><li style="--i:18">Dan Perjovschi</li><li style="--i:19">Laurent d’Ursel</li><li style="--i:20">Collectif Manifestement</li><li style="--i:21">John Barret</li></ul>
+</section>
+<section class="contact conteneur" id="contact">
+  <div class="contact-cote">
+    <h2 class="titre-section" data-decoupe>Contact</h2>
+    <p>A work, a screening, a residency or a question: write directly.</p>
+    <ul class="contact-coordonnees">
+      <li><span class="contact-libelle">Email</span><a href="mailto:jeanfjans@gmail.com">jeanfjans@gmail.com</a></li>
+      <li><span class="contact-libelle">Phone</span><a href="tel:+32474987035">+32 474 98 70 35</a></li>
+      <li><span class="contact-libelle">Facebook</span><a href="https://www.facebook.com/facquodvis" target="_blank" rel="noopener">facquodvis</a></li>
+      <li><span class="contact-libelle">Studio</span><span class="a-completer">to be completed</span></li>
+    </ul>
+    <figure class="media contact-media" data-grok style="--cadrage:50% 50%;--teinte:#998e81">
+  <picture>
+    <img src="/assets/images/grok/carnet-1168.webp" srcset="/assets/images/grok/carnet-640.webp 640w, /assets/images/grok/carnet-1168.webp 1168w" sizes="(max-width: 760px) 100vw, 36vw" alt="Open notebook, pencil and envelope on a wooden table" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">AI-generated illustration</figcaption>
+</figure>
+  </div>
+  <form data-formulaire class="formulaire" action="#" novalidate data-texte-email="Please check this e-mail address (e.g. name@example.com)." data-texte-tel="Please check this phone number (e.g. +32 474 00 00 00).">
+    <div class="champ"><label for="f-nom">Name</label><input id="f-nom" name="nom" autocomplete="name" required></div>
+    <div class="champ"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+    <div class="champ"><label for="f-tel">Phone (optional)</label><input id="f-tel" name="tel" type="tel" autocomplete="tel"></div>
+    <div class="champ"><label for="f-sujet">Subject</label>
+      <select id="f-sujet" name="sujet">
+        <option value="oeuvre">A work</option>
+        <option value="projection">A screening</option>
+        <option value="residence">A residency</option>
+        <option value="autre" selected>Other</option>
+      </select></div>
+    <div class="champ"><label for="f-oeuvre">Piece concerned (optional)</label><input id="f-oeuvre" name="oeuvre" autocomplete="off"></div>
+    <div class="champ"><label for="f-message">Message</label><textarea id="f-message" name="message" rows="5" required></textarea></div>
+    <p class="mention-donnees">Your details are only used to reply to you. <a href="/en/mentions-legales#confidentialite">Privacy policy</a> (to be completed).</p>
+    <button type="submit" class="bouton">Send</button>
+    <p data-message-envoi role="status" tabindex="-1" hidden data-texte="Simulated request: nothing has been sent. On the final website, it will be forwarded to JeanF Jans."></p>
+  </form>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-nom">
+      <p class="pied-marque"><img src="/assets/images/logo.svg" alt="" width="44" height="44"><span><strong>JeanF Jans</strong><br>Nomade Polymedia</span></p>
+      <p>Brussels, studio address to be completed</p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <ul>
+        <li><a href="mailto:jeanfjans@gmail.com">jeanfjans@gmail.com</a></li>
+        <li><a href="tel:+32474987035">+32 474 98 70 35</a></li>
+        <li><a href="https://www.facebook.com/facquodvis" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <nav aria-label="Site map">
+      <p class="pied-titre">Site map</p>
+      <ul><li><a href="/en" data-libelle="Home">Home</a></li><li><a href="/en/oeuvres" data-libelle="Works">Works</a></li><li><a href="/en/films" data-libelle="Films">Films</a></li><li><a href="/en/a-propos" data-libelle="About" aria-current="page">About</a></li><li><a href="/en/mentions-legales" data-libelle="Legal notice">Legal notice</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Reading comfort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Reduce motion" data-libelle-retablir="Restore motion" data-libelle-systeme="Motion reduced by your device setting"><span data-libelle-bouton>Reduce motion</span></button></li>
+        <li><a href="#haut" data-sans-transition>Back to top</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Mock-up: details marked “to be completed” will be supplied by the artist.</p><p>© JeanF Jans</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+32474987035">Call</a>
+  <a class="bouton" href="/en/a-propos#contact" data-libelle="About">Write</a>
+</div>
+</body>
+</html>

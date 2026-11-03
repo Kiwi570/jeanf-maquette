@@ -1,0 +1,699 @@
+{
+  "types": [
+    {
+      "id": "exposition",
+      "nom": {
+        "fr": "Expositions",
+        "en": "Exhibitions"
+      },
+      "un": {
+        "fr": "Exposition",
+        "en": "Exhibition"
+      }
+    },
+    {
+      "id": "film",
+      "nom": {
+        "fr": "Films et festivals",
+        "en": "Films and festivals"
+      },
+      "un": {
+        "fr": "Film ou festival",
+        "en": "Film or festival"
+      }
+    },
+    {
+      "id": "residence",
+      "nom": {
+        "fr": "Résidences",
+        "en": "Residencies"
+      },
+      "un": {
+        "fr": "Résidence",
+        "en": "Residency"
+      }
+    },
+    {
+      "id": "performance",
+      "nom": {
+        "fr": "Performances et rencontres",
+        "en": "Performances and talks"
+      },
+      "un": {
+        "fr": "Performance ou rencontre",
+        "en": "Performance or talk"
+      }
+    },
+    {
+      "id": "curation",
+      "nom": {
+        "fr": "Commissariat",
+        "en": "Curating"
+      },
+      "un": {
+        "fr": "Commissariat",
+        "en": "Curating"
+      }
+    },
+    {
+      "id": "atelier",
+      "nom": {
+        "fr": "Atelier",
+        "en": "Studio"
+      },
+      "un": {
+        "fr": "Atelier",
+        "en": "Studio"
+      }
+    }
+  ],
+  "dates": [
+    {
+      "annee": "2024",
+      "mois": "05",
+      "type": "residence",
+      "titre": "Sabaudia, Città modello fascista",
+      "detail": {
+        "fr": "Projet de soutien à Vicente Gallego Alcaraz (Laundry VI), Rome",
+        "en": "Support project for Vicente Gallego Alcaraz (Laundry VI), Rome"
+      }
+    },
+    {
+      "annee": "2024",
+      "mois": "05",
+      "type": "atelier",
+      "titre": {
+        "fr": "Atelier ouvert",
+        "en": "Open studio"
+      },
+      "detail": {
+        "fr": "Atelier in Beeld",
+        "en": "Atelier in Beeld"
+      }
+    },
+    {
+      "annee": "2024",
+      "mois": "02",
+      "type": "residence",
+      "titre": "Laundry VI",
+      "detail": {
+        "fr": "Avec Vicente Gallego Alcaraz, Igualada",
+        "en": "With Vicente Gallego Alcaraz, Igualada"
+      }
+    },
+    {
+      "annee": "2023",
+      "mois": "08",
+      "type": "exposition",
+      "titre": "Retables",
+      "detail": {
+        "fr": "Artists Meeting Knokke, Grand Casino. Commissaires : Willem Elias, Hugo Brutin, Hilde Van Canneyt",
+        "en": "Artists Meeting Knokke, Grand Casino. Curators: Willem Elias, Hugo Brutin, Hilde Van Canneyt"
+      }
+    },
+    {
+      "annee": "2023",
+      "mois": "07",
+      "type": "film",
+      "titre": "Fratres",
+      "detail": {
+        "fr": "Court-métrage et performance musicale, Pietrasanta Music Festival, avec Zee Zee, Jing Zhao, Michael Guttman",
+        "en": "Short film and music performance, Pietrasanta Music Festival, with Zee Zee, Jing Zhao, Michael Guttman"
+      }
+    },
+    {
+      "annee": "2023",
+      "mois": "05-06",
+      "type": "exposition",
+      "titre": "M.U.R.S (el relat de ses pedres)",
+      "detail": {
+        "fr": "Avec Manu vb Tintoré, Capella Abramovic, Alaior, Minorque",
+        "en": "With Manu vb Tintoré, Capella Abramovic, Alaior, Menorca"
+      }
+    },
+    {
+      "annee": "2023",
+      "mois": "05",
+      "type": "film",
+      "titre": "O, Mensch…",
+      "detail": {
+        "fr": "Borders Art Fair, Venice Experimental, Palazzo Albrizzi-Capello, Venise",
+        "en": "Borders Art Fair, Venice Experimental, Palazzo Albrizzi-Capello, Venice"
+      }
+    },
+    {
+      "annee": "2023",
+      "mois": "05",
+      "type": "atelier",
+      "titre": {
+        "fr": "Atelier ouvert",
+        "en": "Open studio"
+      },
+      "detail": {
+        "fr": "Atelier in Beeld",
+        "en": "Atelier in Beeld"
+      }
+    },
+    {
+      "annee": "2021-2022",
+      "mois": "",
+      "type": "atelier",
+      "titre": {
+        "fr": "Années corona",
+        "en": "Corona years"
+      },
+      "detail": {
+        "fr": "Remise à plat de toute la production : Mauer(stücke)",
+        "en": "Rethinking the whole production: Mauer(stücke)"
+      }
+    },
+    {
+      "annee": "2021-2022",
+      "mois": "11",
+      "type": "exposition",
+      "titre": "M.U.R.S (el relat de ses pedres)",
+      "detail": {
+        "fr": "Avec Manu vb Tintoré, Art i Natura, Minorque",
+        "en": "With Manu vb Tintoré, Art i Natura, Menorca"
+      }
+    },
+    {
+      "annee": "2020",
+      "mois": "09-10",
+      "type": "residence",
+      "titre": "Minskunderstanding (Laundry V)",
+      "detail": {
+        "fr": "Résidence prévue avec la galerie « Y », Minsk, accueillie par Valentina Kiselyova et Anna Chistoserdova",
+        "en": "Residency planned with “Y” Gallery, Minsk, hosted by Valentina Kiselyova and Anna Chistoserdova"
+      },
+      "statut": "avortee"
+    },
+    {
+      "annee": "2020",
+      "mois": "04-09",
+      "type": "exposition",
+      "titre": {
+        "fr": "Projets corona",
+        "en": "Corona projects"
+      },
+      "detail": {
+        "fr": "Annulés ou reportés",
+        "en": "Cancelled or postponed"
+      }
+    },
+    {
+      "annee": "2020",
+      "mois": "06",
+      "type": "film",
+      "titre": "Je brûle de partout",
+      "detail": {
+        "fr": "Projet de clip de Messieurs Delmotte et Leur Chazam, Fondation Boghossian (et Nadja Vilenne)",
+        "en": "Music video project by Messieurs Delmotte and Leur Chazam, Boghossian Foundation (and Nadja Vilenne)"
+      }
+    },
+    {
+      "annee": "2020",
+      "mois": "04",
+      "type": "exposition",
+      "titre": "About Victor Bourgeois",
+      "detail": {
+        "fr": "Collaboration avec Christophe Terlinden, Dries Meddens et le CIVA pour Art Brussels (Covid-19)",
+        "en": "Collaboration with Christophe Terlinden, Dries Meddens and CIVA for Art Brussels (Covid-19)"
+      },
+      "statut": "reporte"
+    },
+    {
+      "annee": "2020",
+      "mois": "01",
+      "type": "exposition",
+      "titre": "Dérive-Dérêve",
+      "detail": {
+        "fr": "Installation, Fondation Josefa",
+        "en": "Installation, Josefa Foundation"
+      }
+    },
+    {
+      "annee": "2019",
+      "mois": "11",
+      "type": "exposition",
+      "titre": "Dérive-Dérêve (#1)",
+      "detail": {
+        "fr": "Expérience de déchets en techniques mixtes, plusieurs lieux à Bruxelles (mois à compléter)",
+        "en": "Mixed-media waste experiment, several places in Brussels (month to be completed)"
+      }
+    },
+    {
+      "annee": "2019",
+      "mois": "08",
+      "type": "exposition",
+      "titre": "Solitudes (portraits)",
+      "detail": {
+        "fr": "Art Nocturne Knokke",
+        "en": "Art Nocturne Knokke"
+      }
+    },
+    {
+      "annee": "2019",
+      "mois": "07",
+      "type": "film",
+      "titre": "Survival",
+      "detail": {
+        "fr": "Vidéo Streitquartett, Casoria Contemporary Art Museum, Naples",
+        "en": "Video Streitquartett, Casoria Contemporary Art Museum, Naples"
+      }
+    },
+    {
+      "annee": "2018",
+      "mois": "10-11",
+      "type": "curation",
+      "titre": "Enclos, cet horizon qui nous poursuit",
+      "detail": {
+        "fr": "Commissariat avec Manuel vb Tintoré, Tourinnes-la-Grosse, 53ᵉˢ Fêtes de la Saint-Martin. Artistes : Christophe Terlinden, Karine Marenne et Messieurs Delmotte, Aljoscha, Dries Meddens, Philippe Herbet, Patricia Martin, Joëlle Verstraeten. Texte : Eric Brücher",
+        "en": "Curated with Manuel vb Tintoré, Tourinnes-la-Grosse, 53rd Saint Martin festivities. Artists: Christophe Terlinden, Karine Marenne and Messieurs Delmotte, Aljoscha, Dries Meddens, Philippe Herbet, Patricia Martin, Joëlle Verstraeten. Writer: Eric Brücher"
+      }
+    },
+    {
+      "annee": "2018",
+      "mois": "08-09",
+      "type": "residence",
+      "titre": "Enclos, cet horizon qui nous poursuit",
+      "detail": {
+        "fr": "Résidence d’artistes, Tourinnes-la-Grosse",
+        "en": "Artists’ residency, Tourinnes-la-Grosse"
+      }
+    },
+    {
+      "annee": "2018",
+      "mois": "07-08",
+      "type": "exposition",
+      "titre": "Survival",
+      "detail": {
+        "fr": "« Marina, scuola greca XXI° sec. », Casoria Contemporary Art Museum, Naples",
+        "en": "“Marina, scuola greca XXI° sec.”, Casoria Contemporary Art Museum, Naples"
+      }
+    },
+    {
+      "annee": "2018",
+      "mois": "04-11",
+      "type": "residence",
+      "titre": "Laundry IV",
+      "detail": {
+        "fr": "Avec Manuel vb Tintoré, commissariat commun du Tourinnes Fest’2018",
+        "en": "With Manuel vb Tintoré, joint curating of Tourinnes Fest’2018"
+      }
+    },
+    {
+      "annee": "2018",
+      "mois": "04",
+      "type": "exposition",
+      "titre": "Nourritures terrestres",
+      "detail": {
+        "fr": "Installation dans un ancien monastère, Bruxelles",
+        "en": "Installation in a former monastery, Brussels"
+      }
+    },
+    {
+      "annee": "2017",
+      "mois": "09-10",
+      "type": "exposition",
+      "titre": "Survival",
+      "detail": {
+        "fr": "Casoria Art Museum, Naples",
+        "en": "Casoria Art Museum, Naples"
+      }
+    },
+    {
+      "annee": "2017",
+      "mois": "09",
+      "type": "exposition",
+      "titre": "Garden celebration",
+      "detail": {
+        "fr": "CIVA, Bruxelles",
+        "en": "CIVA, Brussels"
+      }
+    },
+    {
+      "annee": "2017",
+      "mois": "09",
+      "type": "exposition",
+      "titre": "Fanzine",
+      "detail": {
+        "fr": "Avec Dan Perjovschi, Extra City, Anvers",
+        "en": "With Dan Perjovschi, Extra City, Antwerp"
+      }
+    },
+    {
+      "annee": "2017",
+      "mois": "08",
+      "type": "film",
+      "titre": "O, Mensch…",
+      "detail": {
+        "fr": "Sélection officielle, DaMuVi Film Festival, Los Angeles",
+        "en": "Official selection, DaMuVi Film Festival, Los Angeles"
+      }
+    },
+    {
+      "annee": "2017",
+      "mois": "05",
+      "type": "exposition",
+      "titre": "Veriditas",
+      "detail": {
+        "fr": "Installation, Kreuzberg, Berlin",
+        "en": "Installation, Kreuzberg, Berlin"
+      }
+    },
+    {
+      "annee": "2017",
+      "mois": "04",
+      "type": "performance",
+      "titre": "Action painting",
+      "detail": {
+        "fr": "Carte blanche sur fond noir, de Laurent d’Ursel et alii, Centre J. Francq, Bruxelles",
+        "en": "Carte blanche sur fond noir, by Laurent d’Ursel et al., Centre J. Francq, Brussels"
+      }
+    },
+    {
+      "annee": "2017",
+      "mois": "04",
+      "type": "exposition",
+      "titre": "You no speak American original",
+      "detail": {
+        "fr": "Contemporary Art Museum, Casoria, Naples",
+        "en": "Contemporary Art Museum, Casoria, Naples"
+      }
+    },
+    {
+      "annee": "2016",
+      "mois": "10",
+      "type": "residence",
+      "titre": "Laundry III",
+      "detail": {
+        "fr": "Avec Giuseppe Zevola et Nathalie Heidsieck-de Saint Phalle, Palazzo Spinelli, Naples",
+        "en": "With Giuseppe Zevola and Nathalie Heidsieck-de Saint Phalle, Palazzo Spinelli, Naples"
+      }
+    },
+    {
+      "annee": "2016",
+      "mois": "09",
+      "type": "exposition",
+      "titre": "Road Map",
+      "detail": {
+        "fr": "Dans le cadre de Survival, CAM de Casoria, commissaire : Antonio Manfredi",
+        "en": "As part of Survival, CAM Casoria, curator: Antonio Manfredi"
+      }
+    },
+    {
+      "annee": "2016",
+      "mois": "09",
+      "type": "exposition",
+      "titre": "Garden of Earthly Delights",
+      "detail": {
+        "fr": "Sculpture, peinture, croquis, livres, films, du 23 septembre au 2 octobre, mécénat Marie-Hélène et Sébastien D’Hondt, Beersel",
+        "en": "Sculpture, painting, sketches, books, films, 23 September to 2 October, patrons Marie-Hélène and Sébastien D’Hondt, Beersel"
+      }
+    },
+    {
+      "annee": "2016",
+      "mois": "05-06",
+      "type": "atelier",
+      "titre": {
+        "fr": "Atelier ouvert (Question d’époque)",
+        "en": "Open studio (Question d’époque)"
+      },
+      "detail": {
+        "fr": "Saloon, Bruxelles",
+        "en": "Saloon, Brussels"
+      }
+    },
+    {
+      "annee": "2016",
+      "mois": "03-04",
+      "type": "film",
+      "titre": "Last shots for Paradiso",
+      "detail": {
+        "fr": "Biélorussie",
+        "en": "Belarus"
+      }
+    },
+    {
+      "annee": "2016",
+      "mois": "03-04",
+      "type": "exposition",
+      "titre": "Premio Arte Laguna",
+      "detail": {
+        "fr": "Série des triptyques, du 19 mars au 3 avril, Venise",
+        "en": "Triptych series, 19 March to 3 April, Venice"
+      }
+    },
+    {
+      "annee": "2015",
+      "mois": "11-12",
+      "type": "exposition",
+      "titre": "Something Else",
+      "detail": {
+        "fr": "Off Biennale d’art contemporain du Caire, commissaires Simon Ndjali, A. Moattaz, avec Laundry II (Hagar Masoud, Sama Waly, Marwa Benhalim) : Scattered Limbs of Osiris",
+        "en": "Cairo Off Biennale of contemporary art, curators Simon Ndjali, A. Moattaz, with Laundry II (Hagar Masoud, Sama Waly, Marwa Benhalim): Scattered Limbs of Osiris"
+      }
+    },
+    {
+      "annee": "2015",
+      "mois": "05",
+      "type": "exposition",
+      "titre": {
+        "fr": "Pépinière",
+        "en": "Garden Nursery"
+      },
+      "detail": {
+        "fr": "Installée dans les jardins Iweins, Rixensart",
+        "en": "Installed in the Iweins gardens, Rixensart"
+      }
+    },
+    {
+      "annee": "2015",
+      "mois": "03",
+      "type": "exposition",
+      "titre": {
+        "fr": "Esquisses de Laundry",
+        "en": "Laundry sketches"
+      },
+      "detail": {
+        "fr": "Vernissage le 22 mars, ambassade de Belgique, Le Caire",
+        "en": "Opening on 22 March, Belgian embassy, Cairo"
+      }
+    },
+    {
+      "annee": "2015",
+      "mois": "02-03",
+      "type": "residence",
+      "titre": "Laundry II",
+      "detail": {
+        "fr": "Résidence au Caire. Commissaires : Dina Eldeeb, Mohamed Allam (Medrar Gallery), avec Hagar Masoud, Sama Waly, Marwa Benhalim",
+        "en": "Residency in Cairo. Curators: Dina Eldeeb, Mohamed Allam (Medrar Gallery), with Hagar Masoud, Sama Waly, Marwa Benhalim"
+      }
+    },
+    {
+      "annee": "2015",
+      "mois": "01",
+      "type": "performance",
+      "titre": "Fatwa contre les intégristes de l’intégration",
+      "detail": {
+        "fr": "Collectif Manifestement, performance de rue, le 25 janvier",
+        "en": "Collectif Manifestement, street performance, 25 January"
+      }
+    },
+    {
+      "annee": "2014",
+      "mois": "09",
+      "type": "exposition",
+      "titre": "Popocatepetl",
+      "detail": {
+        "fr": "Installation monumentale (300 ft) de la série Pépinière, square Steurs, Bruxelles",
+        "en": "Monumental installation (300 ft) of the Garden Nursery series, square Steurs, Brussels"
+      }
+    },
+    {
+      "annee": "2014",
+      "mois": "06",
+      "type": "exposition",
+      "titre": "Russian Diary Moods",
+      "detail": {
+        "fr": "Vernissage, G. Circle, Bruxelles",
+        "en": "Opening, G. Circle, Brussels"
+      }
+    },
+    {
+      "annee": "2014",
+      "mois": "04",
+      "type": "performance",
+      "titre": "House of Cards",
+      "detail": {
+        "fr": "Projection-performance avec J. Verstraeten, Anya Tish Gallery, et TFA Ailleurs-Elsewhere, consulat de France, Houston, commissaire : Y. Palix",
+        "en": "Screening-performance with J. Verstraeten, Anya Tish Gallery, and TFA Ailleurs-Elsewhere, French Consulate, Houston, curated by Y. Palix"
+      }
+    },
+    {
+      "annee": "2014",
+      "mois": "04",
+      "type": "film",
+      "titre": "WorldFest-Houston",
+      "detail": {
+        "fr": "Still Lives, Remi Platinum (courts-métrages indépendants), du 3 au 14 avril",
+        "en": "Still Lives, Remi Platinum (indie shorts), 3 to 14 April"
+      },
+      "prix": true
+    },
+    {
+      "annee": "2014",
+      "mois": "03",
+      "type": "performance",
+      "titre": "Art and Memory",
+      "detail": {
+        "fr": "Artiste invité du séminaire, UCL, Louvain-la-Neuve, le 18 mars",
+        "en": "Guest artist at the seminar, UCL, Louvain-la-Neuve, 18 March"
+      }
+    },
+    {
+      "annee": "2013",
+      "mois": "10",
+      "type": "film",
+      "titre": "Il Purgatorio",
+      "detail": {
+        "fr": "Tournage (deuxième session), Palazzo Spinelli, Naples",
+        "en": "Filming (second session), Palazzo Spinelli, Naples"
+      }
+    },
+    {
+      "annee": "2013",
+      "mois": "06-08",
+      "type": "exposition",
+      "titre": {
+        "fr": "Pépinière",
+        "en": "Garden Nursery"
+      },
+      "detail": {
+        "fr": "Quatre sculptures monumentales, Art Nocturne Knokke (La Réserve, De Scharpoord), du 18 juin au 18 août, vernissage le 10 août",
+        "en": "Four monumental sculptures, Art Nocturne Knokke (La Réserve, De Scharpoord), 18 June to 18 August, opening on 10 August"
+      }
+    },
+    {
+      "annee": "2013",
+      "mois": "06",
+      "type": "film",
+      "titre": "O, Mensch",
+      "detail": {
+        "fr": "Film, compagnie de danse NONO-C, Kietvitnest, Anvers, du 17 au 20 juin",
+        "en": "Film, NONO-C dance company, Kietvitnest, Antwerp, 17 to 20 June"
+      }
+    },
+    {
+      "annee": "2013",
+      "mois": "04-05",
+      "type": "residence",
+      "titre": "Laundry I (or a still lifestyle)",
+      "detail": {
+        "fr": "Installation polymedia dans la résidence de G. Petit (aquarelle, sérigraphies, photo, film), résidence-atelier, Houston, Texas, du 14 avril au 5 mai. Commissaire : Y. Palix",
+        "en": "Polymedia installation in G. Petit’s residence (watercolour, screen prints, photo, film), residency-workshop, Houston, Texas, 14 April to 5 May. Curator: Y. Palix"
+      }
+    },
+    {
+      "annee": "2013",
+      "mois": "02",
+      "type": "performance",
+      "titre": "Three Parmenidean instants",
+      "detail": {
+        "fr": "TTroc Bozar, Bruxelles, du 1er au 3 février",
+        "en": "TTroc Bozar, Brussels, 1 to 3 February"
+      }
+    },
+    {
+      "annee": "2013",
+      "mois": "01",
+      "type": "performance",
+      "titre": "Sans titre",
+      "detail": {
+        "fr": "Collectif Manifestement, performance de rue, Bruxelles, le 27 janvier",
+        "en": "Collectif Manifestement, street performance, Brussels, 27 January"
+      }
+    },
+    {
+      "annee": "2013",
+      "mois": "01",
+      "type": "exposition",
+      "titre": "Heracleum mantegazzianum (última Venere)",
+      "detail": {
+        "fr": "Installation, collection privée, Bruxelles, du 14 au 30 janvier",
+        "en": "Installation, private collection, Brussels, 14 to 30 January"
+      }
+    },
+    {
+      "annee": "2012",
+      "mois": "11",
+      "type": "performance",
+      "titre": "Pour le rattachement de la Belgique au Congo",
+      "detail": {
+        "fr": "Carte blanche au Musée africain, Tervuren, avec le Collectif Manifestement",
+        "en": "Carte blanche at the Africa Museum, Tervuren, with Collectif Manifestement"
+      }
+    },
+    {
+      "annee": "2012",
+      "mois": "10",
+      "type": "film",
+      "titre": "Mi chiami",
+      "detail": {
+        "fr": "Vidéo, Palazzo Marigliano (projet R. Kaplan), Naples, et tournage de Il Purgatorio",
+        "en": "Video, Palazzo Marigliano (R. Kaplan project), Naples, and Il Purgatorio film set"
+      }
+    },
+    {
+      "annee": "2012",
+      "mois": "08",
+      "type": "exposition",
+      "titre": "Nepenthes sanguinea",
+      "detail": {
+        "fr": "Installation de la série Pépinière, collection privée, Bruxelles",
+        "en": "Garden Nursery installation, private collection, Brussels"
+      }
+    },
+    {
+      "annee": "2012",
+      "mois": "07",
+      "type": "film",
+      "titre": "Il Paradiso",
+      "detail": {
+        "fr": "Séminaire de cinéma pour enfants, Borissov, Biélorussie",
+        "en": "Film seminar coaching children, Borisov, Belarus"
+      }
+    },
+    {
+      "annee": "2012",
+      "mois": "05",
+      "type": "performance",
+      "titre": "Dégagisme is not surrealist !",
+      "detail": {
+        "fr": "Performance de rue du Collectif Manifestement pour Arte (« Le quai des Belges »)",
+        "en": "Collectif Manifestement street performance for Arte (“Le quai des Belges”)"
+      }
+    },
+    {
+      "annee": "2012",
+      "mois": "04-07",
+      "type": "exposition",
+      "titre": "Three Sculpture Art Festival",
+      "detail": {
+        "fr": "Lavaux-Sainte-Anne",
+        "en": "Lavaux-Sainte-Anne"
+      }
+    },
+    {
+      "annee": "2012",
+      "mois": "04",
+      "type": "performance",
+      "titre": "Rock’n’roll prints",
+      "detail": {
+        "fr": "Performance-atelier et estampes Wonderland, Gallery M Squared, Houston, du 10 au 13 avril",
+        "en": "Performance-workshop and Wonderland prints, Gallery M Squared, Houston, 10 to 13 April"
+      }
+    }
+  ]
+}

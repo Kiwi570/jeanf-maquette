@@ -1,0 +1,352 @@
+{
+  "commun": {
+    "navigation": "Main navigation",
+    "menu": "Menu",
+    "fermer": "Close",
+    "langueAutre": "Version française",
+    "actionEntete": "Write to JeanF",
+    "actionCourte": "Write",
+    "appeler": "Call",
+    "calmeReduire": "Reduce motion",
+    "calmeRetablir": "Restore motion",
+    "calmeSysteme": "Motion reduced by your device setting",
+    "sommaire": "Site map",
+    "confort": "Reading comfort",
+    "retourHaut": "Back to top",
+    "maquette": "Mock-up: details marked “to be completed” will be supplied by the artist.",
+    "evitement": "Skip to content",
+    "mentionIa": "AI-generated illustration",
+    "pause": "Pause",
+    "lecture": "Play",
+    "introLigne": "Nomade Polymedia",
+    "introLieu": "Brussels",
+    "nomComplet": "JeanF Jans",
+    "signature": "Nomade Polymedia",
+    "contact": "Contact",
+    "email": "Email",
+    "telephone": "Phone",
+    "facebook": "Facebook",
+    "atelier": "Studio: address to be completed",
+    "passe": "past",
+    "aCompleter": "to be completed",
+    "codes": "Label codes",
+    "minutage": "Wall timecode",
+    "curseurVoir": "View",
+    "atelierLibelle": "Studio"
+  },
+  "pages": {
+    "accueil": {
+      "titre": "JeanF Jans, Nomade Polymedia: painting, sculpture, films",
+      "description": "Polymedia artist based in Brussels: triptychs, garden sculptures, plastic-waste stained glass, short films and Laundry residencies.",
+      "nav": "Home",
+      "partageAlt": "JeanF, Nomade Polymedia, and the triptych Cantico delle creature, open",
+      "accroche": "The wall makes the work."
+    },
+    "oeuvres": {
+      "titre": "Works: the wall of JeanF Jans",
+      "description": "Five series on a single wall: Altarpieces and triptychs, Garden Nursery, Road Map, Russian Diary Moods, Dérive-Dérêve. Full labels, prices on request.",
+      "nav": "Works",
+      "partageAlt": "Works by JeanF Jans: the triptych Songes de ma voisine de quartier",
+      "accroche": "Five sections of a single wall"
+    },
+    "films": {
+      "titre": "Films: the short films of JeanF Jans",
+      "description": "Twelve short films from 2000 to 2015, including Still Lives, Remi Platinum at WorldFest-Houston 2014.",
+      "nav": "Films",
+      "partageAlt": "Still from the film Still Lives by JeanF Jans",
+      "accroche": "Twelve films, one editing table"
+    },
+    "a-propos": {
+      "titre": "About and contact: JeanF Jans",
+      "description": "Background, training, 2012-2024 timeline, bibliography and contact for the artist JeanF Jans.",
+      "nav": "About",
+      "partageAlt": "JeanF Jans’s studio: a Garden Nursery sculpture in progress",
+      "accroche": "Background, timeline, contact"
+    },
+    "mentions-legales": {
+      "titre": "Legal notice: JeanF Jans",
+      "description": "Publisher, host, credits and privacy for the JeanF Jans website.",
+      "nav": "Legal notice",
+      "partageAlt": "Legal notice of the JeanF Jans website",
+      "accroche": "Legal notice"
+    },
+    "404": {
+      "titre": "Missing wall section: JeanF Jans",
+      "description": "This page does not exist.",
+      "nav": "Page not found",
+      "partageAlt": "Page not found",
+      "accroche": "Missing wall section"
+    }
+  },
+  "accueil": {
+    "hero": {
+      "titre": "JeanF, Nomade Polymedia",
+      "etiquette": "JeanF Jans · Nomade Polymedia · Brussels",
+      "texte": "Paintings, sculptures, stained glass, films and residencies, hung section by section to form a single wall.",
+      "action": "Walk the wall",
+      "action2": "See the films",
+      "info": "Latest residency: Laundry VI, Igualada, 2023-2024",
+      "fermeAlt": "Cantico delle creature, triptych closed: charcoal on raw canvas",
+      "ouvertAlt": "Cantico delle creature, triptych open: oil on canvas",
+      "legende": "Cantico delle creature, 2016-2017 · closed, then open"
+    },
+    "manifeste": {
+      "titre": "Mauerstücke",
+      "sous": "Pieces of wall",
+      "p1": "MAUERSTÜCKE could be interpreted as the diorama of an inner battle in the war of worlds and concepts, of the implosion of the senses and perceptions that render each of us a sort of ambulating Wunderkammer of conflicting ideas… They constitute the basis for how to create and inhabit a place, an aesthetic form in and through which time, space, and depth unfold. In short, a matter of territory.",
+      "p2": "MAUERSTÜCKE constitute a selection of “antiques” combined with more contemporary works, arranged according to affinities of meaning or impact that our gaze elicits in its trajectory across various catalogues. Hypercontextualised at the outset, each piece is put to the test of a new decompartmentalisation by its immediate surroundings, sometimes a sculptural relief composed of waste materials (Müllstück), sometimes a short film (Kurzstück), a staged piece (Skulptück) or a painted, photographed, or printed image (Bildstück), the whole forming a section of wall imbued with its unique character in the scrolling of sections which precede or succeed it. Ultimately, the whole forms a single wall. Akin to how the editing process “makes” the film. In short, the (section of the) wall makes the work.",
+      "p3": "MAUERSTÜCKE imagines the collector’s gestures, with this mythological aspect in assembling his collection (earliest sketches, beginning of a series with a specific style, initial forays…). Randomly ensnared, a scenography emerges as and when a selection of works is sometimes rendered figurative and abstract at others. Inevitably, the external gaze which is invited to reconstitute or fuel its own civil war can only but enrich such a reappraisal. In short, a matter of resonance.",
+      "note": "Mauerstücke, from the German for wall segments, but in this context better understood as items on the wall.",
+      "credit": "Text by JeanF Jans. Translation: John Barret.",
+      "mull": "relief made of waste materials",
+      "kurz": "short film",
+      "skulp": "staged piece",
+      "bild": "painted, photographed or printed image",
+      "codesTexte": "Where the artist has defined one, the label of a piece carries the abbreviation of the approach it belongs to.",
+      "alt": "Two plaster wall sections meeting along a joint"
+    },
+    "mur": {
+      "titre": "The wall",
+      "texte": "Eight pieces from the five series. The triptychs open their shutters as they pass the centre.",
+      "action": "Walk the whole wall",
+      "region": "The wall, horizontal scroll",
+      "glisser": "Swipe the wall"
+    },
+    "laundry": {
+      "titre": "Laundry",
+      "citation": "“A laundering residency, or how to issue a three-five weeks conversation about the Genius loci between one (or more) artist(s), a curator and myself.”",
+      "texte": "Residencies of three to five weeks, each leading to a short film, a book, an installation or a performance.",
+      "carteTitre": "Six residencies, from Houston to Igualada",
+      "carteAlt": "Map of the six Laundry residencies: Houston, Cairo, Naples, Tourinnes-la-Grosse, Minsk, Igualada",
+      "avortee": "aborted",
+      "encours": "film in progress",
+      "sansPhoto": "No photo yet",
+      "carteCoupe": "double red line: scale break, the Atlantic is shortened"
+    },
+    "films": {
+      "titre": "Kurzstücke",
+      "texte": "Twelve short films, from 2000 to 2015: performances, journeys, memories of places.",
+      "prix": "Remi Platinum, WorldFest-Houston 2014",
+      "action": "All films",
+      "voir": "Open the film"
+    },
+    "gare": {
+      "titre": "Gare aux Rumeurs",
+      "texte": "A collective project to create a space for art, research and experimentation for polymedia whistleblowers.",
+      "detail": "In the railway station of Grupont, on line 161 between Brussels and Luxembourg, a “Mus_e de l’insaisissable” (museum of the elusive) devoted to rumour: exhibitions, workshops, films, performed lectures.",
+      "statut": "Booklet, second edition, November 2025",
+      "action": "Read the booklet (PDF, in French)",
+      "alt": "Cover of the Gare aux Rumeurs booklet: Grupont railway station"
+    },
+    "reperes": {
+      "titre": "Latest dates",
+      "texte": "The most recent entries of the timeline.",
+      "action": "Full timeline"
+    },
+    "contact": {
+      "titre": "Write to JeanF",
+      "texte": "A work, a screening, a residency or a question: a message is enough.",
+      "action": "Write a message",
+      "alt": "Empty studio, window light, canvases turned to the wall"
+    }
+  },
+  "oeuvres": {
+    "tete": {
+      "titre": "The wall",
+      "sous": "Works",
+      "texte": "Five series hung section by section: altarpieces that open, stainless steel and corten sculptures, a scroll from the Wall, a Russian diary, plastic stained glass.",
+      "action": "Walk the wall",
+      "info": "{series} series · {pieces} pieces · prices on request",
+      "alt": "Long empty gallery wall under raking light"
+    },
+    "filtres": {
+      "libelle": "Show a series",
+      "tous": "The whole wall"
+    },
+    "mur": {
+      "region": "The wall of works, horizontal scroll",
+      "glisser": "Swipe the wall",
+      "pan": "Section",
+      "synopsis": "Read the series text (PDF, in French)",
+      "titre": "Five sections, one wall",
+      "sauter": "Skip to the list",
+      "presentation": "About the series"
+    },
+    "carte": {
+      "ouvrir": "Open the shutters",
+      "fermer": "Close the shutters",
+      "ouvert": "open",
+      "ferme": "closed",
+      "agrandir": "Enlarge",
+      "voirMur": "View on a wall",
+      "photos": "{n} photos",
+      "film": "Watch the film",
+      "detail": "detail",
+      "anneeInconnue": "year to be completed",
+      "dimsInconnues": "dimensions to be completed",
+      "infosInconnues": "year and dimensions to be completed"
+    },
+    "liste": {
+      "titre": "All pieces",
+      "texte": "The complete list, series by series.",
+      "titreCol": "Title",
+      "serieCol": "Series",
+      "techniqueCol": "Medium",
+      "dimensionsCol": "Dimensions",
+      "anneeCol": "Year",
+      "dispoCol": "Price",
+      "dispo": "On request",
+      "inconnu": "to be completed",
+      "demander": "Ask for the price",
+      "imageCol": "Image"
+    },
+    "voirMur": {
+      "titre": "View on a wall",
+      "texte": "Approximate scale: the bench is about 120 cm long.",
+      "sansDimensions": "Dimensions to be completed: scale not available.",
+      "alt": "Empty white wall above an oak bench"
+    },
+    "visionneuse": {
+      "titre": "Viewer",
+      "precedent": "Previous image",
+      "suivant": "Next image",
+      "loupe": "Hover over the image to magnify",
+      "loupeTactile": "Tap the image to zoom",
+      "compte": "{i} of {n}"
+    },
+    "fin": {
+      "titre": "Interested in a piece?",
+      "texte": "Dimensions, condition, availability and price: request the details of the piece.",
+      "action": "Request details"
+    }
+  },
+  "films": {
+    "tete": {
+      "titre": "Films",
+      "sous": "Kurzstücke, 2000-2015",
+      "texte": "Twelve short films: performances, journeys, memories of places, from Texas to Belarus.",
+      "action": "Watch Still Lives",
+      "info": "Remi Platinum, WorldFest-Houston 2014",
+      "alt": "Empty film editing table in a dark room"
+    },
+    "vedette": {
+      "prix": "Remi Platinum, WorldFest-Houston 2014",
+      "laundry": "Laundry I residency, Houston"
+    },
+    "table": {
+      "titre": "The editing table",
+      "texte": "Each strip’s length matches the film’s running time. Tap a strip to open the film.",
+      "texteSouris": "Each strip’s length matches the film’s running time. Click a strip to open the film.",
+      "echelle": "1 minute",
+      "region": "Editing table of the films"
+    },
+    "fiche": {
+      "production": "Production",
+      "format": "Format",
+      "duree": "Running time",
+      "lieu": "Place",
+      "montre": "Shown",
+      "jouer": "Play the film",
+      "chargement": "The player loads on click, from {service}.",
+      "prive": "Video cannot be embedded online",
+      "demander": "Ask for the link",
+      "ouvrirService": "Watch on {service}",
+      "versions": "Other versions",
+      "fermer": "Close the film",
+      "dureeAVerifier": "running time to be checked"
+    },
+    "fin": {
+      "titre": "Programme a film",
+      "texte": "Festivals, venues, schools: ask for a screening or a viewing link.",
+      "action": "Ask for a screening",
+      "alt": "Projector beam on an empty plaster wall"
+    }
+  },
+  "apropos": {
+    "tete": {
+      "titre": "About",
+      "sous": "JeanF Jans",
+      "texte": "Background, timeline, bibliography and contact.",
+      "info": "Portrait of the artist: to be completed",
+      "alt": "Studio: the sculpture Nepenthes sanguinea being assembled"
+    },
+    "bio": {
+      "titre": "Old emerging artist",
+      "texte": "A law graduate, archaeologist and art historian, JeanF Jans spent ten years restoring ancient and contemporary works and buildings in Germany, Italy, France and Belgium. In 2000 he decided to devote himself entirely to his work as an artist: an “old emerging artist, or Nomade Polymedia”.",
+      "alt": "Restorer’s table: brushes, spatulas, pigments"
+    },
+    "parcours": {
+      "titre": "Training and background"
+    },
+    "agenda": {
+      "titre": "Timeline",
+      "texte": "2012-2024. All dates are in the past.",
+      "filtre": "Show",
+      "tous": "All",
+      "vide": "No date for this filter.",
+      "alt": "Traces of removed frames and posters on a plaster wall",
+      "avortee": "aborted",
+      "annule": "cancelled",
+      "reporte": "postponed"
+    },
+    "bibliographie": {
+      "titre": "Bibliography and catalogues",
+      "alt": "Stack of closed, untitled catalogues"
+    },
+    "avec": {
+      "titre": "With",
+      "texte": "Artists, curators, collectives and collaborators met in the Laundry residencies and collective projects."
+    },
+    "contact": {
+      "titre": "Contact",
+      "texte": "A work, a screening, a residency or a question: write directly.",
+      "nom": "Name",
+      "email": "Email",
+      "tel": "Phone (optional)",
+      "sujet": "Subject",
+      "sujetOeuvre": "A work",
+      "sujetProjection": "A screening",
+      "sujetResidence": "A residency",
+      "sujetAutre": "Other",
+      "oeuvre": "Piece concerned (optional)",
+      "message": "Message",
+      "donnees": "Your details are only used to reply to you. <a href=\"/en/mentions-legales#confidentialite\">Privacy policy</a> (to be completed).",
+      "envoyer": "Send",
+      "alt": "Open notebook, pencil and envelope on a wooden table",
+      "erreurEmail": "Please check this e-mail address (e.g. name@example.com).",
+      "erreurTel": "Please check this phone number (e.g. +32 474 00 00 00).",
+      "envoye": "Simulated request: nothing has been sent. On the final website, it will be forwarded to JeanF Jans."
+    }
+  },
+  "mentions": {
+    "titre": "Legal notice",
+    "alt": "Smooth plaster crossed by a fine crack",
+    "fiche": {
+      "titre": "Details to be completed",
+      "texte": "Name of the responsible publisher or legal status (individual, non-profit…): to be completed. Company or VAT number: to be completed. Postal address: to be completed. Studio address and visiting terms: to be completed. Portrait of the artist and photo credit: to be completed. Credits for the photographs of works: to be completed. Availability and prices of the pieces: to be completed. Data controller: to be completed."
+    },
+    "editeur": {
+      "titre": "Publisher",
+      "texte": "JeanF Jans, artist, Brussels (Belgium). Email: jeanfjans@gmail.com. Phone: +32 474 98 70 35. Legal status and company number: to be completed."
+    },
+    "hebergeur": {
+      "titre": "Host",
+      "texte": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States. Website: vercel.com."
+    },
+    "credits": {
+      "titre": "Credits",
+      "texte": "Works, texts, photographs and films: JeanF Jans, unless otherwise stated. Works by the artists invited to Laundry IV: their authors. English translation of the Mauerstücke text: John Barret. Fonts: Archivo (Omnibus-Type) and IBM Plex Mono (IBM), SIL Open Font License. Images marked “AI-generated illustration” were created with artificial intelligence to show places and materials; they show no work by the artist."
+    },
+    "confidentialite": {
+      "titre": "Privacy",
+      "texte": "The contact form of this mock-up sends nothing. On the final website, the data you send (name, email, phone, message) will only be used to reply and will never be passed on or sold. Retention period, rights of access, rectification and erasure, contact of the data controller: to be completed, in accordance with the GDPR. This website sets no audience-measurement cookie. Your language choice and motion setting are kept in your browser."
+    }
+  },
+  "introuvable": {
+    "titre": "Missing wall section",
+    "texte": "This page does not exist. The rest of the wall still stands.",
+    "retour": "Back to home",
+    "oeuvres": "See the works",
+    "alt": "Plaster wall with one section missing, revealing a dark void"
+  }
+}
