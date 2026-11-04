@@ -2,6 +2,7 @@
    Chaque bande ouvre sa fiche (lien direct #film-…) ; le lecteur YouTube ou Vimeo ne se charge qu'au clic. */
 import { html, brut } from '../../outils/gabarit.mjs';
 import { minutage } from '../gabarits/oeuvre.mjs';
+import { ruban } from '../gabarits/vivant.mjs';
 
 export const page = { cle: 'films', fichier: 'films', imagePartage: 'films/still-lives-1280.webp' };
 
@@ -41,7 +42,7 @@ export default (c) => {
   const sl = films.find((f) => f.id === 'still-lives');
   const max = Math.max(...films.map((f) => f.secondes));
   return html`
-<section class="tete tete--films ecran" id="debut">
+<section class="tete tete--films ecran" id="debut" data-grain data-projecteur>
   ${c.media({ nom: 'grok/montage', alt: '', cadrage: '60% 50%', classe: 'tete-fond', sizes: '100vw' })}
   <div class="tete-grille">
     <div class="tete-texte tete-texte--sombre">
@@ -58,7 +59,9 @@ export default (c) => {
   </div>
 </section>
 
-<section class="table-montage" id="table">
+${ruban(c, { id: 'ruban-films', style: 'pellicule', incline: 0, sens: 1, elements: films.map((f) => html`${f.titre} <span class="ruban-duree">${f.duree}</span>`) })}
+
+<section class="table-montage" id="table" data-grain>
   ${c.media({ nom: 'grok/pellicule', alt: '', classe: 'table-montage-fond', cadrage: '50% 50%', sizes: '100vw' })}
   <div class="conteneur table-montage-tete">
     <h2 class="titre-section" data-decoupe>${c.t('films.table.titre')}</h2>
@@ -69,7 +72,7 @@ export default (c) => {
     ${films.map((f) => {
       const image = f.id === 'still-lives' ? 'laundry/houston' : f.image;
       return html`<li class="bande" id="film-${f.id}" style="--part:${(f.secondes / max).toFixed(4)}">
-      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-${f.id}" data-bande data-duree="${minutage(f.secondes)}">
+      <button type="button" class="bande-bouton" aria-expanded="false" aria-controls="fiche-${f.id}" data-bande data-duree="${minutage(f.secondes)}" data-duree-courte="${f.duree}">
         <span class="bande-annee">${f.annee}</span>
         <span class="bande-titre"><span class="etiquette-code">${f.code}</span>${f.cesure || f.titre}${f.prix ? html` <span class="bande-prix">Remi Platinum</span>` : ''}</span>
         <span class="bande-duree" data-bande-compteur>${f.duree}</span>

@@ -2,6 +2,7 @@
    visionneuse avec loupe (lien direct #oeuvre-…), mode « Voir au mur » à l'échelle, liste complète. */
 import { html, brut } from '../../outils/gabarit.mjs';
 import { image, etiquette, carte, trouver, toutes, titreDe, dims, ratio, dimsTexte } from '../gabarits/oeuvre.mjs';
+import { ruban } from '../gabarits/vivant.mjs';
 
 export const page = { cle: 'oeuvres', fichier: 'oeuvres', imagePartage: 'oeuvres/tr-songes-ouvert-1280.webp' };
 
@@ -29,6 +30,8 @@ export default (c) => {
     </figure>
   </div>
 </section>
+
+${ruban(c, { id: 'ruban-pieces', style: 'clair', incline: 1.2, sens: 1, elements: liste.map(({ o }) => html`${titreDe(c, o)}`) })}
 
 <section class="mur mur--complet ecran epingle" id="mur" data-entete-cache>
   <div class="mur-tete conteneur">

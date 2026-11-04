@@ -2,6 +2,7 @@
    (filtre gardé dans l'adresse : ?type=film), bibliographie, compagnons de route, formulaire simulé
    prérempli par l'adresse (?sujet=oeuvre&oeuvre=…). */
 import { html, brut } from '../../outils/gabarit.mjs';
+import { ruban } from '../gabarits/vivant.mjs';
 
 export const page = { cle: 'a-propos', fichier: 'a-propos', imagePartage: 'apropos/atelier-1134.webp' };
 
@@ -43,6 +44,8 @@ export default (c) => {
     ${c.donnees.apropos.parcours.map((p) => html`<li data-anime><p class="parcours-quand">${c.loc(p.quand)}</p><p>${c.loc(p.quoi)}</p></li>`)}
   </ol>
 </section>
+
+${ruban(c, { id: 'ruban-annees', style: 'encre', incline: -1, elements: annees.map((a) => { const n = dates.filter((d) => d.annee === a).length; return html`<b class="ruban-annee">${a}</b> ${n} ${c.s(n > 1 ? 'commun.ruban.dates' : 'commun.ruban.date')}`; }) })}
 
 <section class="agenda" id="agenda">
   ${c.media({ nom: 'grok/traces', alt: c.s('apropos.agenda.alt'), classe: 'agenda-media', cadrage: '50% 50%', sizes: '100vw' })}

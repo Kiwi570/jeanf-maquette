@@ -1,7 +1,8 @@
 /* Accueil : l'ouverture (Cantico delle creature qui s'ouvre), le manifeste Mauerstücke, le mur des pièces
    phares, Laundry et sa route, les films, Gare aux Rumeurs, les derniers repères, le contact. */
 import { html, brut } from '../../outils/gabarit.mjs';
-import { accrochage, etiquette, carte, trouver, titreDe } from '../gabarits/oeuvre.mjs';
+import { accrochage, etiquette, carte, trouver, titreDe, toutes } from '../gabarits/oeuvre.mjs';
+import { ruban } from '../gabarits/vivant.mjs';
 
 export const page = { cle: 'accueil', fichier: 'index', imagePartage: 'oeuvres/tr-cantico-ouvert-1280.webp' };
 
@@ -28,7 +29,7 @@ function carteLaundry(c, residences) {
       <path d="${brut(route)}" class="carte-route" data-trace/>
       <path d="${brut(avortee)}" class="carte-route carte-route--avortee" data-trace/>
       <path d="${brut(retour)}" class="carte-route" data-trace/>
-      ${pts.map((q) => html`<g class="carte-point${q.r.statut === 'avortee' ? ' carte-point--avorte' : ''}"><circle cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="9"/><circle cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="3.5" class="carte-coeur"/></g>`)}
+      ${pts.map((q) => html`<g class="carte-point${q.r.statut === 'avortee' ? ' carte-point--avorte' : ''}" style="--i:${pts.indexOf(q)}"><circle class="carte-pouls" cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="9"/><circle cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="9"/><circle cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="3.5" class="carte-coeur"/></g>`)}
     </svg>
     ${pts.map((q) => html`<a class="carte-etiquette carte-etiquette--${POSITIONS[q.r.id]}" href="#laundry-${q.r.id}" data-repere data-sans-transition style="left:${(q.x / 10).toFixed(2)}%;top:${(q.y / 5.6).toFixed(2)}%"><span class="carte-num">${q.r.num}</span><span class="carte-ville">${c.loc(q.r.ville)}</span></a>`)}
   </div>
@@ -46,10 +47,10 @@ export default (c) => {
   const typeNom = (id) => c.donnees.agenda.types.find((t) => t.id === id).un;
   return html`
 <section class="hero ecran" id="debut">
-  ${c.media({ nom: 'grok/accueil-mur', alt: '', cadrage: '50% 40%', cadrageMobile: '50% 40%', classe: 'hero-fond', sizes: '100vw' })}
+  ${c.media({ nom: 'grok/accueil-mur', alt: '', cadrage: '50% 40%', cadrageMobile: '50% 40%', classe: 'hero-fond', sizes: '100vw', priorite: true })}
   <div class="hero-grille">
     <div class="hero-texte">
-      <h1 class="hero-titre"><span class="hero-nom" data-anime="gsap">JeanF</span><span class="visuellement-cache">, ${c.t('commun.signature')}</span></h1>
+      <h1 class="hero-titre"><span class="hero-nom" data-anime="gsap">${brut([...'JeanF'].map((l) => `<span class="hero-lettre">${l}</span>`).join(''))}</span><span class="visuellement-cache">, ${c.t('commun.signature')}</span></h1>
       <p class="hero-etiquette" data-anime="gsap"><span class="etiquette-pastille" aria-hidden="true"></span><span>${c.t('accueil.hero.etiquette')}</span></p>
       <p class="hero-intro" data-anime="gsap">${c.t('accueil.hero.texte')}</p>
       <p class="hero-actions" data-anime="gsap">
@@ -64,6 +65,8 @@ export default (c) => {
     </figure>
   </div>
 </section>
+
+${ruban(c, { id: 'ruban-codes', style: 'rouge', incline: -1.4, elements: c.donnees.oeuvres.codes.map((k) => html`<b class="ruban-code">${k.code}</b> ${c.loc(k.nom)}`) })}
 
 <section class="manifeste" id="manifeste">
   <div class="conteneur manifeste-grille">
@@ -104,6 +107,13 @@ export default (c) => {
   </div>
 </section>
 
+<section class="chiffres conteneur" id="chiffres" aria-labelledby="chiffres-titre">
+  <h2 class="visuellement-cache" id="chiffres-titre">${c.t('accueil.chiffres.titre')}</h2>
+  <ul class="chiffres-liste" data-visuel>
+    ${[[toutes(c).length, 'pieces'], [c.donnees.films.length, 'films'], [c.donnees.laundry.length, 'residences'], [c.donnees.agenda.dates.length, 'dates']].map(([n, k], i) => html`<li class="chiffre" style="--i:${i}"><span class="chiffre-nombre" data-compteur="${n}">${n}</span><span class="chiffre-libelle">${c.t(`accueil.chiffres.${k}`)}</span></li>`)}
+  </ul>
+</section>
+
 <section class="laundry" id="laundry">
   <div class="conteneur laundry-tete">
     <h2 class="titre-section" data-decoupe>${c.t('accueil.laundry.titre')}</h2>
@@ -127,7 +137,7 @@ export default (c) => {
   </div>
 </section>
 
-<section class="films-accueil" id="films">
+<section class="films-accueil" id="films" data-grain>
   <div class="conteneur">
     <div class="films-accueil-tete">
       <h2 class="titre-section" data-decoupe>${c.t('accueil.films.titre')}</h2>

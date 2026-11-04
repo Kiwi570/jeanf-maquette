@@ -192,7 +192,7 @@ html:not(.js) .volets .volet--ferme, html:not(.js) .volets-bouton { display: non
 }
 
 /* Le mur : banc de montage épinglé, défilement horizontal. Les cartes prennent la hauteur disponible. */
-.mur { position: relative; overflow: hidden; background: var(--platre); border-top: 1px solid var(--encre); }
+.mur { position: relative; overflow: hidden; background: transparent; border-top: 1px solid var(--encre); }
 .mur::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 calc(25vw - 1px), var(--joint) calc(25vw - 1px) 25vw); pointer-events: none; }
 .mur-tete { position: relative; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 32px; flex: none; }
 .mur-tete .titre-section { font-size: clamp(2rem, min(5vw, 8vh), 4.4rem); margin: 0; }
@@ -226,7 +226,7 @@ html.calme .carte-oeuvre, html:not(.js) .carte-oeuvre { scroll-snap-align: cente
 }
 
 /* Laundry : route des résidences. */
-.laundry { padding-block: clamp(72px, 11vw, 150px); border-top: 1px solid var(--encre); background: var(--platre-clair); }
+.laundry { padding-block: clamp(72px, 11vw, 150px); border-top: 1px solid var(--encre); background: rgba(255, 255, 255, .35); }
 .laundry-tete { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 8px clamp(24px, 5vw, 80px); align-items: end; margin-bottom: clamp(28px, 5vw, 56px); }
 .laundry-tete .titre-section { grid-row: span 2; }
 .laundry-citation { margin: 0; font-family: var(--police-titres); font-stretch: 78%; font-weight: 600; font-size: clamp(1.3rem, 1rem + 1.2vw, 2.1rem); line-height: 1.15; }
@@ -273,7 +273,8 @@ html.calme .carte-oeuvre, html:not(.js) .carte-oeuvre { scroll-snap-align: cente
 }
 
 /* Films sur l'accueil. */
-.films-accueil { padding-block: clamp(72px, 11vw, 150px); background: var(--encre); color: var(--platre); }
+.films-accueil { position: relative; padding-block: clamp(72px, 11vw, 150px); background: var(--encre); color: var(--platre); }
+.films-accueil > :not(.grain) { position: relative; z-index: 1; }
 .films-accueil a { color: inherit; }
 .films-accueil-tete { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 32px; margin-bottom: 28px; }
 .films-accueil-tete p { max-width: 34em; margin: 0; color: #cfcac0; }
@@ -643,3 +644,156 @@ body { padding-bottom: 0; }
 .liste-plan-pan { flex: var(--n) 1 auto; display: grid; gap: 2px; align-content: end; min-height: 72px; padding: 8px; background: var(--platre-fonce); box-shadow: inset 0 0 0 1px var(--joint); font-family: var(--police-mono); font-size: .75rem; }
 .liste-plan-pan strong { font-family: var(--police-titres); font-stretch: 64%; font-weight: 800; font-size: 1.8rem; line-height: 1; }
 .liste-plan-pan:first-child { background: var(--encre); color: var(--platre); }
+
+/* ===================== v2 : un mur vivant ===================== */
+/* Voile en pans de mur : des blocs à joints décalés, montés au départ, démontés à l'arrivée. */
+.voile-blocs { position: absolute; inset: 0; display: grid; grid-template-rows: repeat(6, minmax(0, 1fr)); }
+.voile-rang { display: flex; min-width: 0; }
+.voile-rang i { flex: 1 1 0; min-width: 0; background: var(--voile-fond); box-shadow: inset -1px -1px 0 rgba(228, 224, 216, .13), inset 0 -10px 0 rgba(0, 0, 0, .22); }
+.voile-rang i:last-child { box-shadow: inset 0 -1px 0 rgba(228, 224, 216, .13), inset 0 -10px 0 rgba(0, 0, 0, .22); }
+.voile-rang:last-child i { box-shadow: inset -1px 0 0 rgba(228, 224, 216, .13); }
+.voile-rang:last-child i:last-child { box-shadow: none; }
+.voile-rang:nth-child(even) i:first-child, .voile-rang:nth-child(even) i:last-child { flex-grow: .5; }
+.voile-rang i:nth-child(3n + 2) { background: #1c1a19; }
+.voile-rang:nth-child(3n) i:nth-child(2n) { background: #201e1c; }
+.voile-contenu { position: relative; z-index: 1; }
+html.voile-monte [data-voile], html.voile-demonte [data-voile] { background: transparent !important; visibility: hidden !important; }
+.voile-blocs, .voile-contenu { visibility: visible; }
+
+/* Relief du plâtre : un grain fixe, très léger, sur le fond du site. Il est peint par une couche fixe sous tout
+   le contenu (et sous la lumière de galerie), pas par html : html garde sa couleur de socle, qui ne se voit que
+   dans la bande de la barre de défilement (sombre tant que le voile couvre l'écran). Sinon, une page arrivée par
+   le voile resterait sombre derrière ses sections transparentes jusqu'à la fin de la chute des blocs. */
+body { background: transparent; }
+html::before { content: ''; position: fixed; inset: 0; z-index: -2; pointer-events: none; background: var(--fond) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32 0 0 0 0 .29 0 0 0 0 .25 0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E"); }
+/* Pendant que les blocs montent, la page reste visible : la bande garde la couleur de la page. */
+html.voile-monte { background-color: var(--fond) !important; }
+
+/* Lumière de galerie : derrière le contenu, elle éclaire le plâtre, jamais une œuvre ni un texte. */
+.lumiere { position: fixed; left: 0; top: 0; width: 860px; height: 860px; margin: -430px 0 0 -430px; border-radius: 50%; z-index: -1; pointer-events: none; opacity: 0; transition: opacity .8s ease; background: radial-gradient(closest-side, rgba(255, 252, 244, .72), rgba(255, 250, 240, .28) 52%, rgba(255, 250, 240, 0)); will-change: transform; }
+.lumiere--allumee { opacity: 1; }
+
+/* Cadres accrochés : un clou, et un balancement quand le mur défile (rotation séparée de l'inclinaison). */
+.carte-oeuvre .accroche { transform-origin: 50% 0; }
+.carte-oeuvre .accroche::before { content: ''; position: absolute; left: 50%; top: -15px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #8b847a, var(--encre) 70%); box-shadow: 0 2px 3px rgba(22, 21, 20, .35); }
+.carte-oeuvre--film .accroche::before { display: none; }
+
+/* Curseur : il grossit et dit ce qu'on peut faire. */
+.curseur::after { left: 50%; top: 50%; transform: translate(-50%, -50%); white-space: nowrap; background: transparent; color: var(--papier); padding: 4px 8px; letter-spacing: .04em; transition: transform .25s cubic-bezier(.3, 1.4, .5, 1), background-color .2s; }
+.curseur { transition: scale .25s cubic-bezier(.3, 1.4, .5, 1), border-color .2s, opacity .2s; }
+.curseur.curseur-lien { width: 18px; height: 18px; left: -9px; top: -9px; scale: 2.4; }
+.curseur::before { content: ''; position: absolute; left: 50%; top: 50%; width: 84px; height: 84px; margin: -42px 0 0 -42px; border-radius: 50%; background: var(--rouge); scale: 0; transition: scale .3s cubic-bezier(.3, 1.5, .5, 1); }
+.curseur[data-texte] { scale: 1; border-color: transparent; }
+.curseur[data-texte]::before { scale: 1; }
+.curseur::after { z-index: 1; }
+
+/* Bandeaux défilants, posés de travers comme un ruban adhésif sur le mur. */
+.ruban-zone { position: relative; overflow-x: clip; padding-block: clamp(18px, 3vw, 34px) 8px; display: grid; grid-template-columns: minmax(0, 1fr); justify-items: end; row-gap: 6px; }
+.ruban-zone > .ruban { justify-self: start; }
+.ruban { width: 112vw; margin-left: -6vw; rotate: var(--incline, 0deg); overflow: hidden; font-family: var(--police-titres); font-stretch: 66%; font-weight: 800; font-size: clamp(1.6rem, 4.2vw, 3.6rem); line-height: 1; box-shadow: 0 10px 24px -16px rgba(22, 21, 20, .6); }
+.ruban-piste { display: flex; width: max-content; will-change: transform; }
+.ruban-lot { display: flex; align-items: center; flex: none; }
+.ruban-element { display: inline-flex; align-items: center; gap: .3em; padding: .32em 0 .28em .55em; white-space: nowrap; }
+.ruban-sep { padding-inline: .55em 0; font-size: max(12px, .55em); }
+.ruban-code, .ruban-annee { font-family: var(--police-mono); font-stretch: 100%; font-weight: 500; font-size: max(12px, .42em); padding: .2em .45em; background: var(--encre); color: var(--papier); }
+.ruban-duree { font-family: var(--police-mono); font-stretch: 100%; font-weight: 400; font-size: max(12px, .45em); opacity: .8; }
+.ruban--rouge { background: var(--rouge-texte); color: var(--papier); }
+.ruban--clair { background: var(--papier); color: var(--encre); }
+.ruban--clair .ruban-sep { color: var(--rouge-texte); }
+.ruban--encre { background: var(--encre); color: var(--platre); }
+.ruban--encre .ruban-annee { background: var(--rouge-texte); }
+.ruban--pellicule { background: #0b0a09; color: #efe9de; padding-block: 16px; position: relative; }
+.ruban--pellicule::before, .ruban--pellicule::after { content: ''; position: absolute; left: 0; right: 0; height: 9px; background: repeating-linear-gradient(90deg, transparent 0 9px, #d8d2c6 9px 17px, transparent 17px 26px); opacity: .85; }
+.ruban--pellicule::before { top: 4px; } .ruban--pellicule::after { bottom: 4px; }
+.ruban-zone--pellicule { background: #0e0d0c; padding-block: 0; }
+.ruban-pause { position: relative; margin-right: max(16px, env(safe-area-inset-right, 0px)); z-index: 2; display: inline-flex; align-items: center; gap: .45em; min-height: 44px; min-width: 44px; padding: 0 .8em; border: 1px solid var(--encre); background: var(--papier); color: var(--encre); font-family: var(--police-mono); font-size: .75rem; cursor: pointer; }
+.ruban-pause-icone { width: 9px; height: 10px; border-inline: 3px solid currentColor; }
+.ruban-pause[aria-pressed="true"] .ruban-pause-icone { border: 0; border-left: 9px solid currentColor; border-block: 5px solid transparent; width: 0; height: 0; }
+.ruban-zone--pellicule { padding-bottom: 8px; }
+html:not(.js) .ruban-pause, html.calme .ruban-pause { display: none; }
+
+/* Chiffres : quatre pans de mur qui comptent. */
+.chiffres { padding-block: clamp(48px, 7vw, 96px); }
+.chiffres-liste { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.chiffre { display: grid; align-content: end; gap: .4rem; min-height: clamp(150px, 18vw, 230px); padding: clamp(14px, 2vw, 24px); background: var(--platre-fonce); box-shadow: inset 0 0 0 1px var(--joint), inset 0 -12px 0 rgba(22, 21, 20, .06); transition: transform .35s cubic-bezier(.3, 1.5, .5, 1), background-color .3s; }
+.chiffre:nth-child(2) { background: var(--encre); color: var(--platre); }
+.chiffre:nth-child(4) { background: var(--rouge-texte); color: var(--papier); }
+.chiffre-nombre { font-family: var(--police-titres); font-stretch: 62%; font-weight: 800; font-size: clamp(3.4rem, 8vw, 7rem); line-height: 1.12; }
+.chiffre-libelle { font-family: var(--police-mono); font-size: .8rem; line-height: 1.35; max-width: 20ch; }
+@media (hover: hover) { .chiffre:hover { transform: translateY(-8px) rotate(-1deg); } }
+@media (max-width: 760px) { .chiffres-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Étiquettes tapées à la machine. */
+html.js:not(.calme) .a-taper { clip-path: inset(0 100% 0 0); }
+
+
+/* Pied de page : le nom en blocs. */
+.pied-blocs { display: grid; grid-template-columns: repeat(24, minmax(0, 1fr)); gap: clamp(2px, .3vw, 4px); padding-block: 28px 8px; }
+.pied-bloc { aspect-ratio: 1; background: var(--platre); box-shadow: inset 0 -4px 0 rgba(22, 21, 20, .18); transition: translate .3s cubic-bezier(.3, 1.8, .5, 1), rotate .3s cubic-bezier(.3, 1.8, .5, 1), background-color .2s; cursor: pointer; }
+.pied-bloc:nth-child(5n + 2) { background: #cfc9be; }
+@media (hover: hover) { .pied-bloc:hover { translate: 0 -9px; rotate: -6deg; background: var(--rouge); } }
+
+/* Laundry : chaque résidence bat trois fois quand la carte arrive. */
+.carte-pouls { fill: none; stroke: var(--rouge); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: 50% 50%; }
+html:not(.calme) .carte--vue .carte-pouls { animation: pouls 1.5s cubic-bezier(.2, .7, .3, 1) 3; animation-delay: calc(1.2s + var(--i) * .25s); }
+@keyframes pouls { 0% { opacity: .9; transform: scale(1); } 100% { opacity: 0; transform: scale(3.2); } }
+
+/* Films : grain de pellicule et projecteur, derrière le contenu (photogrammes jamais recouverts). */
+[data-grain] { overflow: hidden; }
+[data-grain] > .grain { position: absolute; top: -256px; left: -256px; right: -256px; bottom: -256px; z-index: 0; pointer-events: none; opacity: .09; background-size: 256px 256px; will-change: transform; }
+.tete--films > .projecteur { position: absolute; inset: 0; z-index: 0; pointer-events: none; will-change: opacity; background: radial-gradient(ellipse 70% 55% at 78% 8%, rgba(255, 240, 210, .30), transparent 70%), conic-gradient(from 200deg at 78% 0%, transparent 0deg, rgba(255, 238, 205, .12) 14deg, transparent 34deg); }
+.table-montage > .table-montage-fond { z-index: 0; }
+.table-montage-tete, .bandes { position: relative; z-index: 1; }
+@media (hover: hover) {
+  .bande-bouton:hover .bande-film::before, .bande-bouton:hover .bande-film::after { animation: perforations .7s linear infinite; }
+  .bande-bouton .bande-image { transition: translate .5s cubic-bezier(.3, 1.4, .5, 1); }
+  .bande-bouton:hover .bande-image { translate: 0 -3px; }
+}
+.bande-bouton:focus-visible .bande-film::before, .bande-bouton:focus-visible .bande-film::after { animation: perforations .7s linear 2; }
+
+/* Amorce de projectionniste : 3, 2, 1. */
+.amorce { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; background: #1b1a18; color: #f1ebe0; }
+.amorce-cercle { position: absolute; width: min(46%, 260px); aspect-ratio: 1; border-radius: 50%; border: 3px solid #f1ebe0; background: conic-gradient(rgba(241, 235, 224, .22) var(--angle, 0deg), transparent 0); }
+.amorce-croix { position: absolute; inset: 0; background: linear-gradient(#f1ebe0, #f1ebe0) center / 100% 1px no-repeat, linear-gradient(#f1ebe0, #f1ebe0) center / 1px 100% no-repeat; opacity: .5; }
+.amorce-chiffre { position: relative; font-family: var(--police-titres); font-stretch: 62%; font-weight: 800; font-size: clamp(4rem, 12vw, 9rem); line-height: 1; }
+
+/* Liens fléchés : la flèche avance. */
+.lien-fleche { transition: letter-spacing .3s; }
+@media (hover: hover) { .lien-fleche:hover { letter-spacing: .03em; } }
+
+/* Le nom de l'accueil : chaque lettre est un bloc qu'on bouscule. */
+.hero-lettre { display: inline-block; transition: transform .45s cubic-bezier(.3, 1.8, .45, 1), color .2s; }
+@media (hover: hover) { .hero-lettre:hover { transform: translateY(-.1em) rotate(-5deg); color: var(--rouge-texte); } }
+/* Logo : les blocs JF se décalent au survol. */
+.entete-logo img { transition: transform .4s cubic-bezier(.3, 1.8, .45, 1); }
+@media (hover: hover) { .entete-logo:hover img { transform: rotate(-8deg) scale(1.08); } }
+/* Noms des compagnons de route : des pavés qu'on soulève. */
+.avec-mur li { transition: transform .35s cubic-bezier(.3, 1.7, .5, 1), background-color .2s, color .2s; }
+@media (hover: hover) { .avec-mur li:hover { transform: translateY(-6px) rotate(-2deg); background: var(--rouge-texte); color: var(--papier); } }
+/* Étiquettes de musée : elles se redressent au survol. */
+@media (hover: hover) { .carte-oeuvre .etiquette { transition: transform .35s cubic-bezier(.3, 1.6, .5, 1); } .carte-oeuvre:hover .etiquette { transform: translateY(-3px) rotate(-.8deg); } }
+html.calme .hero-lettre, html.calme .entete-logo img, html.calme .avec-mur li, html.calme .chiffre { transition: none !important; transform: none !important; }
+html.calme .pied-bloc { transition: none !important; translate: none !important; rotate: none !important; }
+
+/* Curseur sur une œuvre : un anneau, et le libellé dans une étiquette décalée. Jamais un disque sur l'œuvre. */
+/* Les deux états ont la même boîte : on passe de l'un à l'autre par échelle et translation (aucun décalage de mise en page). */
+.curseur.curseur--anneau[data-texte]::before { background: transparent; box-shadow: inset 0 0 0 3.5px var(--rouge); scale: .57; }
+.curseur.curseur--anneau::after { transform: translate(14px, 14px); background: var(--encre); color: var(--papier); }
+.curseur.curseur--loupe { opacity: 0 !important; }
+
+/* Mur au téléphone : l'étiquette reste sous son œuvre. */
+@media (max-width: 899px), (max-height: 519px) {
+  .carte-oeuvre { justify-content: center; }
+  .carte-oeuvre-mur { flex: 0 1 auto; }
+}
+
+/* Retour arrière : l'œuvre d'ouverture est déjà ouverte dès la première image (comme en mode calme). */
+html[data-arrivee="retour"] :is(.hero-oeuvre, .tete-oeuvre) .volets .volet--ouvert { clip-path: none; }
+html[data-arrivee="retour"] :is(.hero-oeuvre, .tete-oeuvre) .volets .volet--ferme { opacity: 0; visibility: hidden; }
+
+/* Agenda : l'année reste en haut pendant qu'on lit ses dates ; le filet se trace en arrivant. */
+.agenda-annee { position: relative; border-top: 0; }
+.agenda-annee::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--encre); transform-origin: 0 50%; }
+html.js:not(.calme):not([data-arrivee="retour"]) .agenda-annee:not(.trace)::before { transform: scaleX(0); }
+.agenda-annee::before { transition: transform .9s cubic-bezier(.65, 0, .35, 1); }
+@media (min-width: 761px) { .agenda-an { position: sticky; top: calc(var(--entete-h) + 12px); align-self: start; } }

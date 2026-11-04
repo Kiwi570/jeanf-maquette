@@ -8,6 +8,17 @@ Maquette du site de JeanF Jans, artiste « Nomade Polymedia » (Bruxelles). Dire
 
 **Sources** : textes, œuvres, films et agenda relevés sur le site actuel et dans les PDF du site (`donnees/`) ; photos du livret RDM dans `recu/rdm/` ; conversion par `outils/lot-jeanf.py` puis `python3 outils/images.py recu/lot.json`. Les images d'origine ne sont pas dans le zip (trop lourdes) : pour reconvertir, copier le contenu du dossier `jeanf-images` (zip des images du site) dans `recu/site/` et celui du dossier `jeanf-grok` (zip des images Grok) dans `recu/grok/`. Les images converties, elles, sont dans `assets/images/`.
 
+## Effets vivants (v2)
+
+- `assets/js/vivant.js` contient :
+  - la lumière de galerie, les cadres inclinables et leur balancement, le curseur qui dit ce qu'on peut faire et les boutons magnétiques ;
+  - les bandeaux, les étiquettes tapées, le nom en blocs du pied de page ;
+  - le grain, le projecteur et l'amorce des films.
+
+  Tout est coupé en mode calme, et aucune position n'est lue pendant le défilement.
+- `source/gabarits/vivant.mjs` contient les bandeaux défilants (toujours avec un bouton pause) et les compteurs.
+- Voile en pans de mur : `assets/js/socle/voile.js` est une option ajoutée au socle. Elle s'active quand le voile contient `[data-voile-blocs]` ; `transitions.js` et `ouverture.js` l'utilisent, et sans blocs le voile glisse comme avant.
+
 ## Reconstruire
 
 ```

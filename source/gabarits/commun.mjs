@@ -14,7 +14,7 @@ const LETTRES = {
   F: ['1111', '1000', '1000', '1110', '1000', '1000', '1000'],
 };
 
-function blocsNom() {
+function blocsNom(classe = 'bloc') {
   const blocs = [];
   let col = 1;
   for (const lettre of 'JeanF') {
@@ -24,7 +24,7 @@ function blocsNom() {
   }
   /* Ordre de chute : de bas en haut, de gauche à droite, comme un mur qu'on monte. */
   blocs.sort((a, b) => b.r - a.r || a.c - b.c);
-  return blocs.map((b, i) => `<span class="bloc" style="grid-column:${b.c};grid-row:${b.r};--i:${i}"></span>`).join('');
+  return blocs.map((b, i) => `<span class="${classe}" style="grid-column:${b.c};grid-row:${b.r};--i:${i}"></span>`).join('');
 }
 
 function tete(c) {
@@ -128,6 +128,7 @@ function pied(c) {
       </ul>
     </div>
   </div>
+  <div class="conteneur pied-blocs" aria-hidden="true" data-visuel>${brut(blocsNom('pied-bloc'))}</div>
   <div class="conteneur pied-bas"><p>${c.t('commun.maquette')}</p><p>© JeanF Jans</p></div>
 </footer>`;
 }
@@ -140,8 +141,16 @@ function barre(c) {
 </div>`;
 }
 
+/* Voile en pans de mur : 6 rangées de blocs à joints décalés (la rangée paire commence et finit par un demi-bloc). */
+function blocsVoile() {
+  return Array.from({ length: 6 }, (_, r) => {
+    const n = r % 2 ? 5 : 4;
+    return `<div class="voile-rang">${Array.from({ length: n }, (_, k) => `<i data-r="${r}" data-c="${k}"></i>`).join('')}</div>`;
+  }).join('');
+}
+
 function voile(c) {
-  return html`<div data-voile aria-hidden="true"><span class="voile-joint"></span><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="56" height="56"><span data-voile-libelle>${c.libelle(c.page.cle)}</span></div></div>`;
+  return html`<div data-voile aria-hidden="true" data-gouttiere="${c.site.couleurs.voile}"><div class="voile-blocs" data-voile-blocs>${brut(blocsVoile())}</div><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="56" height="56"><span data-voile-libelle>${c.libelle(c.page.cle)}</span></div></div>`;
 }
 
 function panneau(c) {
@@ -159,7 +168,7 @@ export function page(c, contenu) {
   return html`<!doctype html>
 <html lang="${c.l}" data-v="${c.v}" data-gabarit="${c.page.gabarit || c.page.cle}"${c.site.curseur ? brut(' data-curseur') : ''}>
 ${tete(c)}
-<body id="haut" class="page-${c.page.cle}">
+<body id="haut" class="page-${c.page.cle}" data-textes-vivants="${brut(JSON.stringify(Object.fromEntries(['voir', 'film', 'lire', 'fiche', 'pousser', 'defiler'].map((k) => [k, c.s(`commun.curseur.${k}`)]))).replace(/&/g, '&amp;').replace(/"/g, '&quot;'))}">
 ${voile(c)}
 ${panneau(c)}
 <a class="evitement" href="#contenu">${c.t('commun.evitement')}</a>

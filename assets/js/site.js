@@ -8,7 +8,8 @@
    5. Visionneuse avec loupe, « Voir au mur » à l'échelle, filtres gardés dans l'adresse.
    6. Table de montage des films : fiches, lecteur chargé au clic, minutage au survol.
    7. Lumière de vitrail derrière Dérive-Dérêve (canvas, s'arrête hors écran, image fixe en mode calme). */
-import { demarrer, boucle, etat, quand, rafraichir, aller, allerAncre, bloquerDefilement, debloquerDefilement, suivre, lacher } from './socle/index.js?v=1';
+import { demarrer, boucle, etat, quand, rafraichir, aller, allerAncre, bloquerDefilement, debloquerDefilement, suivre, lacher } from './socle/index.js?v=2';
+import { initLumiere, initCadres, balanceur, balancementNatif, initCurseurContexte, initMagnetique, initRubans, initFrappe, initPiedBlocs, initGrain, initProjecteur, amorce, cascade, breve, initFilets } from './vivant.js?v=2';
 
 const gsap = window.gsap;
 const ST = window.ScrollTrigger;
@@ -87,11 +88,12 @@ function initMurs() {
       '(min-width: 900px) and (min-height: 520px)': () => {
         piste.removeAttribute('tabindex');
         const distance = () => Math.max(0, piste.scrollWidth - window.innerWidth);
+        const balancer = balanceur(piste);
         const tween = gsap.fromTo(piste, { x: 0 }, {
           x: () => -distance(), ease: 'none',
           scrollTrigger: {
             trigger: section, start: 'top top', end: () => '+=' + Math.round(distance() * VITESSE_MUR), pin: true, anticipatePin: 1, scrub: 0.5, invalidateOnRefresh: true,
-            onUpdate: (s) => { if (barre) barre.style.transform = `scaleX(${s.progress.toFixed(4)})`; },
+            onUpdate: (s) => { if (barre) barre.style.transform = `scaleX(${s.progress.toFixed(4)})`; balancer(s.getVelocity() / VITESSE_MUR); },
           },
         });
         section._tween = tween;
@@ -113,13 +115,19 @@ function initMurs() {
           ST.update();
         };
         piste.addEventListener('focusin', auFocus);
-        return () => { piste.setAttribute('tabindex', '0'); piste.removeEventListener('focusin', auFocus); section._tween = null; };
+        return () => { piste.setAttribute('tabindex', '0'); piste.removeEventListener('focusin', auFocus); section._tween = null; balancer.detruire(); };
       },
       '(max-width: 899px), (max-height: 519px)': () => {
         const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { ouvrirVolets($('[data-volets]', e.target)); io.unobserve(e.target); } }), { root: piste, threshold: 0.6 });
         cartesVolets().forEach((v) => io.observe(v.closest('.carte-oeuvre')));
-        piste.addEventListener('scroll', () => { if (barre) barre.style.transform = `scaleX(${(piste.scrollLeft / Math.max(1, piste.scrollWidth - piste.clientWidth)).toFixed(4)})`; }, { passive: true });
-        return () => io.disconnect();
+        const finBalance = balancementNatif(piste);
+        /* Longueur du mur lue après la mise en page (ResizeObserver), jamais pendant le défilement. */
+        let course = 1;
+        const ro = new ResizeObserver(() => { course = Math.max(1, piste.scrollWidth - piste.clientWidth); });
+        ro.observe(piste);
+        const progres = () => { if (barre) barre.style.transform = `scaleX(${(piste.scrollLeft / course).toFixed(4)})`; };
+        piste.addEventListener('scroll', progres, { passive: true });
+        return () => { io.disconnect(); ro.disconnect(); finBalance(); piste.removeEventListener('scroll', progres); };
       },
     });
   });
@@ -140,10 +148,13 @@ function initTitres() {
   titres.forEach((t) => {
     window.SplitText.create(t, {
       /* reduceWhiteSpace: false garde les espaces insécables fines (« intéresse ? ») que SplitText changerait en espaces. */
-      type: 'lines', mask: 'lines', linesClass: 'ligne', autoSplit: true, reduceWhiteSpace: false,
+      type: 'lines,words,chars', mask: 'lines', linesClass: 'ligne', charsClass: 'brique', autoSplit: true, reduceWhiteSpace: false,
+      /* Les lettres tombent dans leur ligne comme des briques qu'on pose, de gauche à droite. */
+      /* Une fois posées, elles ne retombent plus (redécoupage au changement de largeur ou au chargement des polices). */
       onSplit(self) {
         t.classList.add('decoupe-prete');
-        return gsap.fromTo(self.lines, { yPercent: 108 }, { yPercent: 0, duration: 0.9, ease: 'power4.out', stagger: 0.08, scrollTrigger: { trigger: t, start: 'top 88%', once: true } });
+        if (t.dataset.pose) return null;
+        return gsap.fromTo(self.chars, { yPercent: -120, rotation: (i) => ((i * 37) % 13) - 6 }, { yPercent: 0, rotation: 0, duration: 0.75, ease: 'back.out(1.5)', stagger: 0.03, scrollTrigger: { trigger: t, start: 'top 88%', once: true }, onComplete: () => { t.dataset.pose = '1'; } });
       },
     });
   });
@@ -176,6 +187,7 @@ function initRoute() {
   gsap.set(points, { scale: 0, transformOrigin: '50% 50%', transformBox: 'fill-box' });
   gsap.set(etiquettes, { opacity: 0 });
   ST.create({ trigger: carte, start: 'top 75%', once: true, onEnter: () => {
+    carte.classList.add('carte--vue');
     const tl = gsap.timeline();
     tl.fromTo(points, { scale: 0 }, { scale: 1, duration: 0.4, stagger: 0.12, ease: 'back.out(2)' }, 0)
       .fromTo(etiquettes, { opacity: 0 }, { opacity: 1, duration: 0.4, stagger: 0.12 }, 0.1);
@@ -195,31 +207,6 @@ function initParallaxe() {
   $$('.contact-accueil-media img, .fin-oeuvres-media img, .fin-films-media img, .agenda-media img, .manifeste-media img').forEach((img) => {
     gsap.fromTo(img, { yPercent: -5, scale: 1.12 }, { yPercent: 5, scale: 1.12, ease: 'none', scrollTrigger: { trigger: img.closest('section') || img, start: 'top bottom', end: 'bottom top', scrub: true } });
   });
-}
-
-/* ——— Boutons magnétiques et curseur qui affiche le code de la pièce ——— */
-function initMagnetique() {
-  if (!souris || !gsap || etat.calme) return;
-  $$('[data-magnetique]').forEach((b) => {
-    let r = null;
-    const x = gsap.quickTo(b, 'x', { duration: 0.35, ease: 'power3' }), y = gsap.quickTo(b, 'y', { duration: 0.35, ease: 'power3' });
-    b.addEventListener('pointerenter', () => { r = b.getBoundingClientRect(); });
-    b.addEventListener('pointermove', (e) => { if (!r || e.pointerType !== 'mouse') return; x(((e.clientX - r.left) / r.width - 0.5) * 10); y(((e.clientY - r.top) / r.height - 0.5) * 8); });
-    b.addEventListener('pointerleave', () => { x(0); y(0); r = null; });
-  });
-}
-function initCurseurTexte() {
-  if (!souris || etat.calme) return;
-  const texte = $('[data-curseur]') ? 'curseurVoir' : null;
-  if (!texte) return;
-  document.addEventListener('pointerover', (e) => {
-    const c = $('.curseur');
-    if (!c) return;
-    const carte = e.target.closest && e.target.closest('.carte-oeuvre[data-code], .bande-bouton');
-    if (carte && carte.dataset.code) c.dataset.texte = carte.dataset.code;
-    else if (carte && carte.matches('.bande-bouton')) c.dataset.texte = carte.dataset.duree || '';
-    else delete c.dataset.texte;
-  }, { passive: true });
 }
 
 /* ——— Fenêtres plein écran du projet (visionneuse, voir au mur) : focus gardé, Échap, bande suivie ——— */
@@ -284,6 +271,12 @@ function initVisionneuse() {
     courante = art;
     montrer(0);
     f.ouvrir(depuis);
+    /* La visionneuse s'allume, l'œuvre s'avance (taille et proportions intactes une fois posée). */
+    if (gsap && !etat.calme) {
+      gsap.fromTo(boite, { opacity: 0 }, { opacity: 1, duration: 0.28, ease: 'power1.out', clearProps: 'opacity' });
+      const fig = $('.visionneuse-image:not([hidden])', art);
+      if (fig) gsap.fromTo(fig, { scale: 0.94, y: 22 }, { scale: 1, y: 0, duration: 0.55, ease: 'power3.out', clearProps: 'transform' });
+    }
     history.replaceState(null, '', `${location.pathname}${location.search}#oeuvre-${id}`);
     return true;
   }
@@ -410,13 +403,14 @@ function initFiltresOeuvres() {
       if (piste) piste.scrollLeft = 0;
       /* La galerie a raccourci : retour au début du mur si on était plus loin. */
       if (avant) requestAnimationFrame(() => requestAnimationFrame(() => aller(section, { instant: true })));
+      if (!depuisAdresse) cascade($$('.pan:not([hidden]) .carte-oeuvre', section).slice(0, 8));
     },
   });
 }
 function initFiltresAgenda() {
   initFiltres({
     groupe: '[data-filtres-agenda]', param: 'type',
-    appliquer: (v) => {
+    appliquer: (v, { depuisAdresse } = {}) => {
       let total = 0;
       $$('.agenda-annee').forEach((a) => {
         let n = 0;
@@ -424,6 +418,7 @@ function initFiltresAgenda() {
         a.hidden = !n; total += n;
       });
       const vide = $('[data-agenda-vide]'); if (vide) vide.hidden = total > 0;
+      if (!depuisAdresse) cascade($$('.agenda-date:not([hidden])').slice(0, 10));
     },
   });
 }
@@ -466,9 +461,15 @@ function initFilms() {
   /* Lecteur : YouTube (sans cookies) ou Vimeo, chargé seulement au clic. */
   document.addEventListener('click', (e) => {
     const bouton = e.target.closest && e.target.closest('[data-lecteur-jouer]');
-    if (!bouton) return;
+    if (!bouton || bouton.dataset.enCours) return;
     const l = bouton.closest('[data-lecteur]');
     $$('[data-lecteur] iframe').forEach((i) => i.remove());
+    /* Amorce 3-2-1 de projectionniste, puis le lecteur (rien n'est chargé avant le clic). */
+    bouton.dataset.enCours = '1';
+    amorce(l).then((ok) => { delete bouton.dataset.enCours; if (ok) charger(l); });
+  });
+  function charger(l) {
+    if (l.closest('[hidden]')) return;
     const i = document.createElement('iframe');
     i.src = l.dataset.lecteur === 'vimeo' ? `https://player.vimeo.com/video/${l.dataset.id}?autoplay=1&dnt=1` : `https://www.youtube-nocookie.com/embed/${l.dataset.id}?autoplay=1&rel=0`;
     i.title = l.dataset.titre;
@@ -476,7 +477,7 @@ function initFilms() {
     i.allowFullscreen = true;
     l.appendChild(i);
     i.focus();
-  });
+  }
 }
 
 /* ——— Lumière de vitrail derrière Dérive-Dérêve ——— */
@@ -490,7 +491,7 @@ function initVitrail() {
   const taille = () => { const r = canvas.parentElement.getBoundingClientRect(); W = canvas.width = Math.max(1, Math.round(r.width / 2)); H = canvas.height = Math.max(1, Math.round(r.height / 2)); };
   taille();
   new ResizeObserver(taille).observe(canvas.parentElement);
-  boucle(canvas, (dt, t) => {
+  breve(boucle(canvas, (dt, t) => {
     ctx.clearRect(0, 0, W, H);
     taches.forEach((p, i) => {
       const x = (p.x + Math.sin(t * p.v * 6 + i) * 0.06) * W, y = (p.y + Math.cos(t * p.v * 5 + i * 2) * 0.08) * H, r = p.r * Math.max(W, H);
@@ -498,7 +499,7 @@ function initVitrail() {
       g.addColorStop(0, `rgba(${p.c}, .22)`); g.addColorStop(1, `rgba(${p.c}, 0)`);
       ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
     });
-  }, { lourde: true });
+  }, { lourde: true }));
 }
 
 /* ——— Ouverture ——— */
@@ -515,9 +516,9 @@ function arriveeContenu(tl, debut) {
   return tl;
 }
 
-function ouvrirVoletsTete() {
+function ouvrirVoletsTete(delai = 350) {
   const v = $('.hero-oeuvre [data-volets], .tete-oeuvre [data-volets]');
-  if (v) setTimeout(() => ouvrirVolets(v), 350);
+  if (v) setTimeout(() => ouvrirVolets(v), delai);
 }
 
 demarrer({
@@ -531,7 +532,15 @@ demarrer({
     essayer('route', initRoute);
     essayer('parallaxe', initParallaxe);
     essayer('magnetique', initMagnetique);
-    essayer('curseur', initCurseurTexte);
+    essayer('curseur', initCurseurContexte);
+    essayer('lumiere', initLumiere);
+    essayer('cadres', initCadres);
+    essayer('rubans', initRubans);
+    essayer('frappe', initFrappe);
+    essayer('pied', initPiedBlocs);
+    essayer('grain', initGrain);
+    essayer('projecteur', initProjecteur);
+    essayer('filets', initFilets);
     essayer('visionneuse', initVisionneuse);
     essayer('voir-mur', initVoirMur);
     essayer('filtres', initFiltresOeuvres);
@@ -545,7 +554,7 @@ demarrer({
     });
   },
   /* Intro complète, environ 2,2 s : joints, pans qui tombent et forment « JeanF », étiquette tapée,
-     minutage, puis le mur s'efface en glissant à peine vers la gauche et découvre la page. */
+     minutage, puis le mur se replie vers la gauche comme un volet et découvre la page ; le triptyque s'ouvre aussitôt. */
   jouer() {
     if (!gsap) return null;
     const panneau = $('.ouverture-panneau');
@@ -558,7 +567,8 @@ demarrer({
       .fromTo(blocs, { y: () => -window.innerHeight * 1.2 }, { y: 0, duration: 0.42, ease: 'power4.in', stagger: { each: 0.0105 } }, 0.15)
       .fromTo('.ouverture-etiquette', { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.45, ease: 'steps(16)' }, 1.02)
       .fromTo(t, { s: 0 }, { s: 1.64, duration: 0.75, ease: 'none', onUpdate: () => { if (compteur) compteur.textContent = minutage(t.s); } }, 0.9)
-      .fromTo(panneau, { opacity: 1, x: 0 }, { opacity: 0, x: () => -window.innerWidth * 0.06, duration: 0.55, ease: 'power2.inOut' }, 1.6);
+      .fromTo(panneau, { clipPath: 'inset(0% 0% 0% 0%)' }, { clipPath: 'inset(0% 100% 0% 0%)', duration: 0.6, ease: 'power3.inOut' }, 1.55)
+      .call(() => ouvrirVoletsTete(0), null, 2.0);
     arriveeContenu(tl, 1.78);
     return tl;
   },

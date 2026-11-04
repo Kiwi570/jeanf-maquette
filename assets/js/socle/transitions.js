@@ -3,10 +3,11 @@
    de démarrer couverte) ; 3. la nouvelle page se prépare sous le voile ; 4. le voile se retire.
    Les liens vers la page en cours font défiler sans recharger (chemins normalisés, cleanUrls).
    Les grands sauts dans une même page passent aussi sous le voile. */
-import { html, etat, chemin, stockage, emettre } from './etat.js?v=1';
-import { aller, bloquerDefilement, debloquerDefilement } from './defilement.js?v=1';
-import { fermerMenu } from './entete.js?v=1';
-import { suivre, lacher } from './gouttiere.js?v=1';
+import { html, etat, chemin, stockage, emettre } from './etat.js?v=2';
+import { aller, bloquerDefilement, debloquerDefilement } from './defilement.js?v=2';
+import { fermerMenu } from './entete.js?v=2';
+import { suivre, lacher } from './gouttiere.js?v=2';
+import { enBlocs, monter, demonter, nettoyerVoile } from './voile.js?v=2';
 
 const prechargees = new Set();
 let enDepart = false;
@@ -16,6 +17,7 @@ function voile() { return document.querySelector('[data-voile]'); }
 function couvrir(duree = 450) {
   const v = voile();
   if (!v || etat.calme) return Promise.resolve();
+  if (enBlocs(v)) return monter(v, duree);
   html.classList.remove('voile-leve');
   v.style.visibility = 'visible';
   const a = v.animate([{ transform: 'translateY(100%)' }, { transform: 'translateY(0)' }],
@@ -26,6 +28,7 @@ function couvrir(duree = 450) {
 function decouvrir(duree = 450) {
   const v = voile();
   if (!v || etat.calme) return Promise.resolve();
+  if (enBlocs(v)) return demonter(v, duree);
   const a = v.animate([{ transform: 'translateY(0)' }, { transform: 'translateY(-100%)' }],
     { duration: duree, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
   return a.finished.catch(() => {}).then(() => {
@@ -50,6 +53,10 @@ export async function allerAncre(hash, { pousser = true } = {}) {
   if (pousser) history.pushState(null, '', hash || location.pathname + location.search);
   const y = cible ? cible.getBoundingClientRect().top : -window.scrollY;
   if (!etat.calme && Math.abs(y) > window.innerHeight * 3) {
+    /* Le voile annonce la section d'arrivée (son titre), pas la page. */
+    const lib = document.querySelector('[data-voile-libelle]');
+    const titre = cible && cible.querySelector && cible.querySelector('h1, h2');
+    if (lib && titre) lib.textContent = titre.textContent.trim().slice(0, 40);
     bloquerDefilement('saut');
     suivre(voile());
     await couvrir(320);
@@ -124,5 +131,5 @@ export function initTransitions() {
   document.addEventListener('focusin', precharger);
   document.addEventListener('touchstart', precharger, { passive: true });
 
-  window.addEventListener('pageshow', (e) => { if (e.persisted) enDepart = false; });
+  window.addEventListener('pageshow', (e) => { if (!e.persisted) return; enDepart = false; const v = voile(); if (v) { nettoyerVoile(v); v.style.visibility = ''; v.style.transform = ''; } html.classList.remove('voile-monte', 'voile-demonte'); });
 }

@@ -32,7 +32,22 @@
     "codes": "Code des étiquettes",
     "minutage": "Minutage du mur",
     "curseurVoir": "Voir",
-    "atelierLibelle": "Atelier"
+    "atelierLibelle": "Atelier",
+    "curseur": {
+      "voir": "Voir",
+      "film": "Le film",
+      "lire": "Lecture",
+      "pousser": "Pousser",
+      "defiler": "Défiler",
+      "fiche": "Fiche"
+    },
+    "ruban": {
+      "pause": "Pause",
+      "lecture": "Lecture",
+      "libelle": "du bandeau défilant",
+      "date": "date",
+      "dates": "dates"
+    }
   },
   "pages": {
     "accueil": {
@@ -148,6 +163,13 @@
       "texte": "Une œuvre, une projection, une résidence ou une question : un message suffit.",
       "action": "Écrire un message",
       "alt": "Atelier vide, lumière de fenêtre, toiles retournées contre le mur"
+    },
+    "chiffres": {
+      "titre": "En chiffres",
+      "pieces": "pièces sur le mur",
+      "films": "courts-métrages",
+      "residences": "résidences Laundry, dont une avortée",
+      "dates": "dates à l’agenda depuis 2012"
     }
   },
   "oeuvres": {

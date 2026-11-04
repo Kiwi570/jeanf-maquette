@@ -32,7 +32,22 @@
     "codes": "Label codes",
     "minutage": "Wall timecode",
     "curseurVoir": "View",
-    "atelierLibelle": "Studio"
+    "atelierLibelle": "Studio",
+    "curseur": {
+      "voir": "View",
+      "film": "The film",
+      "lire": "Play",
+      "pousser": "Push",
+      "defiler": "Scroll",
+      "fiche": "Details"
+    },
+    "ruban": {
+      "pause": "Pause",
+      "lecture": "Play",
+      "libelle": "the scrolling band",
+      "date": "date",
+      "dates": "dates"
+    }
   },
   "pages": {
     "accueil": {
@@ -148,6 +163,13 @@
       "texte": "A work, a screening, a residency or a question: a message is enough.",
       "action": "Write a message",
       "alt": "Empty studio, window light, canvases turned to the wall"
+    },
+    "chiffres": {
+      "titre": "In figures",
+      "pieces": "pieces on the wall",
+      "films": "short films",
+      "residences": "Laundry residencies, one of them aborted",
+      "dates": "timeline entries since 2012"
     }
   },
   "oeuvres": {

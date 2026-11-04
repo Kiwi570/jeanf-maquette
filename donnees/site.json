@@ -2,7 +2,7 @@
   "nom": "JeanF",
   "adresse": "https://jeanf-maquette.vercel.app",
   "siteActuel": "jeanf.be",
-  "version": 1,
+  "version": 2,
   "langues": ["fr", "en"],
   "navigation": ["accueil", "oeuvres", "films", "a-propos"],
   "actionEntete": { "page": "a-propos", "ancre": "contact" },

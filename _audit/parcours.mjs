@@ -169,7 +169,8 @@ export default async function ({ contexte, attendrePret, attendre, BASE, R, T })
           if (r.expanded !== 'true') R.echec('films', `bouton de ${b.id} sans aria-expanded="true"`, ou('/films'));
           if (b === integrable) {
             await page.locator(`#${b.id} [data-lecteur-jouer]`).click();
-            await attendre(400);
+            /* Amorce 3-2-1 (environ 1,3 s) avant que le lecteur se charge. */
+            await attendre(1900);
             const src = await page.evaluate((id) => { const i = document.querySelector(`#${id} iframe`); return i ? i.src : ''; }, b.id);
             if (!/^https:\/\/(www\.youtube-nocookie\.com|player\.vimeo\.com)\//.test(src)) R.echec('films', `lecteur absent ou sans youtube-nocookie / vimeo après le clic (${src || 'aucun'})`, ou('/films'));
             await bouton.click();
